@@ -997,7 +997,7 @@
       <h3 class="motto-title">About Me &amp; Blog</h3>
       <div class="motto-content">
         <p>
-          Kai Moura Wang - Data Analyst. If you have no foundation, don&#39;t worry! It&#39;s not as scary as it seems! Progress with me, let&#39;s learn data from ZERO. Step by step, we&#39;ll be HERO. （If you have trouble displaying the website, these are the recomended Browers: Chrome/Brave/Microsoft Edge; Some effects may be missing on Safari/Firefox.）  
+          Kai Moura Wang - Data Analyst. If you have no foundation, don&#39;t worry! It&#39;s not as scary as it seems! Progress with me, let&#39;s learn data from ZERO. Step by step, we&#39;ll be HERO.  
         </p> 
       </div>
   </div>
@@ -1061,10 +1061,27 @@
         :data="listData"
         :class-option="classOption"
         class="warp"
-        style="height: 0px"
+        style="height: 30px"
       >
         <ul class="index-notice-content__ul">
           
+          
+            <li>
+              
+                <div class="index-notice-content__title">
+                  
+                    <a href=" " title="If you have trouble displaying the website, these are the recomended Browers: Chrome/Brave/Microsoft Edge; Some effects may be missing on Safari/Firefox." style="color:purple">
+                      If you have trouble displaying the website, these are the recomended Browers: Chrome/Brave/Microsoft Edge; Some effects may be missing on Safari/Firefox.
+                    </a>
+                  
+                </div>
+                
+                  <div class="index-notice-content__date" style="color:purple">
+                    31-08-2021
+                  </div>
+                
+              
+            </li>
            
         </ul>
       </vue-seamless-scroll>
@@ -1079,7 +1096,7 @@
 <script>
   var seamless = JSON.parse('false');
   seamless = seamless ? 0 : 30;
-  var listData = '' || '';
+  var listData = '[object Object]' || '';
   listData = listData.split(',');
   var vm = new Vue({
     el: '#appIndexNotice',
