@@ -132,7 +132,7 @@
     <div class="drawer-box-head bg-color">
       <img class="drawer-box-head_logo" src="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/20210828122447.jpg" alt="logo">
       <h3 class="drawer-box-head_title">Kai Moura Wang</h3>
-      <h5 class="drawer-box-head_desc"></h5>
+      <h5 class="drawer-box-head_desc">Learn Data Science From ZERO</h5>
     </div>
     
     <div class="drawer-box-content">
@@ -141,10 +141,69 @@
           
             <li class="drawer-box-content_item" style="position: relative;">
               
-                <a target="_blank" rel="noopener" href="https://www.freeprivacypolicy.com/live/2dce005e-28de-418e-9406-58847151ec44" class="drawer-menu-item-link">
+                <a href="/" class="drawer-menu-item-link">
                   
-                  <span class="name">Disclaimer</span>
+                    <i class="fa fa-home" aria-hidden="true"></i>
+                  
+                  <span class="name">Home💻</span>
                 </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="/categories" class="drawer-menu-item-link">
+                  
+                    <i class="fa fa-bookmark" aria-hidden="true"></i>
+                  
+                  <span class="name">Categories📇</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="/tags" class="drawer-menu-item-link">
+                  
+                    <i class="fa fa-tags" aria-hidden="true"></i>
+                  
+                  <span class="name">Tags🏷</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="/archives" class="drawer-menu-item-link">
+                  
+                    <i class="fa fa-archive" aria-hidden="true"></i>
+                  
+                  <span class="name">Archives🗄</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(4)">
+                  <span>
+                    
+                      <i class="fa fa-user"></i>
+                    
+                    <span class="name">About🏳️‍🌈</span>
+                  </span>
+                  <i class="fa fa-chevron-left arrow " :class="{'icon-rotate': isOpen(4)}" aria-hidden="true"></i>
+                </a>
+                <ul class="drawer-sub-menu" v-if="isOpen(4)">
+                  
+                  <li>
+                    <a target="_blank" rel="noopener" href="https://www.freeprivacypolicy.com/live/2dce005e-28de-418e-9406-58847151ec44">
+                      
+                      <span>⚠ Disclaimer</span>
+                    </a>
+                  </li>
+                  
+                </ul>
               
             </li>
           
@@ -215,10 +274,67 @@
           
             <li class="menu-item" style="position: relative;">
               
-                <a target="_blank" rel="noopener" href="https://www.freeprivacypolicy.com/live/2dce005e-28de-418e-9406-58847151ec44" class="menu-item-link" title="Disclaimer">
+                <a href="/" class="menu-item-link" title="Home💻">
                   
-                  <span class="name">Disclaimer</span>
+                    <i class="fa fa-home" aria-hidden="true"></i>
+                  
+                  <span class="name">Home💻</span>
                 </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/categories" class="menu-item-link" title="Categories📇">
+                  
+                    <i class="fa fa-bookmark" aria-hidden="true"></i>
+                  
+                  <span class="name">Categories📇</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/tags" class="menu-item-link" title="Tags🏷">
+                  
+                    <i class="fa fa-tags" aria-hidden="true"></i>
+                  
+                  <span class="name">Tags🏷</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/archives" class="menu-item-link" title="Archives🗄">
+                  
+                    <i class="fa fa-archive" aria-hidden="true"></i>
+                  
+                  <span class="name">Archives🗄</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="javascript:;" class="menu-item-link" title="About🏳️‍🌈">
+                  
+                    <i class="fa fa-user"></i>
+                  
+                  <span class="name">About🏳️‍🌈</span>
+                  <i class="fa fa-chevron-down arrow" aria-hidden="true"></i>
+                </a>
+                <ul class="sub-menu">
+                  
+                  <li>
+                    <a target="_blank" rel="noopener" href="https://www.freeprivacypolicy.com/live/2dce005e-28de-418e-9406-58847151ec44">
+                      
+                      <span>⚠ Disclaimer</span>
+                    </a>
+                  </li>
+                  
+                </ul>
               
             </li>
           
