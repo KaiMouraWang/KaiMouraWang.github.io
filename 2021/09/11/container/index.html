@@ -11,7 +11,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-  <title>Categories | Kai Moura Wang</title>
+  <title>What is Container &amp; Docker? | Kai Moura Wang</title>
 
   <link rel="icon" type="image/jpeg" href="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/20210828122447.jpg">
   <link rel="stylesheet" href="https://at.alicdn.com/t/font_1911880_c1nvbyezg17.css">
@@ -539,67 +539,371 @@
     <div id="safearea">
       <main class="main" id="pjax-container" style="margin-top: 0;">
         
-<div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;"></div>
-<div class="bg-light-floor-categories" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -3;"></div>
+ <!-- prismjs 代码高亮 -->
+ 
 
-<div class="lazyload categories-header" data-original="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/5.gif">
-    <div class="categories-header-title">
-        CATEGORIES
+
+<div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -1;"></div>
+
+<!-- 文章详情页顶部图片和标题 -->
+
+
+
+
+<div class="post-detail-header lazyload" id="thumbnail_canvas" data-original="/medias/4.jpg" style="background-repeat: no-repeat; background-size: cover; 
+  background-position: center center;position: relative;">
+  <div class="post-detail-header-mask"></div>
+  <canvas id="header_canvas"style="position:absolute;bottom:0;pointer-events:none;"></canvas>
+  
+  <div class="post-detail-header_info-box">
+    <div class="title-box">
+      <span class="title">
+        What is Container &amp; Docker?
+      </span>
     </div>
-    <div class="categories-header-desc">
     
-        <span class="title" id="categories-header-desc"></span>
-    <script>
-  function typedFn() {
-    const el = '#categories-header-desc';
-    const type = 'categories';
-    let desc = 'Readers📖 are plentiful. Thinkers🧠 are rare.'
-    var typed = new Typed(el, {
-      strings: [desc],
-      startDelay: 100,
-      typeSpeed: 100,
-      loop: true,
-      backSpeed: 50,
-      showCursor: true
-    });
-  }
-  typedFn();
-</script>
     
-    </div>
-    <div class="mask-box"></div>
+      
+        <span class="post-detail-header_date">
+          <i class="fa fa-calendar"></i> Published in：2021-09-11 |
+        </span>
+      
+
+      
+        <span class="post-detail-header_categories">
+          <i class="iconfont iconbookmark1"></i> category：
+          
+            <a href="/categories/Azure/" class="post-detail-header_category">
+              Azure
+            </a>
+          
+            <a href="/categories/Data-Science/" class="post-detail-header_category">
+              Data Science
+            </a>
+          
+        </span>
+      
+
+      
+    
+  </div>
+  
+  
+    <script src="/js/bubble/bubble.js"></script>
+  
 </div>
 
 
 
-<div id="categories" class="container">
-    <div class="card">
-        <div class="card-content">
-            <div class="category-title center-align">
-                <i class="fa fa-tags"></i>&nbsp;&nbsp;Article Categories
-            </div>
-            <div class="category-chips">
-                
-                
-                <a href="/categories/Azure/" title="Azure: 1">
-                    <span class="category-content"
-                        title="Azure" style="background-color: #85C1E9;">Azure
-                        <span class="category-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/Data-Science/" title="Data Science: 1">
-                    <span class="category-content"
-                        title="Data Science" style="background-color: #F9E79F;">Data Science
-                        <span class="category-length">1</span>
-                    </span>
-                </a>
-                
-            </div>
+<div class="row justify-position">
+  <div class="main-content">
+    <article class="post post-detail">
+      
+      <div class="post-content">
+        <h1 id="What-is-Container-amp-Docker-Bilingual"><a href="#What-is-Container-amp-Docker-Bilingual" class="headerlink" title="What is Container &amp; Docker?(Bilingual)"></a>What is Container &amp; Docker?(Bilingual)</h1><h2 id="Container"><a href="#Container" class="headerlink" title="Container"></a>Container</h2><h3 id="What-is-Container"><a href="#What-is-Container" class="headerlink" title="What is Container?"></a>What is Container?</h3><p>A container is <strong><u>a standard unit of software</u> that packages up code and all its dependencies</strong> so the application runs quickly and reliably from one computing environment to another.</p>
+<p><strong>Human language Version</strong>😂:</p>
+<p>Imagine the term ‘Container’ is an actual container in life:</p>
+<p><img "" class="lazyload placeholder" data-original="https://cdn.pixabay.com/photo/2016/11/21/13/20/port-1845350_1280.jpg" src="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/loading.gif"></p>
+<p>In the old days, if you want to build an app, you have to start from deploying a system such as VM, and different VM(such as Windows &amp; Linux) makes it harder to transfer the app from one system to another.</p>
+<p>Therefore, containers are a solution to the problem of <strong>how to get software to run reliably when <u>moved from one computing environment to another</u>.</strong> </p>
+<p><u><strong>A container consists of an entire runtime environment except they don’t include the operating system: an application, plus all its dependencies, libraries and other binaries, and configuration files needed to run it, bundled into one package.</strong></u> By containerizing the application platform and its dependencies, differences in OS distributions and underlying infrastructure are abstracted away.</p>
+<p><code>In this case:  Different systems are like different quays. And Containers is like actual containers. If you wanna move the containers from Shanghai Quay(Windows) to London Quay(Linux), the containers will not be affected and easy to transfer.</code></p>
+<h4 id="Benefits-of-Docker"><a href="#Benefits-of-Docker" class="headerlink" title="Benefits of  Docker:"></a>Benefits of  Docker:</h4><p>A container may be only tens of megabytes in size, whereas a virtual machine with its own entire operating system may be several gigabytes in size. Because of this, a single server can host far more containers than virtual machines.</p>
+<p>Another major benefit is that virtual machines may take several minutes to boot up their operating systems and begin running the applications they host, while containerized applications can be started almost instantly. That means containers can be instantiated in a “just in time” fashion when they are needed and can disappear when they are no longer required, freeing up resources on their hosts.</p>
+<p>A third benefit is that containerization allows for greater modularity. Rather than run an entire complex application inside a single container, the application can be split in to modules (such as the database, the application front end, and so on). This is the so-called microservices approach.  Applications built in this way are easier to manage because each module is relatively simple, and changes can be made to modules without having to rebuild the entire application. Because containers are so lightweight, individual modules (or microservices) can be instantiated only when they are needed and are available almost immediately.</p>
+<hr>
+<h3 id="什么是容器（Container）"><a href="#什么是容器（Container）" class="headerlink" title="什么是容器（Container）?"></a>什么是容器（Container）?</h3><p>早期，大家都认为硬件抽象层基于hypervisor的虚拟化方式可以最大程度上提供虚拟化管理的灵活性。各种不同操作系统的虚拟机都能通过hypervisor（KVM、XEN等）来衍生、运行、销毁。然而，随着时间推移，用户发现hypervisor这种方式麻烦越来越多。为什么？因为对于hypervisor环境来说，<strong>每个虚拟机都需要运行一个完整的操作系统以及其中安装好的大量应用程序</strong>。但实际生产开发环境里，我们更关注的是自己部署的应用程序，如果每次部署发布我都得搞一个完整操作系统和附带的依赖环境，那么这让任务和性能变得很重和很低下。</p>
+<p>基于上述情况，人们就在想，有没有其他什么方式能让人更加的关注应用程序本身，底层多余的操作系统和环境我可以共享和复用？<strong>换句话来说，那就是<u>我部署一个服务运行好后，我再想移植到另外一个地方，我可以不用再安装一套操作系统和依赖环境</u>。</strong>这就像集装箱运载一样，我把货物一辆兰博基尼跑车（好比开发好的应用APP），打包放到一容器集装箱里，它通过货轮可以轻而易举的从上海码头（CentOS7.2环境）运送到纽约码头（Ubuntu14.04环境）。而且运输期间，我的兰博基尼（APP）没有受到任何的损坏（文件没有丢失），在另外一个码头卸货后，依然可以完美风骚的赛跑（启动正常）。</p>
+<p>Linux Container容器技术的诞生（2008年）就解决了IT世界里“集装箱运输”的问题。Linux Container（简称LXC）它是一种内核轻量级的操作系统层虚拟化技术。Linux Container主要由Namespace和Cgroup两大机制来保证实现。那么Namespace和Cgroup是什么呢？刚才我们上面提到了集装箱，集装箱的作用当然是可以对货物进行打包隔离了，不让A公司的货跟B公司的货混在一起，不然卸货就分不清楚了。那么Namespace也是一样的作用，做隔离。光有隔离还没用，我们还需要对货物进行资源的管理。同样的，航运码头也有这样的管理机制：货物用什么样规格大小的集装箱，货物用多少个集装箱，货物哪些优先运走，遇到极端天气怎么暂停运输服务怎么改航道等等… 通用的，与此对应的Cgroup就负责资源管理控制作用，比如进程组使用CPU/MEM的限制，进程组的优先级控制，进程组的挂起和恢复等等。</p>
+<p>Linux Container容器技术的诞生（2008年）就解决了IT世界里“集装箱运输”的问题。Linux Container（简称LXC）它是一种内核轻量级的操作系统层虚拟化技术。Linux Container主要由Namespace和Cgroup两大机制来保证实现。那么Namespace和Cgroup是什么呢？刚才我们上面提到了集装箱，集装箱的作用当然是可以对货物进行打包隔离了，不让A公司的货跟B公司的货混在一起，不然卸货就分不清楚了。那么Namespace也是一样的作用，做隔离。光有隔离还没用，我们还需要对货物进行资源的管理。同样的，航运码头也有这样的管理机制：货物用什么样规格大小的集装箱，货物用多少个集装箱，货物哪些优先运走，遇到极端天气怎么暂停运输服务怎么改航道等等… 通用的，与此对应的Cgroup就负责资源管理控制作用，比如进程组使用CPU/MEM的限制，进程组的优先级控制，进程组的挂起和恢复等等。</p>
+<hr>
+<h4 id="优势："><a href="#优势：" class="headerlink" title="优势："></a>优势：</h4><p>容器的特点其实我们拿跟它跟硬件抽象层虚拟化hypervisor技术对比就清楚了，我们之前也提到过，传统的虚拟化（虚拟机）技术，创建环境和部署应用都很麻烦，而且应用的移植性也很繁琐，比如你要把vmware里的虚拟机迁移到KVM里就很繁琐（需要做镜像格式的转换）。那么有了容器技术就简单了，总结下容器技术主要有三个特点：</p>
+<pre><code>1. 极其轻量：只打包了必要的Bin/Lib；
+2. 秒级部署：根据镜像的不同，容器的部署大概在毫秒与秒之间（比虚拟机强很多）；
+3. 易于移植：一次构建，随处部署；
+4. 弹性伸缩：Kubernetes、Swam、Mesos这类开源、方便、好使的容器管理平台有着非常强大的弹性管理能力。
+</code></pre>
+<h2 id="What-is-Docker"><a href="#What-is-Docker" class="headerlink" title="What is Docker?"></a>What is Docker?</h2><h3 id="What-is-Docker-1"><a href="#What-is-Docker-1" class="headerlink" title="What is Docker?"></a>What is Docker?</h3><p>Docker is <u><strong>not</strong> equal</u> to Container. It’s just <u>one of the platforms</u> that can deliver containers.</p>
+<p><strong>Docker is a set of platform as a service products that use OS-level virtualization to deliver software in packages called containers.</strong> </p>
+<hr>
+<h3 id="什么是Docker"><a href="#什么是Docker" class="headerlink" title="什么是Docker?"></a>什么是Docker?</h3><p>当前，docker几乎是容器的代名词，很多人以为docker就是容器。其实，这是错误的认识，除了docker  还有coreos。所以，容器世界里并不是只有docker一家。既然不是一家就很容易出现分歧。任何技术出现都需要一个标准来规范它，不然各搞各的很容易导致技术实现的碎片化，出现大量的冲突和冗余。因此，在2015年，由Google，Docker、CoreOS、IBM、微软、红帽等厂商联合发起的OCI（Open Container  Initiative）组织成立了，并于2016年4月推出了第一个开放容器标准。标准主要包括runtime运行时标准和image镜像标准。标准的推出，有助于替成长中市场带来稳定性，让企业能放心采用容器技术，用户在打包、部署应用程序后，可以自由选择不同的容器Runtime；同时，镜像打包、建立、认证、部署、命名也都能按照统一的规范来做。</p>
+<p>两种标准主要包含以下内容：</p>
+<p><code>1.容器运行时标准 （runtime spec）</code></p>
+<p>a). creating：使用 create 命令创建容器，这个过程称为创建中 b). created：容器创建出来，但是还没有运行，表示镜像和配置没有错误，容器能够运行在当前平台 c). running：容器的运行状态，里面的进程处于 up 状态，正在执行用户设定的任务 d). stopped：容器运行完成，或者运行出错，或者 stop 命令之后，容器处于暂停状态。这个状态，容器还有很多信息保存在平台中，并没有完全被删除</p>
+<p><code>2.容器镜像标准（image spec）</code></p>
+<p>a). 文件系统：以 layer 保存的文件系统，每个 layer 保存了和上层之间变化的部分，layer 应该保存哪些文件，怎么表示增加、修改和删除的文件等; b). config 文件：保存了文件系统的层级信息（每个层级的 hash 值，以及历史信息），以及容器运行时需要的一些信息（比如环境变量、工作目录、命令参数、mount 列表），指定了镜像在某个特定平台和系统的配置。比较接近我们使用 docker inspect <image_id> 看到的内容; c). manifest 文件：镜像的 config 文件索引，有哪些 layer，额外的 annotation 信息，manifest 文件中保存了很多和当前平台有关的信息; d). index 文件：可选的文件，指向不同平台的 manifest 文件，这个文件能保证一个镜像可以跨平台使用，每个平台拥有不同的 manifest 文件，使用 index 作为索引。</p>
+<h2 id="Related-Quiz"><a href="#Related-Quiz" class="headerlink" title="Related Quiz:"></a>Related Quiz:</h2><p>Q:Which service simplifies the process of configuring, deploying, and  managing a simple containerized application on the Azure cloud?</p>
+<ol>
+<li><p>Azure Container Instances</p>
+</li>
+<li><p>Azure Functions</p>
+</li>
+<li><p>Azure App Service</p>
+</li>
+<li><p>Azure Pipelines</p>
+</li>
+</ol>
+<p>A: Azure Container Instances</p>
+<p>Containers are somewhat like virtual machines except they don’t include the operating system. This makes it easy to deploy them because they’re very lightweight compared to virtual machines. In fact, containers run on virtual machines.</p>
+<p>Microsoft provides a variety of ways to run containers. The simplest way is to use Azure Container Instances. This service lets you run a container using a single command.</p>
+<h2 id="References-amp-Credit："><a href="#References-amp-Credit：" class="headerlink" title="References &amp; Credit："></a>References &amp; Credit：</h2><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/qcloud1001/p/9273549.html">https://www.cnblogs.com/qcloud1001/p/9273549.html</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.cio.com/article/2924995/what-are-containers-and-why-do-you-need-them.html">https://www.cio.com/article/2924995/what-are-containers-and-why-do-you-need-them.html</a></p>
+
+      </div>
+      <div class="post-tags-categories">
+        
+        <div class="tags">
+          
+            <a href="/tags/container/" class="">
+              container
+            </a>
+          
+            <a href="/tags/docker/" class="">
+              docker
+            </a>
+          
+            <a href="/tags/Azure/" class="">
+              Azure
+            </a>
+          
         </div>
-    </div>
+        
+      </div>
+      
+        <div class="copyright">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+    <strong>Author:  </strong>Kai Moura Wang</a>
+    </li>
+    <li class="post-copyright-link">
+    <strong>Link:  </strong>
+    <a href="/2021/09/11/container/" target="_blank" title="What is Container &amp; Docker?">http://www.kaimourawang.com/2021/09/11/container/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>Copyright:   </strong>
+      You are WELCOME to SHARE this article via Link above or Social Badges below. All articles on this website are under a <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)">CC BY-NC-SA 4.0</a>
+      license.
+    </li>
+  </ul>
+<div>
+      
+    </article>
+    <!-- 上一篇文章和下一篇文章 -->
+    
+      <!-- 文章详情页的上一页和下一页 -->
+<div class="post-nav">
+
+
+
+
+
 </div>
+
+    
+    
+
+    <!-- 打赏 -->
+    
+
+    <!-- 分享 -->
+    
+      <!-- https://github.com/overtrue/share.js -->
+<!-- 文章详情页的分享 -->
+<div class="social-share" data-sites="twitter,facebook,google,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+
+<script src="/js/shareJs/social-share.min.js"></script>
+</script>
+
+<style>
+  .social-share {
+    margin: 20px 0;
+  }
+</style>
+
+
+    
+    
+    <!-- 评论 -->
+    <!-- 评论 -->
+
+  <div id="myComment">
+    
+  </div>
+
+<!-- comment script in themes\hexo-theme-bamboo\layout\_partial\scripts\index.ejs -->
+
+
+  </div>
+
+  <!-- 目录 -->
+  <!-- 文章详情页右侧目录 -->
+
+  <div class="toc-aside">
+    <div class="toc-main">
+      <div class="toc-aside-title">
+        <i class="fa fa-list-ul" aria-hidden="true"></i><span>catalog</span>
+        
+          <div class="toc-open-close">catalog</div>
+        
+      </div>
+      <div class="toc-content">
+        <div class="toc"></div>
+      </div>
+    </div>
+  </div>
+  <!-- js在scripts目录下的的toc.ejs里面 -->
+  
+
+  <script>
+    function openBtnClickFn () {
+      let openOrCloseBtn = $('.toc-aside .toc-aside-title .toc-open-close');
+      let open = eval('' || 'true');
+      openOrCloseBtn.click(function() {
+        if (open === true) {
+          $(".toc-aside").css({'width': 0, 'padding': 0});
+          $(".toc-content").css({'width': 0});
+          $(".toc-aside-title span, .toc-aside-title i").css({'display': 'none'});
+          $(".main-content").css({'width': '75%', 'margin': '10px auto'});
+          open = false;
+        } else {
+          $(".toc-aside").css({'width': '300px', 'padding': '0 10px'});
+          $(".toc-content").css({'width': '300px'});
+          $(".toc-aside-title span, .toc-aside-title i").css({'display': 'inline-block'});
+          $(".main-content").css({'width': '65%', 'margin-right': '10px', 'margin-left': 'calc(35% - 350px)'});
+          open = true;
+        }
+      });
+    };
+    openBtnClickFn();
+    document.addEventListener('pjax:complete', function () {
+      openBtnClickFn();
+    })
+  </script>
+
+
+  
+
+  <!-- 图片放大 Wrap images with fancybox support -->
+  <script src="/js/wrapImage.js"></script>
+</div>
+
+<!-- 文章详情页背景图 -->
+<div id="appBgSwiper" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;" :style="{'background-color': bgColor ? bgColor : 'transparent'}">
+    <transition-group tag="ul" :name="names">
+        <li v-for='(image,index) in img' :key='index' v-show="index === mark" class="bg-swiper-box">
+            <img :src="image" class="bg-swiper-img">
+        </li>
+    </transition-group>
+</div>
+<script>
+    var vm = new Vue({
+        el: '#appBgSwiper',
+        data: {
+            names: '' || 'fade' || 'fade', // translate-fade fade
+            mark: 0,
+            img: [],
+            bgColor: '',
+            time: null
+        },
+        methods: {   //添加方法
+            change(i, m) {
+                if (i > m) {
+                    // this.names = 'fade';
+                } else if (i < m) {
+                    // this.names = 'fade';
+                } else {
+                    return;
+                }
+                this.mark = i;
+            },
+            prev() {
+                // this.names = 'fade';
+                this.mark--;
+                if (this.mark === -1) {
+                    this.mark = 3;
+                    return
+                }
+            },
+            next() {
+                // this.names = 'fade';
+                this.mark++;
+                if (this.mark === this.img.length) {
+                    this.mark = 0;
+                    return
+                }
+            },
+            autoPlay() {
+                // this.names = 'fade';
+                this.mark++;
+                if (this.mark === this.img.length) {
+                    this.mark = 0;
+                    return
+                }
+            },
+            play() {
+                let bgImgDelay = '' || '180000'
+                let delay = parseInt(bgImgDelay) || 180000;
+                this.time = setInterval(this.autoPlay, delay);
+            },
+            enter() {
+                clearInterval(this.time);
+            },
+            leave() {
+                this.play();
+            }
+        },
+        created() {
+            this.play()
+        },
+        beforeDestroy() {
+            clearInterval(this.time);
+        },
+        mounted() {
+            let prop = ''|| 'https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/reversed-waterfall@3000x2000px.png';
+            let isImg = prop.includes('.bmp') || prop.includes('.jpg') || prop.includes('.png') || prop.includes('.tif') || prop.includes('.gif') || prop.includes('.pcx') || prop.includes('.tga') || prop.includes('.exif') || prop.includes('.fpx') || prop.includes('.psd') || prop.includes('.cdr') || prop.includes('.pcd') || prop.includes('.dxf') || prop.includes('.ufo') || prop.includes('.eps') || prop.includes('.ai') || prop.includes('.raw') || prop.includes('.WMF') || prop.includes('.webp') || prop.includes('.jpeg') || prop.includes('http://') || prop.includes('https://') 
+            if (isImg) {
+                let img = prop.split(',');
+                let configRoot = '/'
+                let arrImg = [];
+                img.forEach(el => {
+                    var Expression=/http(s)?:\/\/([\w-]+\.)+[\w-]+(\/[\w- .\/?%&=]*)?/;
+			        var objExp = new RegExp(Expression);
+
+                    if(objExp.test(el)) {
+                        // http or https
+                        arrImg.push(el);
+                    } else {
+                        // 非http or https开头
+                        // 本地文件
+                        let firstStr = el.charAt(0);
+                        if (firstStr == '/') {
+                            el = el.substr(1); // 删除第一个字符 '/',因为 configRoot最后一个字符为 /
+                        }
+                        el = configRoot + el;
+                        arrImg.push(el);
+                    }
+                })
+                this.img = arrImg;
+            } else {
+                this.bgColor = prop;
+            }
+        }
+    })
+</script>
+
+<style>
+    .bg-swiper-box {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    .bg-swiper-img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+</style>
 
       </main>
     </div>
