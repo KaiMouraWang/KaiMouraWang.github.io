@@ -632,7 +632,7 @@
 <p>a). creating：使用 create 命令创建容器，这个过程称为创建中 b). created：容器创建出来，但是还没有运行，表示镜像和配置没有错误，容器能够运行在当前平台 c). running：容器的运行状态，里面的进程处于 up 状态，正在执行用户设定的任务 d). stopped：容器运行完成，或者运行出错，或者 stop 命令之后，容器处于暂停状态。这个状态，容器还有很多信息保存在平台中，并没有完全被删除</p>
 <p><code>2.容器镜像标准（image spec）</code></p>
 <p>a). 文件系统：以 layer 保存的文件系统，每个 layer 保存了和上层之间变化的部分，layer 应该保存哪些文件，怎么表示增加、修改和删除的文件等; b). config 文件：保存了文件系统的层级信息（每个层级的 hash 值，以及历史信息），以及容器运行时需要的一些信息（比如环境变量、工作目录、命令参数、mount 列表），指定了镜像在某个特定平台和系统的配置。比较接近我们使用 docker inspect <image_id> 看到的内容; c). manifest 文件：镜像的 config 文件索引，有哪些 layer，额外的 annotation 信息，manifest 文件中保存了很多和当前平台有关的信息; d). index 文件：可选的文件，指向不同平台的 manifest 文件，这个文件能保证一个镜像可以跨平台使用，每个平台拥有不同的 manifest 文件，使用 index 作为索引。</p>
-<h2 id="Related-Quiz"><a href="#Related-Quiz" class="headerlink" title="Related Quiz:"></a>Related Quiz:</h2><p>Q:Which service simplifies the process of configuring, deploying, and  managing a simple containerized application on the Azure cloud?</p>
+<h2 id="Related-Quiz"><a href="#Related-Quiz" class="headerlink" title="Related Quiz:"></a>Related Quiz:</h2><p>Q: Which service simplifies the process of configuring, deploying, and  managing a simple containerized application on the Azure cloud?</p>
 <ol>
 <li><p>Azure Container Instances</p>
 </li>
@@ -646,6 +646,20 @@
 <p>A: Azure Container Instances</p>
 <p>Containers are somewhat like virtual machines except they don’t include the operating system. This makes it easy to deploy them because they’re very lightweight compared to virtual machines. In fact, containers run on virtual machines.</p>
 <p>Microsoft provides a variety of ways to run containers. The simplest way is to use Azure Container Instances. This service lets you run a container using a single command.</p>
+<hr>
+<p>Q: What Azure Cloud compute service is useful when planning a ‘lift-and-shift” migration of an application from an on-premises environment to the Azure Cloud?</p>
+<ol>
+<li><p>Azure Virtual Machines</p>
+</li>
+<li><p>Azure Functions</p>
+</li>
+<li><p>Azure Container Instances</p>
+</li>
+<li><p>Azure DevOps</p>
+</li>
+</ol>
+<p>A: Azure Container Instances</p>
+<p>If you currently have an application running on a Windows or Linux server, then the most straightforward way to migrate it to Azure is to do what’s called a “lift and shift” migration. That is, you simply lift the application from your on-premises server and shift it to a virtual server in the cloud. Azure VMs are known as Infrastructure-as-a-Service because they’re traditional IT infrastructure components that are offered as a service.</p>
 <h2 id="References-amp-Credit："><a href="#References-amp-Credit：" class="headerlink" title="References &amp; Credit："></a>References &amp; Credit：</h2><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/qcloud1001/p/9273549.html">https://www.cnblogs.com/qcloud1001/p/9273549.html</a></p>
 <p><a target="_blank" rel="noopener" href="https://www.cio.com/article/2924995/what-are-containers-and-why-do-you-need-them.html">https://www.cio.com/article/2924995/what-are-containers-and-why-do-you-need-them.html</a></p>
 
@@ -694,6 +708,23 @@
 <div class="post-nav">
 
 
+
+  
+  <div class="post-nav-prev post-nav-item">
+    <div class="post-nav-img lazyload" data-original="/medias/7.jpg" style="background-size: cover; 
+      background-position: center center;">
+    </div>
+    <a href="/2021/09/12/redundant/" class="post-nav-link">
+      <div class="title">
+        <i class="fa fa-angle-left"></i> Prev:
+        <div class="title-text">What is &#39;Redundant&#39; Data?</div>
+      </div>
+      
+      <!-- <div class="content">
+        What is ‘Redundant’ Data?When it comes to Data Storage, the 
+      </div> -->
+    </a>
+  </div>
 
 
 
