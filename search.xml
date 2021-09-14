@@ -4,6 +4,41 @@
   
     
     <entry>
+      <title>Agile</title>
+      <link href="/posts/b6d6088d/"/>
+      <url>/posts/b6d6088d/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Agile-敏捷项目管理"><a href="#Agile-敏捷项目管理" class="headerlink" title="Agile  敏捷项目管理"></a>Agile  敏捷项目管理</h1><h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><p>Agile/ˈædʒaɪl/ is the most common <strong>software development</strong> methodology - it is an <strong>iterative</strong>(/‘ɪtərətɪv/<strong>迭代式</strong>) methodology to create software. The simplest and oldest methodology however is the waterfall methodology. The waterfall methodology had some disadvantages which led most companies to adopt the new agile methodology. Both methodologies use the Software Development Lifecycle (SDLC) but implement it in different ways.</p><p><strong>Software Development Lifecycle(SDLC)</strong></p><p>The software development lifecycle is the steps necessary to create any piece of software. It is made up of 6 separate stages: <strong>Requirements, Analysis, Design, Coding, Testing and Operation</strong></p><blockquote><p><code>Although Agile seems to be the most popular software development methodology now, it doesn&#39;t mean Waterfall methodology is out-dated or has no advantage. For example, if you are trying to build a bridge, do you really want to build a MVP(Minimum Viable Product) first then improve it? The answer is definitely no. You would want build it to standard consider the safety issue. So the waterfall would be a better fit in this case.</code></p></blockquote><hr><h2 id="Waterfall-vs-Agile"><a href="#Waterfall-vs-Agile" class="headerlink" title="Waterfall vs Agile"></a>Waterfall vs Agile</h2><p><img "" class="lazyload placeholder" data-original="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/v2-12223b04c233f2e0ad86123e5aec446a_1440w.jpg" src="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/loading.gif"></p><hr><h2 id="Agile-Values-Manifesto-敏捷软件开发宣言"><a href="#Agile-Values-Manifesto-敏捷软件开发宣言" class="headerlink" title="Agile Values / Manifesto 敏捷软件开发宣言"></a>Agile Values / Manifesto <strong>敏捷软件开发宣言</strong></h2><ol><li><p><strong><u>Individuals and Interactions</u> over Processes and Tools</strong></p><p><strong><u>个体和互动</u>  高于  流程和工具</strong></p></li><li><p><strong><u>Working Software</u> over Comprehensive Documentation</strong></p><p><strong><u>可工作的软件</u> 高于 详尽的文档</strong></p></li><li><p><strong><u>Customer Collaboration</u> over Contract Negotiation</strong></p><p><strong><u>客户协作</u>  高于  合同谈判</strong></p></li><li><p><strong><u>Responding to Chang</u>e over Following a Plan</strong></p><p><strong><u>响应变化</u> 高于 遵循计划</strong></p></li></ol><hr><h2 id="Agile-Principles-工作原则"><a href="#Agile-Principles-工作原则" class="headerlink" title="Agile Principles 工作原则"></a>Agile Principles 工作原则</h2><ol><li>​    Our highest priority is to satisfy the customer through early and continuous delivery of valuable software.</li><li>​    Welcome changing requirements, even late in development. Agile processes harness change for the customer’s competitive advantage.</li><li>​    Deliver working software frequently, from a couple of weeks to a couple of months, with a preference to the shorter timescale.</li><li>​    Business people and developers must work together daily throughout the project.</li><li>​    Build projects around motivated individuals. Give them the environment and support they need, and trust them to get the job done.</li><li>​    The most efficient and effective method of conveying information to and within a development team is face-to-face conversation.</li><li>​    Working software is the primary measure of progress.</li><li>​    Agile processes promote sustainable development. The sponsors, developers, and users should be able to maintain a constant pace indefinitely.</li><li>​    Continuous attention to technical excellence and good design enhances agility.</li><li>​    Simplicity - the art of maximising the amount of work not done is essential.</li><li>​    The best architectures, requirements, and designs emerge from self-organising teams.</li><li>​    At regular intervals, the team reflects on how to become more effective, then tunes and adjusts its behaviour accordingly.</li></ol><p><img "" class="lazyload placeholder" data-original="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/v2-c15cd51c61a48138cd4b17579081cf12_1440w.jpg" src="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/loading.gif"></p><h2 id="Empirical-Process-Control"><a href="#Empirical-Process-Control" class="headerlink" title="Empirical Process Control"></a>Empirical Process Control</h2><blockquote><p>empirical /ɪmˈpɪrɪkl/ 经验主义的</p></blockquote><ol><li>Transparency</li><li>Inspection</li><li>Adaptation</li></ol><h2 id="Scrum-and-other-Common-Agile-development-frameworks"><a href="#Scrum-and-other-Common-Agile-development-frameworks" class="headerlink" title="Scrum and other Common Agile development frameworks"></a>Scrum and other Common Agile development frameworks</h2><blockquote><p><strong>Scrum /skrʌm/</strong>  (英式橄榄球)并列争球，密集争球 In rugby, a scrum is a tight group formed by players from both sides pushing against each other with their heads down in an attempt to get the ball.</p></blockquote><p>Scrum is the most common Agile development framework, others are <strong>Kanban</strong>, XP (eXtreme Programming).</p><p><img "" class="lazyload placeholder" data-original="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/000.png" src="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/loading.gif"></p><h2 id="Related-concept-that-might-helped-understand-the-term-“Working-software”"><a href="#Related-concept-that-might-helped-understand-the-term-“Working-software”" class="headerlink" title="Related concept that might helped understand the term “Working software”:"></a>Related concept that might helped understand the term “Working software”:</h2><p>Minimum Viable Product(MVP):</p><p><img "" class="lazyload placeholder" data-original="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/J5LPsyNvGP67SQgew229.webp" src="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/loading.gif"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Agile </category>
+          
+          <category> Software Development </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Agile </tag>
+            
+            <tag> Scrum </tag>
+            
+            <tag> Sprint </tag>
+            
+            <tag> Software Development </tag>
+            
+            <tag> Project Management </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>What is SMB?</title>
       <link href="/posts/34b77a68/"/>
       <url>/posts/34b77a68/</url>
