@@ -611,6 +611,39 @@
       
       <div class="post-content">
         <h1 id="Git-Basics"><a href="#Git-Basics" class="headerlink" title="Git - Basics"></a>Git - Basics</h1><h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><p>Git is used for tracking changes in source code during software development.<br><strong>It is designed for coordinating work amongst programmers, but <u>it can be used to track changes in any set of files</u>.</strong></p>
+<h2 id="Basic-Workflow"><a href="#Basic-Workflow" class="headerlink" title="Basic Workflow"></a>Basic Workflow</h2><p>The basic workflow for using Git includes <strong>staging, committing and pushing changes</strong>.<br>Before a change can be committed it must be staged and to apply your changes for everyone else on the team, the changes must be pushed to the remote repository.</p>
+<hr>
+<h2 id="Common-Commands-and-Concepts"><a href="#Common-Commands-and-Concepts" class="headerlink" title="Common Commands and Concepts"></a><strong>Common Commands and Concepts</strong></h2><h3 id="Get-help-git-help-everyday"><a href="#Get-help-git-help-everyday" class="headerlink" title="Get help ( git help everyday )"></a><strong>Get help ( <u>git help everyday</u> )</strong></h3><p>This open a html on your default browser and you can check the manual of git.</p>
+<h3 id="Cloning-a-Repository-git-clone"><a href="#Cloning-a-Repository-git-clone" class="headerlink" title="Cloning a Repository (git clone)"></a><strong>Cloning a Repository (<em>git clone</em>)</strong></h3><p>To download a remote repository you can use the git clone command and provide the URL of the remote repository. Example:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># git clone [REPOSITORY_URL]</span><br><span class="line">git clone https://github.com/bob-crutchley/vim</span><br></pre></td></tr></table></figure>
+
+<h3 id="Create-an-empty-Git-repository-or-reinitialize-an-existing-one-git-init"><a href="#Create-an-empty-Git-repository-or-reinitialize-an-existing-one-git-init" class="headerlink" title="Create an empty Git repository or reinitialize an existing one(git init)"></a><strong>Create an empty Git repository or reinitialize an existing one(git init)</strong></h3><h3 id="Staging-a-Change-git-add"><a href="#Staging-a-Change-git-add" class="headerlink" title="Staging a Change (git add)"></a><strong>Staging a Change (<em>git add</em>)</strong></h3><p><strong>Staging is the step that you must take before committing a change.</strong><br>Staging is a feature in Git that enables the developer to choose what changes are actually going to get committed to the repository when the commit is made. There is a few ways you stage files:</p>
+<h3 id="Committing-a-Change-git-commit"><a href="#Committing-a-Change-git-commit" class="headerlink" title="Committing a Change (git commit)"></a><strong>Committing a Change (<em>git commit</em>)</strong></h3><p>When you make a commit to a Git repository, you are effectively “saving” the changes that you have staged to the repository.</p>
+<p>Unlike saving files in most other programs, Git also requires <strong>a message</strong> to be saved against the commit along with some basic information about the user from the Git config shown above.</p>
+<p>What you put in this message is important, <strong>so that you understand what it is that you changed on that particular commit</strong>.</p>
+<blockquote>
+<p>‘message’ here is like a ‘flag’ or ‘tag’, it is not the change you made in git add, it is just a reminder/sticker of what you have done.</p>
+<p>commit的message是为了提醒你在git add里做的改动的总结/提醒/便签，并非是你要进行改动的内容</p>
+</blockquote>
+<p><strong>Commits can be reverted</strong>, so it helps when there is a concise message about what was implemented or removed.</p>
+<h4 id="Troubleshooting"><a href="#Troubleshooting" class="headerlink" title="Troubleshooting:"></a><strong>Troubleshooting:</strong></h4><p>If getting ^X mode (^]^D^E^F^I^K^L^N^O^Ps^U^V^Y) at bottom of screen(whether it’s on Mac or Windows), it’s because the default text editor is <strong>vim</strong>. If you wish to use <strong>Nano</strong> you should type the following command:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global core.editor &quot;nano&quot;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Checking-your-commit-git-log"><a href="#Checking-your-commit-git-log" class="headerlink" title="Checking your commit(git log)"></a><strong>Checking your commit(<em>git log</em>)</strong></h3><h3 id="Local-Repository-Status-git-status"><a href="#Local-Repository-Status-git-status" class="headerlink" title="Local Repository Status (git status)"></a><strong>Local Repository Status (git status)</strong></h3><p>Knowing the current state of your local repository is very useful so that you can understand what commands to run.<br>For instance, <strong>how can you know what files have been staged and not staged</strong>?</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<hr>
+<h2 id="Abbreviations-Acronym"><a href="#Abbreviations-Acronym" class="headerlink" title="Abbreviations_Acronym"></a>Abbreviations_Acronym</h2><p>It’s not necessary to memorize these, but it helps you understand the command better.</p>
+<blockquote>
+<p>cd: change directory</p>
+<p>pwd: print work directory</p>
+<p>ls: list</p>
+<p>mkdir: make directory</p>
+</blockquote>
 
       </div>
       <div class="post-tags-categories">
