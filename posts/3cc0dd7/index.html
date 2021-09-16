@@ -612,7 +612,7 @@
       <div class="post-content">
         <h1 id="Git-Branch"><a href="#Git-Branch" class="headerlink" title="Git_Branch"></a>Git_Branch</h1><p><img "" class="lazyload placeholder" data-original="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/branch.jpg" src="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/loading.gif"></p>
 <blockquote>
-<p>Branch 分支</p>
+<p>Branch 分支 - 可以理解为“树”的“分支”</p>
 </blockquote>
 <p>正常情况下，如果想要一个脱离主线的分支来开发项目，常常需要完全创建一个源代码目录的副本，对大项目来说，这样的过程会耗费很多时间，所以这是一个比较低效的做法。但是<strong>git分支则不同，你会发现使用分支和合并分支是非常方便的</strong>。</p>
 <p>首先要知道<u><strong>git保存数据不是保存的文件的差异或变化</strong></u> ，而是一系列<u><strong>不同时刻</strong></u>( <u><strong>timelines</strong></u> )的<u><strong>文件快照</strong></u>（ <u><strong>snapshots</strong></u> ) 。<br>在进行提交操作时，Git会保存一个提交对象(blob对象)，该提交对象会包含一个指向暂存内容快照的指针，还包含作者的姓名,邮箱和提交时输入的信息以及指向它父对象的指针，首次提交时提交对象没有父对象，普通提交产生的提交对象有一个父对象，而由多个分支合并产生的提交对象 会有多个父对象。</p>
