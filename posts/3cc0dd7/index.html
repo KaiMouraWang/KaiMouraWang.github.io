@@ -614,6 +614,35 @@
 <blockquote>
 <p>Branch 分支 - 可以理解为“树”的“分支”</p>
 </blockquote>
+<p>Branches are kinda like a Parallel universes of Marvel.</p>
+<p>With <strong>Version Control Systems (VSC)</strong>, like Git, we can separate the codebase on to many different branches.</p>
+<h2 id="Git-Branching-Workflow-Example"><a href="#Git-Branching-Workflow-Example" class="headerlink" title="Git Branching Workflow Example"></a>Git Branching Workflow Example</h2><p>The two main branches that exist are the develop and main branches.</p>
+<h3 id="New-Application-Features"><a href="#New-Application-Features" class="headerlink" title="New Application Features"></a>New Application Features</h3><p>Conventionally, new features are to be created in <strong>feature branch</strong>es from the develop branch, and, once the feature has been developed, the code can be reviewed by a peer in a Pull Request and deployed to a test environment for Integration or User Acceptance Testing.</p>
+<p>If all testing and reviews pass, the <strong>Pull Request</strong> can be approved and <strong>merged into</strong> the <code>develop</code> branch.</p>
+<h3 id="Releases"><a href="#Releases" class="headerlink" title="Releases"></a>Releases</h3><p>When there is a release approaching, a <strong>release candidate branch</strong> can be made.</p>
+<p>On this new branch, further testing of all the new features working together can take place, and more candidates can be made on this branch to amend any issues.</p>
+<p>Once testing has passed and the release has been signed off by the individual accountable for releases, the release candidate branch can be merged into master for the release to be deployed to a production environment.</p>
+<p><strong>Once merged into the <u>master branch</u>, the code can be tagged or <u>marked as a release</u> on the Git service that you are using.</strong></p>
+<p><strong>Changes must also be <u>merged back</u> into the <u>develop branch</u></strong>, so that any changes that were made to the release candidate will also be included in future releases.</p>
+<p><img "" class="lazyload placeholder" data-original="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/branches.png" src="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/loading.gif"></p>
+<h2 id="Creating-and-Deleting-Branches"><a href="#Creating-and-Deleting-Branches" class="headerlink" title="Creating and Deleting Branches"></a>Creating and Deleting Branches</h2><p>Creating and Deleting Branches:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch</span><br></pre></td></tr></table></figure>
+
+<p>To create a new branch, the command is:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch [NEW_BRANCH_NAME]</span><br></pre></td></tr></table></figure>
+
+<p>If you want to <strong>work on a new branch straight away</strong>, you can create a branch and checkout to it at the same time:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b [NEW_BRANCH_NAME]</span><br></pre></td></tr></table></figure>
+
+<p>When you have finished working on your branch, and your code has been merged to <code>main</code>, it is good practice to <strong>delete the branch</strong>:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -d [BRANCH_NAME]</span><br></pre></td></tr></table></figure>
+
+<p>If you aren’t closing a Pull Request and find yourself needing to close a branch, you can use the following command to delete a branch on your  remote repository (again, likely on GitHub):</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push --delete origin [BRANCH_NAME]</span><br></pre></td></tr></table></figure>
+
+
+
+<hr>
 <p>正常情况下，如果想要一个脱离主线的分支来开发项目，常常需要完全创建一个源代码目录的副本，对大项目来说，这样的过程会耗费很多时间，所以这是一个比较低效的做法。但是<strong>git分支则不同，你会发现使用分支和合并分支是非常方便的</strong>。</p>
 <p>首先要知道<u><strong>git保存数据不是保存的文件的差异或变化</strong></u> ，而是一系列<u><strong>不同时刻</strong></u>( <u><strong>timelines</strong></u> )的<u><strong>文件快照</strong></u>（ <u><strong>snapshots</strong></u> ) 。<br>在进行提交操作时，Git会保存一个提交对象(blob对象)，该提交对象会包含一个指向暂存内容快照的指针，还包含作者的姓名,邮箱和提交时输入的信息以及指向它父对象的指针，首次提交时提交对象没有父对象，普通提交产生的提交对象有一个父对象，而由多个分支合并产生的提交对象 会有多个父对象。</p>
 <p>这里举一个例子，假设现在工作目录中有三个将要被暂存和提交的文件，当使用git commit进行提交操作时，git会先计算每个子目录的校验和，然后在git仓库中为这些校验和保存为树对象，随后Git便会创建一个提交对象，它除了上面提到的那些信息外，还包含指向这个树对象的指针。现在仓库中有五个对象：三个blob对象（保存着文件快照）一个树对象（记录着目录结构和blob对象 索引）以及一个提交对象（包含着指向前述树对象的指针和所有提交信息）</p>
@@ -673,7 +702,8 @@
         <div class="title-text">Git_Basics</div>
       </div>
       <!-- <div class="content">
-        Git_BasicsOverviewGit is used for tracking changes in source
+        Git_Basics
+I’m an egotistical bastard, and I name all my pro
       </div> -->
     </a>
   </div>

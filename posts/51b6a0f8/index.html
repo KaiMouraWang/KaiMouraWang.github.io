@@ -610,7 +610,11 @@
     <article class="post post-detail">
       
       <div class="post-content">
-        <h1 id="Git-Basics"><a href="#Git-Basics" class="headerlink" title="Git_Basics"></a>Git_Basics</h1><h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><p>Git is used for tracking changes in source code during software development.<br><strong>It is designed for coordinating work amongst programmers, but <u>it can be used to track changes in any set of files</u>.</strong></p>
+        <h1 id="Git-Basics"><a href="#Git-Basics" class="headerlink" title="Git_Basics"></a>Git_Basics</h1><blockquote>
+<p><em>I’m an egotistical bastard, and I name all my projects after myself. First Linux, now git.</em></p>
+<p><em>_Linus Torvalds</em></p>
+</blockquote>
+<h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><p>Git is used for tracking changes in source code during software development.<br><strong>It is designed for coordinating work amongst programmers, but <u>it can be used to track changes in any set of files</u>.</strong></p>
 <blockquote>
 <p>However, 所有的版本控制系统，其实只能跟踪文本文件的改动，比如TXT文件，网页，所有的程序代码等等，Git也不例外。版本控制系统可以告诉你每次的改动，比如在第5行加了一个单词“Linux”，在第8行删了一个单词“Windows”。而图片、视频这些二进制文件，虽然也能由版本控制系统管理，但没法跟踪文件的变化，只能把二进制文件每次改动串起来，也就是只知道图片从100KB改成了120KB，但到底改了啥，版本控制系统不知道，也没法知道。</p>
 </blockquote>
@@ -626,6 +630,15 @@
 <p>Setting Config Locally</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># git config user.name &quot;[USERNAME]&quot;</span><br><span class="line">git config user.name &quot;bob-crutchley&quot;</span><br><span class="line"># git config user.email &quot;[EMAIL]&quot;</span><br><span class="line">git config user.email &quot;bob@email.com&quot;</span><br></pre></td></tr></table></figure>
 
+<h3 id="Forking"><a href="#Forking" class="headerlink" title="Forking"></a>Forking</h3><p>远程删除：</p>
+<p>git remote -v 查看远程库信息</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git remote -v</span><br><span class="line">origin  git@github.com:michaelliao/learn-git.git (fetch)</span><br><span class="line">origin  git@github.com:michaelliao/learn-git.git (push)</span><br></pre></td></tr></table></figure>
+
+<p>git remote rm <name> 比如 in this case ‘origin’:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git remote rm origin</span><br></pre></td></tr></table></figure>
+
+<p>Pull Request</p>
+<p>让别人pull你写的东西。 </p>
 <hr>
 <blockquote>
 <p>创建directory 或 进入directory - 这个directory文件夹就是你想要工作的文件夹</p>
@@ -727,7 +740,7 @@
 
 Branch 分支 - 可以理解为“树”的“分支”
 
-正常情况下，如果想要一个脱离主线的分支来开
+Branches are kinda li
       </div> -->
     </a>
   </div>
