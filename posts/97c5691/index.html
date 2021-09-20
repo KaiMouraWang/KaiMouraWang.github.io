@@ -683,8 +683,8 @@
 <p>散列法（Hashing）或哈希法是一种将<strong>字符组成的字符串转换为固定长度（一般是更短长度）的数值或索引值</strong>的方法，称为散列法，也叫哈希法。由于通过更短的哈希值比用原始值进行数据库搜索更快，<strong>这种方法一般用来在数据库中建立索引并进行搜索，同时还用在各种解密算法中</strong>。</p>
 <p>哈希的英文意思为“无用信息”，因此哈希函数一词的由来可能是因为最终形成的哈希表里面是各种看起来没有用的数字。除用来快速搜索数据外，散列法还用来完成签名的加密解密工作，这种签名可以用来对收发消息时的用户签名进行鉴权。<strong>先用哈希函数对数据签名进行转换，然后将数字签名本身和转换后的信息摘要分别独立的发送给接收人。通过利用和发送人一样的哈希函数，接收人可以从数字签名获得一个信息摘要，然后将此摘要同传送过来的摘要进行比较，这两个值相等则表示数字签名有效。</strong></p>
 <p>利用哈希函数对数据库中的原始值建立索引，以后每获取一次数据时都要利用哈希函数进行重新转换。因此，<strong>哈希函数始终是单向操作</strong>。没有必要通过分析哈希值来试图逆推哈希函数。实际上，一个典型的哈希函数是不可能逆推出来的。好的哈希函数还应该避免对于不同输入产生相同的哈希值的情况发生。如果产生了哈希值相同的情况，称为冲突。可接受的哈希函数应该将冲突情况的可能性降到非常小。</p>
-<h3 id="1-确定性"><a href="#1-确定性" class="headerlink" title="1.确定性"></a><strong>1.确定性</strong></h3><p>如果两个散列值是不相同的（根据同一函数），那么这两个散列值的原始输入也是不相同的。</p>
-<h3 id="2-哈希碰撞（Hash-Collision）"><a href="#2-哈希碰撞（Hash-Collision）" class="headerlink" title="2.哈希碰撞（Hash Collision）"></a><strong>2.哈希碰撞（Hash Collision）</strong></h3><p>散列函数的输入和输出不是唯一对应关系的，如果两个散列值相同，两个输入值很可能是相同的，但也可能不同。</p>
+<h3 id="Characteristics-of-Hash"><a href="#Characteristics-of-Hash" class="headerlink" title="Characteristics of Hash"></a>Characteristics of Hash</h3><h4 id="1-确定性"><a href="#1-确定性" class="headerlink" title="1.确定性"></a><strong>1.确定性</strong></h4><p>如果两个散列值是不相同的（根据同一函数），那么这两个散列值的原始输入也是不相同的。</p>
+<h4 id="2-哈希碰撞（Hash-Collision）"><a href="#2-哈希碰撞（Hash-Collision）" class="headerlink" title="2.哈希碰撞（Hash Collision）"></a><strong>2.哈希碰撞（Hash Collision）</strong></h4><p>散列函数的输入和输出不是唯一对应关系的，如果两个散列值相同，两个输入值很可能是相同的，但也可能不同。</p>
 <blockquote>
 <p>collision / <strong>kəˈlɪʒn</strong> / 碰撞; 冲突</p>
 </blockquote>
@@ -695,8 +695,8 @@
 <p>这涉及到数学中比较好理解的一个原理：<strong>抽屉原理/鸽巢原理 <u>Pigeonhole principle</u></strong> 。</p>
 <p>抽屉原理：<strong>桌上有十个苹果，要把这十个苹果放到九个抽屉里，无论怎样放，我们会发现至少会有一个抽屉里面至少放两个苹果</strong>。这一现象就是我们所说的“抽屉原理”。</p>
 <p><strong>对于散列表而言，无论设置的存储区域（n）有多大，当需要存储的数据大于 n 时，那么必然会存在哈希值相同的情况。这就是所谓的散列冲突。</strong></p>
-<h3 id="3-不可逆性"><a href="#3-不可逆性" class="headerlink" title="3.不可逆性"></a><strong>3.不可逆性</strong></h3><p>一个哈希值对应无数个明文，理论上你并不知道哪个是。</p>
-<h3 id="4-混淆特性"><a href="#4-混淆特性" class="headerlink" title="4.混淆特性"></a><strong>4.混淆特性</strong></h3><p>输入一些数据计算出散列值，然后部分改变输入值，一个具有强混淆特性的散列函数会产生一个完全不同的散列值。</p>
+<h4 id="3-不可逆性"><a href="#3-不可逆性" class="headerlink" title="3.不可逆性"></a><strong>3.不可逆性</strong></h4><p>一个哈希值对应无数个明文，理论上你并不知道哪个是。</p>
+<h4 id="4-混淆特性"><a href="#4-混淆特性" class="headerlink" title="4.混淆特性"></a><strong>4.混淆特性</strong></h4><p>输入一些数据计算出散列值，然后部分改变输入值，一个具有强混淆特性的散列函数会产生一个完全不同的散列值。</p>
 <hr>
 <h3 id="Common-Hash-Function"><a href="#Common-Hash-Function" class="headerlink" title="Common Hash Function"></a><strong>Common Hash Function</strong></h3><p><strong>MD5</strong>：Message-Digest Algorithm 5</p>
 <p><strong>SHA-1</strong> ：Secure Hash Algorithm 1</p>
