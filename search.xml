@@ -29,31 +29,6 @@
     
     
     <entry>
-      <title>Security</title>
-      <link href="/posts/c59bd5c1/"/>
-      <url>/posts/c59bd5c1/</url>
-      
-        <content type="html"><![CDATA[<h1 id="Security"><a href="#Security" class="headerlink" title="Security"></a>Security</h1><p><a href="https://www.httpbin.org/">https://www.httpbin.org/</a></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Security </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Security </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Networking</title>
       <link href="/posts/c2bcd5ce/"/>
       <url>/posts/c2bcd5ce/</url>
@@ -71,49 +46,6 @@
         <tags>
             
             <tag> Networking </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Jira</title>
-      <link href="/posts/1565726e/"/>
-      <url>/posts/1565726e/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      <categories>
-          
-          <category> Agile </category>
-          
-          <category> Software Development </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Agile </tag>
-            
-            <tag> Scrum </tag>
-            
-            <tag> Software Development </tag>
-            
-            <tag> Project Management </tag>
-            
-            <tag> DevOps </tag>
-            
-            <tag> Kanban </tag>
-            
-            <tag> Github </tag>
-            
-            <tag> Gitlab </tag>
-            
-            <tag> Jira </tag>
             
         </tags>
       
@@ -322,9 +254,9 @@
             
             <tag> Azure </tag>
             
-            <tag> Data Storage </tag>
-            
             <tag> SMB </tag>
+            
+            <tag> Data Storage </tag>
             
         </tags>
       
@@ -351,11 +283,11 @@
       
         <tags>
             
+            <tag> Data Storage </tag>
+            
             <tag> Redundant </tag>
             
             <tag> Redundancy </tag>
-            
-            <tag> Data Storage </tag>
             
         </tags>
       
