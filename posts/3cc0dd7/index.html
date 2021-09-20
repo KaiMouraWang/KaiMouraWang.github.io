@@ -555,6 +555,21 @@
         
  <!-- prismjs 代码高亮 -->
  
+    
+    <link href="/js/prism/prism-line-numbers.css" rel="stylesheet">
+    
+        <link href="/js/prism/prism-okaidia.min.css" rel="stylesheet">
+    
+
+    <style>
+        pre[class*="language-"] {
+            overflow-y: hidden;
+        }
+        .line-numbers .line-numbers-rows {
+            border: none;
+        }
+    </style>
+  
 
 
 <div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -1;"></div>
@@ -626,19 +641,19 @@
 <p><strong>Changes must also be <u>merged back</u> into the <u>develop branch</u></strong>, so that any changes that were made to the release candidate will also be included in future releases.</p>
 <p><img "" class="lazyload placeholder" data-original="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/branches.png" src="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/loading.gif"></p>
 <h2 id="Creating-and-Deleting-Branches"><a href="#Creating-and-Deleting-Branches" class="headerlink" title="Creating and Deleting Branches"></a>Creating and Deleting Branches</h2><p>Creating and Deleting Branches:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">git branch<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>To create a new branch, the command is:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch [NEW_BRANCH_NAME]</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">git branch [NEW_BRANCH_NAME]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>If you want to <strong>work on a new branch straight away</strong>, you can create a branch and checkout to it at the same time:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b [NEW_BRANCH_NAME]</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">git checkout -b [NEW_BRANCH_NAME]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>When you have finished working on your branch, and your code has been merged to <code>main</code>, it is good practice to <strong>delete the branch</strong>:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -d [BRANCH_NAME]</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">git branch -d [BRANCH_NAME]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>If you aren’t closing a Pull Request and find yourself needing to close a branch, you can use the following command to delete a branch on your  remote repository (again, likely on GitHub):</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push --delete origin [BRANCH_NAME]</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">git push --delete origin [BRANCH_NAME]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 
 

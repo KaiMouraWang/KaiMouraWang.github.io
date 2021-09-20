@@ -11,7 +11,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-  <title>Kai Moura Wang</title>
+  <title>Security | Kai Moura Wang</title>
 
   <link rel="icon" type="image/jpeg" href="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/20210828122447.jpg">
   <link rel="stylesheet" href="https://at.alicdn.com/t/font_1911880_c1nvbyezg17.css">
@@ -552,820 +552,363 @@
     <!-- 内容区域 -->
     <div id="safearea">
       <main class="main" id="pjax-container" style="margin-top: 0;">
-        <!-- 首页轮播 -->
-<link href="/js/swiper/swiper@5.4.1.min.css" rel="stylesheet">
-
-
-  <link href="/js/vue-typed-js/index.css" rel="stylesheet">
-
-
-
-
-
-
-<div class="swiper-length" style="display: none;">0</div>
-<div id="appSwiper"
-  class="swiper-no-swiping"
-  @mouseenter="stopAutoPlay()" 
-  @mouseleave="startAutoPlay()"
->
-  <swiper v-cloak ref="mySwiper" :options="swiperOptions" @slideChangeTransitionEnd="slideChangeTransitionEnd">
+        
+ <!-- prismjs 代码高亮 -->
+ 
     
-      <swiper-slide>
-        <div class="item swiper-lazy" data-background="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/4.gif" style="background-size: 300000px; 
-          background-position: left center;" style="position: relative;">
-          <div class="swiper-bgmask" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;"></div>
-            <div class="flag">
-              
-              <div class="img-mask swiper-lazy swiper-default-bgImg" data-background="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/4.gif" style="height: 100%; background-size: cover; 
-                background-position: center center;">
-                <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>   
-              </div>
-              <div class="flag-text">
-                <div class="flag-text-content">
-                  <div class="title ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">Learn Data Science From ZERO:</div>
-                  
-                    <div class="ani animated default-excerpt" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">
-                      <vue-typed-js :strings="defaultDesc" :loop="defaultDescTypedLoop" :type-speed="80" :back-speed="40">
-                        <h1 class="typing"></h1>
-                      </vue-typed-js>
-                    </div>
-                    
-                </div>
-                <div style="display: flex;" class="flag-text-btns">
-                  
-                    <div class="ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a target="_blank" rel="noopener" href="https://kaimourawang.com/about/" class="read-more swiper-btn-color" style="display: inline-block; z-index:1;">About Me</a></div>
-                  
-                  
-                    <div class="ani animated" style="margin-left: 10px;" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a target="_blank" rel="noopener" href="https://kaimourawang.com/archives/" class="read-more swiper-btn-color2" style="display: inline-block; z-index:1;border: 1px solid white;">Start Now</a></div>
-                  
-                </div>
-              </div>
-            </div>
-          </div>
-      </swiper-slide>
+    <link href="/js/prism/prism-line-numbers.css" rel="stylesheet">
     
-  </swiper>
-  
-    <div id="scroll-down" @click="toPostContent()">
-      <a href="javascript:;">
-        <i class="fa fa-angle-down scroll-down-effects"></i>
-      </a>
-    </div>
-  
-  <canvas id="header_canvas"style="position:absolute;bottom:0;width:100%;pointer-events:none;"></canvas>
-</div>
+        <link href="/js/prism/prism-okaidia.min.css" rel="stylesheet">
+    
 
-<script type="text/javascript">
-  Vue.use(window.VueAwesomeSwiper)
-</script>
-
-<script>
-  var autoplay = JSON.parse('false');
-  var delay = '5000';
-  var loop = JSON.parse('true') ? false : JSON.parse('true');
-  var effect = 'slide';
-  var swiperLength = parseInt(document.querySelector(".swiper-length").innerText);
-  var defaultDesc = '🚀Progress with Kai Moura Wang💻';
-  defaultDesc = defaultDesc.split(',');
-  var defaultDescTypedLoop = JSON.parse('true');
-  var vm = new Vue({
-    el: '#appSwiper',
-    data: {
-      defaultDesc: defaultDesc,
-      defaultDescTypedLoop,
-      swiperOptions: {
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true // 允许点击小圆点跳转
-        },
-        loop: loop ? true : false,
-        effect, // fade
-        autoplay: (autoplay && swiperLength > 1) ? {
-  　　　　delay,
-  　　　　disableOnInteraction: false // 手动切换之后继续自动轮播
-    　　} : false,
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-        lazy: {
-          loadPrevNext: true,
-        },
-        on:{
-          init: function() {
-            swiperAnimateCache(this); //隐藏动画元素 
-            swiperAnimate(this); //初始化完成开始动画
-          }, 
-          slideChangeTransitionEnd: function(){ 
-            swiperAnimate(this); //每个slide切换结束时也运行当前slide动画
-          } 
+    <style>
+        pre[class*="language-"] {
+            overflow-y: hidden;
         }
-        // Some Swiper option/callback...
-      }
-    },
-    computed: {
-      swiper() {
-        return this.$refs.mySwiper.$swiper
-      }
-    },
-    mounted() {
-      // console.log('Current Swiper instance object', this.swiper)
-      // this.swiper.slideTo(0, 1000, false)
-    },
-    methods: {
-      stopAutoPlay() {
-        (autoplay && swiperLength > 1) && this.swiper.autoplay.stop();
-      },
-      startAutoPlay() {
-        (autoplay && swiperLength > 1) && this.swiper.autoplay.start();
-      },
-      slideChangeTransitionEnd() {
-        console.log('1');
-      },
-      toPostContent() {
-        const fullHeight = $(window).height() - 60;
-        $('html,body').animate({scrollTop: fullHeight},500);
-      }
-    },
-    created() {}
-  })
-</script>
-
-  <script src="/js/bubble/homeBubble.js"></script>
-
-<style>
-#appSwiper {
-  position: relative;
-  user-select: none;
-  overflow: hidden;
-}
-.default-excerpt {
-  font-size: 1.6rem;
-  margin-top: 1rem;
-  font-family: Titillium Web,'PingFang SC','Hiragino Sans GB','Microsoft JhengHei','Microsoft YaHei',sans-serif;
-}
-.bottom-one-btn {
-  margin-top: 15px;
-}
-.swiper-container {
-  overflow: hidden;
-  z-index: 0;
-}
-.swiper-slide {
-  height: 350px;
-  position: relative;
-}
-.swiper-button-prev,
-.swiper-button-next {
-  padding: 10px 10px;
-  transition: background 0.2s;
-}
-.swiper-button-prev:hover,
-.swiper-button-next:hover {
-  background: rgba(0, 0, 0, 0.2);
-}
-.swiper-slide .item {
-  width: 100%;
-  height: 100%;
-}
-.flag {
-  position: relative;
-  width: 60%;
-  margin: 0 auto;
-  color: #ffffff;
-  height: 100%;
-  background: #000;
-}
-.flag img {
-  min-height: 100%;
-}
-.flag-text {
-  position: absolute;
-  top: 50px;
-  left: 50px;
-  width: 80%;
-  height: 280px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  z-index: 9999;
-}
-.flag-text .title {
-  font-size: 1.8rem;
-  font-family: Long Cang,cursive;
-}
-.flag-text .title a {
-  color: #fff;
-  transition: color 0.3s;
-}
-.flag-text .title a:hover {
-  color: #8732a8;
-}
-.flag-text .excerpt {
-  color: #eee;
-  font-family: Ubuntu,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
-  width: 70%;
-  line-height: 30px;
-  height: 150px;
-  margin-top: 2%;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 5;
-  overflow: hidden;
-}
-.swiper-pagination-bullet-active {
-  opacity: 1;
-  background-color: #42b983;
-}
-.img-mask {
-  opacity:0.6; filter: alpha(opacity=60);
-}
-.flag-text .read-more {
-  margin-bottom: 30px;
-  padding: 5px 15px;
-  color: #ffffff;
-  border-radius: 20px;
-}
-#scroll-down {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 2.5rem;
-  color: #fff;
-  cursor: pointer;
-  z-index: 2;
-}
-#scroll-down a {
-  color: #fff;
-}
-@-webkit-keyframes rightan
-  {
+        .line-numbers .line-numbers-rows {
+            border: none;
+        }
+    </style>
   
-  0%
-  {
-    transform: translateY(0);
-    opacity: 0.5;
-  }
-  50% {
-    transform: translateY(-30px);
-    opacity: 1;
-  }
-  100%
-  {
-    transform: translateY(0);
-    opacity: 0.5;
-  }
-}
-.scroll-down-effects {
-  animation: rightan 1.5s infinite;
-}
-/* 当头部导航设置为背景透明的时候 */
-
-  .swiper-slide {
-    height: 400px;
-  }
-  .flag-text {
-    top: 80px;
-  }
 
 
-@media (min-width: 992px) {
-  .swiper-button-prev {
-    margin-left: 20%;
-    transform: translateX(-180%);
-  }
-  .swiper-button-next {
-    margin-right: 20%;
-    transform: translateX(180%);
-  }
-  .flag-text .title {
-    width: 80%;
-    line-height: 35px;
-    max-height: 70px;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    overflow: hidden;
-  }
-}
-@media (max-width: 992px) {
-  .flag {
-    width: 100%;
-  }
-  .flag-text .title {
-    font-size: 1.5rem;
-    margin-top: 50px;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    overflow: hidden;
-  }
-  .flag-text {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 80%;
-    height: 100%;
-    margin-left: 50%;
-    transform: translateX(-50%);
-  }
-  .flag-text .excerpt {
-    width: 100%;
-    line-height: 25px;
-    height: 125px;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 5;
-    overflow: hidden;
-  }
-  .flag-text .read-more {
-    margin-bottom: 80px;
-  }
-}
-@media (max-width: 992px) and (min-width: 551px) {
-  .flag-text .excerpt {
-    width: 70%;
-  }
-}
-@media (max-width: 551px) {
-  .swiper-slide {
-    height: 250px;
-  }
-  .flag-text .title {
-    line-height: 30px;
-    max-height: 60px;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    overflow: hidden;
-    margin-top: 20px;
-  }
-  .flag-text .excerpt {
-    font-size: 1rem;
-    line-height: 20px;
-    height: 80px;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 4;
-  }
-  .flag-text .excerpt { 
-    margin-top: 10px;
-  }
-  .flag-text .read-more {
-    margin-top: 10px;
-    margin-bottom: 50px;
-  }
-  .swiper-button-prev,
-  .swiper-button-next {
-    transform: scale(0.5);
-  }
-  .swiper-button-prev {
-    left: 0;
-  }
-  .swiper-button-next {
-    right: 0;
-  }
-}
-/* 当头部导航设置为背景透明的时候 */
+<div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -1;"></div>
 
-  @media (max-width: 992px) {
-    .flag-text {
-      top: 60px;
-      height: 80%;
-    }
-  }
-  @media (max-width: 551px) {
-    .swiper-slide {
-      height: 310px;
-    }
-  }
-
-
-/* 文字或者按钮居中显示 */
-
-  .flag-text {
-    left: 10%;
-  }
-  .flag-text .flag-text-content {
-    width: 100%;
-    text-align: center;
-  }
-  .flag-text .title {
-    width: 100%;
-    text-align: center;
-  }
-  .flag-text .excerpt { 
-    width: 100%;
-    text-align: center;
-  }
-  .bottom-one-btn {
-    display: flex;
-    justify-content: center;
-  }
-  .default-excerpt {
-    display: flex;
-    justify-content: center;
-    font-size: 1.6rem;
-    font-family: Titillium Web,'PingFang SC','Hiragino Sans GB','Microsoft JhengHei','Microsoft YaHei',sans-serif;
-  }
-  .flag-text-btns {
-    justify-content: center;
-  }
-  @media (min-width: 992px) {
-    .flag-text .excerpt {
-      line-height: 30px;
-      display: -webkit-box;
-      -webkit-box-orient: vertical;
-      -webkit-line-clamp: 5;
-      overflow: hidden;
-    }
-  }
-  @media (max-width: 992px) {
-    .flag-text {
-      margin-left: 0;
-      transform: translateX(0);
-    }
-  }
+<!-- 文章详情页顶部图片和标题 -->
 
 
 
 
-/* 全屏显示 */
-
-  .flag {
-    width: 100%;
-  }
-  .swiper-slide {
-    height: calc(100vh - 60px);
-    
-      height: 100vh;
-    
-  }
-  .flag-text {
-    top: 50%;
-    left: 15%;
-    transform: translateY(-50%);
-    width: 70%;
-    height: auto;
-  }
-  .flag-text .title {
-    font-size: 2.8rem;
-    line-height: 1.5em;
-    max-height: none;
-    /* overflow: visible; */
-  }
-  .flag-text .excerpt {
-    font-size: 1.25rem;
-    height: 150px;
-  }
-  .flag-text .read-more {
-    margin-top: 10px;
-  }
-  .swiper-button-prev,
-  .swiper-button-next {
-    margin-top: -60px!important;
-  }
-  .swiper-btn-color,
-  .swiper-btn-color2 {
-    background-color: transparent;
-    border: 1px solid #fff;
-  }
-  .swiper-btn-color:hover,
-  .swiper-btn-color2:hover {
-    background-color: #8732a8;
-    border: 1px solid #8732a8!important;
-  }
-  .flag-text-btns {
-    justify-content: center;
-  }
-  .swiper-button-prev {
-    margin-left: 10px;
-    transform: translateX(0);
-    border-radius: 50%;
-    padding: 0;
-    width: 50px;
-    height: 50px;
-  }
-  .swiper-button-next {
-    margin-right: 10px;
-    transform: translateX(0);
-    border-radius: 50%;
-    padding: 0;
-    width: 50px;
-    height: 50px;
-  }
-  .swiper-button-next:after, .swiper-button-prev:after {
-    font-size: 1.2rem;
-  }
-  @media (min-width: 992px) {
-    .flag-text .excerpt {
-      line-height: 35px;
-      height: 175px;
-    }
-    .default-excerpt {
-      min-height: 150px;
-    }
-    .typed-element {
-      align-items: unset;
-    }
-  }
-  @media (max-width: 992px) {
-    .flag-text {
-      margin-left: 0;
-      height: 60%;
-      top: 55%;
-    }
-    .flag-text .title {
-      font-size: 2.4rem;
-      margin-top: 0;
-      display: -webkit-box;
-      -webkit-box-orient: vertical;
-      -webkit-line-clamp: 2;
-      overflow: hidden;
-    }
-    .flag-text .excerpt {
-      line-height: 35px;
-      height: 185px;
-    }
-    .flag-text .read-more {
-      margin-top: 20px;
-    }
-  }
-  @media (max-width: 551px) {
-    .flag-text {
-      height: 60%;
-    }
-    .flag-text .title {
-      font-size: 2.2rem;
-    }
-    .flag-text .excerpt {
-      line-height: 30px;
-    }
-    .flag-text .read-more {
-      margin-top: 50px;
-      padding: 10px 30px;
-    }
-    .swiper-button-prev {
-      margin-left: 0;
-    }
-    .swiper-button-next {
-      margin-right: 0;
-    }
-    .default-excerpt {
-      margin-top: 1rem;
-    }
-  }
-
-
-/* video */
-.swiper-video {
-  width: 100%;
-  height: 100%;
-}
-.swiper-video video {
-  pointer-events: none;
-}
-.swiper-video-maskBox{
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: #000;
-  opacity: 0.2;
-  z-index: 1;
-}
-@media (min-width: 992px) {
+<div class="post-detail-header lazyload" id="thumbnail_canvas" data-original="/medias/4.jpg" style="background-repeat: no-repeat; background-size: cover; 
+  background-position: center center;position: relative;">
+  <div class="post-detail-header-mask"></div>
+  <canvas id="header_canvas"style="position:absolute;bottom:0;pointer-events:none;"></canvas>
   
-    .swiper-video {
-      display: none;
-    }
-    .swiper-default-bgImg {
-      display: block;  
-    }
-  
-}
-@media (max-width: 992px) {
-  .swiper-video {
-    display: none;
-  }
-  .swiper-default-bgImg {
-    display: block;  
-  }
-}
-/* video-end */
-</style>
-<!-- 首页座右铭 -->
-
-<!-- 首页公告 -->
-
-<!-- 首页文章置顶 -->
-
-
-
-
-<!-- hash算法 -->
-
-<div class="bg-floor" id="home-bg-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;"></div>
-<section class="posts">
-  
-    <article class="post reveal" style="flex-direction: row-reverse;   ">
-      <div class="post-main">
-        <div class="post-info">
-          <div class="post-time">
-            <i class="fa fa-clock-o" aria-hidden="true"></i>
-            <span class="post-time">2021-09-12</span>
-          </div>
-          <div class="post-title">
-            <a class="post-title-link" href="/posts/34b77a68/">What is SMB?</a>
-          </div>
-          <div class="post-meta">
-            <div class="post-tags">
-              <!-- 文章详情页的标签 -->
-
-    <i class="iconfont icontag"></i>
-    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Azure/" rel="tag">Azure</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Data-Storage/" rel="tag">Data Storage</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SMB/" rel="tag">SMB</a></li></ul>
-
-            </div>
-            <div class="post-categories">
-              <!-- 文章详情页的分类 -->
-
-<div class="article-category">
-  <i class="iconfont iconbookmark1"></i>
-  <a class="article-category-link" href="/categories/Azure/">Azure</a> <a class="article-category-link" href="/categories/Data-Science/">Data Science</a>
-</div>
-
-
-            </div>
-          </div>
-          <div class="post-img-mobile">
-            
-              
-              <a href="/posts/34b77a68/" class="lazyload" data-original="/medias/5.jpg" style="background-size: cover; 
-                background-position: center center;">
-              </a>
-            
-          </div>
-          <div class="post-content">
-            What is SMB?SMB &amp; SMB-compliantSMBServer Message Block (SMB), one version of which was also known as Common Internet
-          </div>
-        </div>
-        <div class="post-more">
-          <a href="/posts/34b77a68/">
-            <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
-          </a>
-        </div>
-      </div>
-      <div class="post-img">
-        
-          <a href="/posts/34b77a68/" class="lazyload" data-original="/medias/5.jpg" style="background-size: cover; 
-            background-position: center center;">
-          </a>
-        
-      </div>
-    </article>
-  
-    <article class="post reveal" style="   ">
-      <div class="post-main">
-        <div class="post-info">
-          <div class="post-time">
-            <i class="fa fa-clock-o" aria-hidden="true"></i>
-            <span class="post-time">2021-09-12</span>
-          </div>
-          <div class="post-title">
-            <a class="post-title-link" href="/posts/38dbfa3f/">What is &#39;Redundant&#39; Data?</a>
-          </div>
-          <div class="post-meta">
-            <div class="post-tags">
-              <!-- 文章详情页的标签 -->
-
-    <i class="iconfont icontag"></i>
-    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Data-Storage/" rel="tag">Data Storage</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Redundancy/" rel="tag">Redundancy</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Redundant/" rel="tag">Redundant</a></li></ul>
-
-            </div>
-            <div class="post-categories">
-              <!-- 文章详情页的分类 -->
-
-<div class="article-category">
-  <i class="iconfont iconbookmark1"></i>
-  <a class="article-category-link" href="/categories/Azure/">Azure</a> <a class="article-category-link" href="/categories/Data-Science/">Data Science</a>
-</div>
-
-
-            </div>
-          </div>
-          <div class="post-img-mobile">
-            
-              
-              <a href="/posts/38dbfa3f/" class="lazyload" data-original="/medias/7.jpg" style="background-size: cover; 
-                background-position: center center;">
-              </a>
-            
-          </div>
-          <div class="post-content">
-            What is ‘Redundant’ Data?Redundant DataWhen it comes to Data Storage, the word ‘redundant’ or ‘ redundancy’ keeps poppin
-          </div>
-        </div>
-        <div class="post-more">
-          <a href="/posts/38dbfa3f/">
-            <i class="iconfont iconmore" pointer style="  " title="阅读更多"></i>
-          </a>
-        </div>
-      </div>
-      <div class="post-img">
-        
-          <a href="/posts/38dbfa3f/" class="lazyload" data-original="/medias/7.jpg" style="background-size: cover; 
-            background-position: center center;">
-          </a>
-        
-      </div>
-    </article>
-  
-    <article class="post reveal" style="flex-direction: row-reverse;   ">
-      <div class="post-main">
-        <div class="post-info">
-          <div class="post-time">
-            <i class="fa fa-clock-o" aria-hidden="true"></i>
-            <span class="post-time">2021-09-11</span>
-          </div>
-          <div class="post-title">
-            <a class="post-title-link" href="/posts/c9b9b3e2/">What is Container &amp; Docker?</a>
-          </div>
-          <div class="post-meta">
-            <div class="post-tags">
-              <!-- 文章详情页的标签 -->
-
-    <i class="iconfont icontag"></i>
-    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Azure/" rel="tag">Azure</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Container/" rel="tag">Container</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Docker/" rel="tag">Docker</a></li></ul>
-
-            </div>
-            <div class="post-categories">
-              <!-- 文章详情页的分类 -->
-
-<div class="article-category">
-  <i class="iconfont iconbookmark1"></i>
-  <a class="article-category-link" href="/categories/Azure/">Azure</a> <a class="article-category-link" href="/categories/Data-Science/">Data Science</a>
-</div>
-
-
-            </div>
-          </div>
-          <div class="post-img-mobile">
-            
-              
-              <a href="/posts/c9b9b3e2/" class="lazyload" data-original="/medias/4.jpg" style="background-size: cover; 
-                background-position: center center;">
-              </a>
-            
-          </div>
-          <div class="post-content">
-            What is Container &amp; Docker?ContainerWhat is Container?A container is a standard unit of software that packages up co
-          </div>
-        </div>
-        <div class="post-more">
-          <a href="/posts/c9b9b3e2/">
-            <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
-          </a>
-        </div>
-      </div>
-      <div class="post-img">
-        
-          <a href="/posts/c9b9b3e2/" class="lazyload" data-original="/medias/4.jpg" style="background-size: cover; 
-            background-position: center center;">
-          </a>
-        
-      </div>
-    </article>
-  
-</section>
-<!-- 翻页 -->
-
-  <!-- <nav class="page-nav">
-    <a class="extend prev" rel="prev" href="/">Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-  </nav> -->
-  <div class="page-nav">
-    
-      <a href="/"
-         class="page-nav-pre">
-         <i class="fa fa-angle-left"></i><span class="ml-5">Prev</span>
-      </a>
-    
-    <div class="page-info">
-        <div class="page-info-text">2 / 2</div>
+  <div class="post-detail-header_info-box">
+    <div class="title-box">
+      <span class="title">
+        Security
+      </span>
     </div>
     
+    
+      
+        <span class="post-detail-header_date">
+          <i class="fa fa-calendar"></i> Published in：2021-09-17 |
+        </span>
+      
+
+      
+        <span class="post-detail-header_categories">
+          <i class="iconfont iconbookmark1"></i> category：
+          
+            <a href="/categories/Security/" class="post-detail-header_category">
+              Security
+            </a>
+          
+        </span>
+      
+
+      
+    
+  </div>
+  
+  
+    <script src="/js/bubble/bubble.js"></script>
+  
+</div>
+
+
+
+<div class="row justify-position">
+  <div class="main-content">
+    <article class="post post-detail">
+      
+      <div class="post-content">
+        <h1 id="Security"><a href="#Security" class="headerlink" title="Security"></a>Security</h1><p><a target="_blank" rel="noopener" href="https://www.httpbin.org/">https://www.httpbin.org/</a></p>
+
+      </div>
+      <div class="post-tags-categories">
+        
+        <div class="tags">
+          
+            <a href="/tags/Security/" class="">
+              Security
+            </a>
+          
+        </div>
+        
+      </div>
+      
+        <div class="copyright">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+    <strong>Author:  </strong>Kai Moura Wang</a>
+    </li>
+    <li class="post-copyright-link">
+    <strong>Link:  </strong>
+    <a href="/posts/c59bd5c1/" target="_blank" title="Security">http://www.kaimourawang.com/posts/c59bd5c1/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>Copyright:   </strong>
+      You are WELCOME to SHARE this article via Link above or Social Badges👇 below. All articles on this website are under a <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)">CC BY-NC-SA 4.0</a>
+      license.
+    </li>
+  </ul>
+<div>
+      
+    </article>
+    <!-- 上一篇文章和下一篇文章 -->
+    
+      <!-- 文章详情页的上一页和下一页 -->
+<div class="post-nav">
+
+
+
+  
+  <div class="post-nav-prev post-nav-item">
+    <div class="post-nav-img lazyload" data-original="/medias/1.jpg" style="background-size: cover; 
+      background-position: center center;">
+    </div>
+    <a href="/posts/cf0415bc/" class="post-nav-link">
+      <div class="title">
+        <i class="fa fa-angle-left"></i> Prev:
+        <div class="title-text">How to enable Chrome parallel download</div>
+      </div>
+      
+      <!-- <div class="content">
+        How to enable Chrome / Chromium-based Browsers Parallel Down
+      </div> -->
+    </a>
   </div>
 
 
-<!-- 花瓣和雪花飘落 -->
-<!-- 雪花和花瓣特效 -->
+
+  
+  <div class="post-nav-next post-nav-item">
+    <div class="post-nav-img lazyload" data-original="/medias/11.jpg" style="background-size: cover; 
+      background-position: center center;">
+    </div>
+    <a href="/posts/c2bcd5ce/" class="post-nav-link">
+      <div class="title">
+        Next: <i class="fa fa-angle-right"></i>
+        <div class="title-text">Networking</div>
+      </div>
+      <!-- <div class="content">
+        NetworkingBasic ConceptNodes -  keyword: JOIN
+Node/nəʊd/ 节点
+
+      </div> -->
+    </a>
+  </div>
+
+</div>
+
+    
+    
+
+    <!-- 打赏 -->
+    
+
+    <!-- 分享 -->
+    
+      <!-- https://github.com/overtrue/share.js -->
+<!-- 文章详情页的分享 -->
+<div class="social-share" data-sites="twitter,facebook,google,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+
+<script src="/js/shareJs/social-share.min.js"></script>
+</script>
+
+<style>
+  .social-share {
+    margin: 20px 0;
+  }
+</style>
 
 
+    
+    
+    <!-- 评论 -->
+    <!-- 评论 -->
 
-<!-- 灯笼 -->
+  <div id="myComment">
+    
+  </div>
 
+<!-- comment script in themes\hexo-theme-bamboo\layout\_partial\scripts\index.ejs -->
+
+
+  </div>
+
+  <!-- 目录 -->
+  <!-- 文章详情页右侧目录 -->
+
+  <div class="toc-aside">
+    <div class="toc-main">
+      <div class="toc-aside-title">
+        <i class="fa fa-list-ul" aria-hidden="true"></i><span>catalog</span>
+        
+          <div class="toc-open-close">catalog</div>
+        
+      </div>
+      <div class="toc-content">
+        <div class="toc"></div>
+      </div>
+    </div>
+  </div>
+  <!-- js在scripts目录下的的toc.ejs里面 -->
+  
+
+  <script>
+    function openBtnClickFn () {
+      let openOrCloseBtn = $('.toc-aside .toc-aside-title .toc-open-close');
+      let open = eval('' || 'true');
+      openOrCloseBtn.click(function() {
+        if (open === true) {
+          $(".toc-aside").css({'width': 0, 'padding': 0});
+          $(".toc-content").css({'width': 0});
+          $(".toc-aside-title span, .toc-aside-title i").css({'display': 'none'});
+          $(".main-content").css({'width': '75%', 'margin': '10px auto'});
+          open = false;
+        } else {
+          $(".toc-aside").css({'width': '300px', 'padding': '0 10px'});
+          $(".toc-content").css({'width': '300px'});
+          $(".toc-aside-title span, .toc-aside-title i").css({'display': 'inline-block'});
+          $(".main-content").css({'width': '65%', 'margin-right': '10px', 'margin-left': 'calc(35% - 350px)'});
+          open = true;
+        }
+      });
+    };
+    openBtnClickFn();
+    document.addEventListener('pjax:complete', function () {
+      openBtnClickFn();
+    })
+  </script>
+
+
+  
+
+  <!-- 图片放大 Wrap images with fancybox support -->
+  <script src="/js/wrapImage.js"></script>
+</div>
+
+<!-- 文章详情页背景图 -->
+<div id="appBgSwiper" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;" :style="{'background-color': bgColor ? bgColor : 'transparent'}">
+    <transition-group tag="ul" :name="names">
+        <li v-for='(image,index) in img' :key='index' v-show="index === mark" class="bg-swiper-box">
+            <img :src="image" class="bg-swiper-img">
+        </li>
+    </transition-group>
+</div>
+<script>
+    var vm = new Vue({
+        el: '#appBgSwiper',
+        data: {
+            names: '' || 'fade' || 'fade', // translate-fade fade
+            mark: 0,
+            img: [],
+            bgColor: '',
+            time: null
+        },
+        methods: {   //添加方法
+            change(i, m) {
+                if (i > m) {
+                    // this.names = 'fade';
+                } else if (i < m) {
+                    // this.names = 'fade';
+                } else {
+                    return;
+                }
+                this.mark = i;
+            },
+            prev() {
+                // this.names = 'fade';
+                this.mark--;
+                if (this.mark === -1) {
+                    this.mark = 3;
+                    return
+                }
+            },
+            next() {
+                // this.names = 'fade';
+                this.mark++;
+                if (this.mark === this.img.length) {
+                    this.mark = 0;
+                    return
+                }
+            },
+            autoPlay() {
+                // this.names = 'fade';
+                this.mark++;
+                if (this.mark === this.img.length) {
+                    this.mark = 0;
+                    return
+                }
+            },
+            play() {
+                let bgImgDelay = '' || '180000'
+                let delay = parseInt(bgImgDelay) || 180000;
+                this.time = setInterval(this.autoPlay, delay);
+            },
+            enter() {
+                clearInterval(this.time);
+            },
+            leave() {
+                this.play();
+            }
+        },
+        created() {
+            this.play()
+        },
+        beforeDestroy() {
+            clearInterval(this.time);
+        },
+        mounted() {
+            let prop = ''|| 'https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/reversed-waterfall@3000x2000px.png';
+            let isImg = prop.includes('.bmp') || prop.includes('.jpg') || prop.includes('.png') || prop.includes('.tif') || prop.includes('.gif') || prop.includes('.pcx') || prop.includes('.tga') || prop.includes('.exif') || prop.includes('.fpx') || prop.includes('.psd') || prop.includes('.cdr') || prop.includes('.pcd') || prop.includes('.dxf') || prop.includes('.ufo') || prop.includes('.eps') || prop.includes('.ai') || prop.includes('.raw') || prop.includes('.WMF') || prop.includes('.webp') || prop.includes('.jpeg') || prop.includes('http://') || prop.includes('https://') 
+            if (isImg) {
+                let img = prop.split(',');
+                let configRoot = '/'
+                let arrImg = [];
+                img.forEach(el => {
+                    var Expression=/http(s)?:\/\/([\w-]+\.)+[\w-]+(\/[\w- .\/?%&=]*)?/;
+			        var objExp = new RegExp(Expression);
+
+                    if(objExp.test(el)) {
+                        // http or https
+                        arrImg.push(el);
+                    } else {
+                        // 非http or https开头
+                        // 本地文件
+                        let firstStr = el.charAt(0);
+                        if (firstStr == '/') {
+                            el = el.substr(1); // 删除第一个字符 '/',因为 configRoot最后一个字符为 /
+                        }
+                        el = configRoot + el;
+                        arrImg.push(el);
+                    }
+                })
+                this.img = arrImg;
+            } else {
+                this.bgColor = prop;
+            }
+        }
+    })
+</script>
+
+<style>
+    .bg-swiper-box {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    .bg-swiper-img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+</style>
 
       </main>
     </div>

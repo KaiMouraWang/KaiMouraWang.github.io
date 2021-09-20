@@ -555,6 +555,21 @@
         
  <!-- prismjs 代码高亮 -->
  
+    
+    <link href="/js/prism/prism-line-numbers.css" rel="stylesheet">
+    
+        <link href="/js/prism/prism-okaidia.min.css" rel="stylesheet">
+    
+
+    <style>
+        pre[class*="language-"] {
+            overflow-y: hidden;
+        }
+        .line-numbers .line-numbers-rows {
+            border: none;
+        }
+    </style>
+  
 
 
 <div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -1;"></div>
@@ -622,20 +637,29 @@
 <hr>
 <h2 id="Common-Commands-and-Concepts"><a href="#Common-Commands-and-Concepts" class="headerlink" title="Common Commands and Concepts"></a><strong>Common Commands and Concepts</strong></h2><h3 id="Get-help-git-help-everyday"><a href="#Get-help-git-help-everyday" class="headerlink" title="Get help ( git help everyday )"></a><strong>Get help ( <u>git help everyday</u> )</strong></h3><p>This open a html on your default browser and you can check the manual of git.</p>
 <h3 id="Cloning-a-Repository-git-clone"><a href="#Cloning-a-Repository-git-clone" class="headerlink" title="Cloning a Repository (git clone)"></a><strong>Cloning a Repository (<em>git clone</em>)</strong></h3><p>To download a remote repository you can use the git clone command and provide the <strong>URL</strong> of the remote repository. Example:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># git clone [REPOSITORY_URL]</span><br><span class="line">git clone https://github.com/bob-crutchley/vim</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-GIT" data-language="GIT"><code class="language-GIT"># git clone [REPOSITORY_URL]
+git clone https:&#x2F;&#x2F;github.com&#x2F;bob-crutchley&#x2F;vim<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <h3 id="Username-and-Email-in-Git-Config-git-config"><a href="#Username-and-Email-in-Git-Config-git-config" class="headerlink" title="Username and Email in Git Config (git config)"></a>Username and Email in Git Config (git config)</h3><p>Setting Config Globally</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># git config --global user.name &quot;[USERNAME]&quot;</span><br><span class="line">git config --global user.name &quot;bob-crutchley&quot;</span><br><span class="line"># git config --global user.email &quot;[EMAIL]&quot;</span><br><span class="line">git config --global user.email &quot;bob@email.com&quot;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-Git" data-language="Git"><code class="language-Git"># git config --global user.name &quot;[USERNAME]&quot;
+git config --global user.name &quot;bob-crutchley&quot;
+# git config --global user.email &quot;[EMAIL]&quot;
+git config --global user.email &quot;bob@email.com&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>Setting Config Locally</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># git config user.name &quot;[USERNAME]&quot;</span><br><span class="line">git config user.name &quot;bob-crutchley&quot;</span><br><span class="line"># git config user.email &quot;[EMAIL]&quot;</span><br><span class="line">git config user.email &quot;bob@email.com&quot;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-Git" data-language="Git"><code class="language-Git"># git config user.name &quot;[USERNAME]&quot;
+git config user.name &quot;bob-crutchley&quot;
+# git config user.email &quot;[EMAIL]&quot;
+git config user.email &quot;bob@email.com&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="Forking"><a href="#Forking" class="headerlink" title="Forking"></a>Forking</h3><p>远程删除：</p>
 <p>git remote -v 查看远程库信息</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git remote -v</span><br><span class="line">origin  git@github.com:michaelliao/learn-git.git (fetch)</span><br><span class="line">origin  git@github.com:michaelliao/learn-git.git (push)</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-Git" data-language="Git"><code class="language-Git">$ git remote -v
+origin  git@github.com:michaelliao&#x2F;learn-git.git (fetch)
+origin  git@github.com:michaelliao&#x2F;learn-git.git (push)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p>git remote rm <name> 比如 in this case ‘origin’:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git remote rm origin</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-Git" data-language="Git"><code class="language-Git">$ git remote rm origin<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>Pull Request</p>
 <p>让别人pull你写的东西。 </p>
@@ -647,7 +671,15 @@
 </blockquote>
 <h3 id="Create-an-empty-Git-repository-or-reinitialize-an-existing-one-git-init"><a href="#Create-an-empty-Git-repository-or-reinitialize-an-existing-one-git-init" class="headerlink" title="Create an empty Git repository or reinitialize an existing one (git init)"></a><strong>Create an empty Git repository or reinitialize an existing one (git init)</strong></h3><p>git init 会在当前directory里建立一个空的git repo. 即.git文件夹</p>
 <h3 id="Staging-a-Change-git-add"><a href="#Staging-a-Change-git-add" class="headerlink" title="Staging a Change (git add)"></a><strong>Staging a Change (<em>git add</em>)</strong></h3><p><strong>Staging is the step that you must take before committing a change.</strong><br>Staging is a feature in Git that enables the developer to choose what changes are actually going to get committed to the repository when the commit is made. There is a few ways you stage files:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># stage all files</span><br><span class="line">git add --all</span><br><span class="line"></span><br><span class="line"># stage all files (only if you are at the root of your project)</span><br><span class="line">git add .</span><br><span class="line"></span><br><span class="line"># stage selected files: git add [FILES]</span><br><span class="line">git add file_1.txt file_2.txt</span><br><span class="line">git add *.txt</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-Git" data-language="Git"><code class="language-Git"># stage all files
+git add --all
+
+# stage all files (only if you are at the root of your project)
+git add .
+
+# stage selected files: git add [FILES]
+git add file_1.txt file_2.txt
+git add *.txt<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="Committing-a-Change-git-commit"><a href="#Committing-a-Change-git-commit" class="headerlink" title="Committing a Change (git commit)"></a><strong>Committing a Change (<em>git commit</em>)</strong></h3><p>When you make a commit to a Git repository, you are effectively “saving” the changes that you have staged to the repository.</p>
 <p>Unlike saving files in most other programs, Git also requires <strong>a message</strong> to be saved against the commit along with some basic information about the user from the Git config shown above.</p>
@@ -659,7 +691,7 @@
 <p><strong>Commits can be reverted</strong>, so it helps when there is a concise message about what was implemented or removed.</p>
 <hr>
 <h4 id="Troubleshooting"><a href="#Troubleshooting" class="headerlink" title="Troubleshooting:"></a><strong>Troubleshooting:</strong></h4><p>If getting ^X mode (^]^D^E^F^I^K^L^N^O^Ps^U^V^Y) at bottom of screen(whether it’s on Mac or Windows), it’s because the default text editor is <strong>vim</strong>. If you wish to use <strong>Nano</strong> you should type the following command:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global core.editor &quot;nano&quot;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-Git" data-language="Git"><code class="language-Git">git config --global core.editor &quot;nano&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <hr>
 <h4 id="一图理解-git-add-与-index-与-stage-staging-联系"><a href="#一图理解-git-add-与-index-与-stage-staging-联系" class="headerlink" title="一图理解 git add 与 index 与 stage/staging 联系:"></a><strong>一图理解 git add 与 index 与 stage/staging 联系:</strong></h4><p><img "" class="lazyload placeholder" data-original="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/u=2451541123,1533082919&fm=26&fmt=auto.webp" src="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/loading.gif"></p>
@@ -671,7 +703,7 @@
 <p>在早期的时候，将“一个新文件添加到index里面”，和“更新一个index里面已经有的文件”，是两件不同的事情，但是，<strong>现在，已经统一起来了，都用 git-add 命令来操作</strong>。到这里，基本讲完了index的故事。<strong>因为index的添加和更新操作被统一起来了，所以，一些git的培训师，就将index这件事情，抽象成了一个叫做“下次提交的暂存区（staging area）”的东西</strong>，所以，将文件添加到index里面，也因此被叫做“to stage”，所以，stage这个词，是新近才出现在git的术语表里的。</p>
 <hr>
 <h3 id="Checking-your-commit-git-log"><a href="#Checking-your-commit-git-log" class="headerlink" title="Checking your commit(git log)"></a><strong>Checking your commit(<em>git log</em>)</strong></h3><h3 id="Local-Repository-Status-git-status"><a href="#Local-Repository-Status-git-status" class="headerlink" title="Local Repository Status (git status)"></a><strong>Local Repository Status (git status)</strong></h3><p>Knowing the current state of your local repository is very useful so that you can understand what commands to run.<br>For instance, <strong>how can you know what files have been staged and not staged</strong>?</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-Git" data-language="Git"><code class="language-Git">git status<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 
 
@@ -749,17 +781,17 @@ Branches are kinda li
 
   
   <div class="post-nav-next post-nav-item">
-    <div class="post-nav-img lazyload" data-original="/medias/8.jpg" style="background-size: cover; 
+    <div class="post-nav-img lazyload" data-original="/medias/11.jpg" style="background-size: cover; 
       background-position: center center;">
     </div>
     <a href="/posts/518e617c/" class="post-nav-link">
       <div class="title">
         Next: <i class="fa fa-angle-right"></i>
-        <div class="title-text">Git_Introduction_to_Source_Control</div>
+        <div class="title-text">Version_Control(VCS)&amp;Git</div>
       </div>
       <!-- <div class="content">
-        Git_Introduction_to_Source_Control
-Git explained in short wo
+        1.Version_Control(VCS)&amp;GitUpdated: 20/09/2021
+Version/So
       </div> -->
     </a>
   </div>

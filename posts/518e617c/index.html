@@ -11,7 +11,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-  <title>Git_Introduction_to_Source_Control | Kai Moura Wang</title>
+  <title>Version_Control(VCS)&amp;Git | Kai Moura Wang</title>
 
   <link rel="icon" type="image/jpeg" href="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/20210828122447.jpg">
   <link rel="stylesheet" href="https://at.alicdn.com/t/font_1911880_c1nvbyezg17.css">
@@ -555,6 +555,21 @@
         
  <!-- prismjs 代码高亮 -->
  
+    
+    <link href="/js/prism/prism-line-numbers.css" rel="stylesheet">
+    
+        <link href="/js/prism/prism-okaidia.min.css" rel="stylesheet">
+    
+
+    <style>
+        pre[class*="language-"] {
+            overflow-y: hidden;
+        }
+        .line-numbers .line-numbers-rows {
+            border: none;
+        }
+    </style>
+  
 
 
 <div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -1;"></div>
@@ -564,7 +579,7 @@
 
 
 
-<div class="post-detail-header lazyload" id="thumbnail_canvas" data-original="/medias/8.jpg" style="background-repeat: no-repeat; background-size: cover; 
+<div class="post-detail-header lazyload" id="thumbnail_canvas" data-original="/medias/11.jpg" style="background-repeat: no-repeat; background-size: cover; 
   background-position: center center;position: relative;">
   <div class="post-detail-header-mask"></div>
   <canvas id="header_canvas"style="position:absolute;bottom:0;pointer-events:none;"></canvas>
@@ -572,7 +587,7 @@
   <div class="post-detail-header_info-box">
     <div class="title-box">
       <span class="title">
-        Git_Introduction_to_Source_Control
+        Version_Control(VCS)&amp;Git
       </span>
     </div>
     
@@ -610,17 +625,9 @@
     <article class="post post-detail">
       
       <div class="post-content">
-        <h1 id="Git-Introduction-to-Source-Control"><a href="#Git-Introduction-to-Source-Control" class="headerlink" title="Git_Introduction_to_Source_Control"></a>Git_Introduction_to_Source_Control</h1><blockquote>
-<p>Git explained in short words:</p>
-<p><strong><u>Distributed</u></strong> <u><strong>Source Control</strong></u> system</p>
-<p><strong>分布式</strong> <strong>版本控制</strong> 系统</p>
-</blockquote>
-<h2 id="Distributed-vs-Centralized-分布式-vs-集中式"><a href="#Distributed-vs-Centralized-分布式-vs-集中式" class="headerlink" title="Distributed vs Centralized 分布式 vs 集中式"></a>Distributed vs Centralized 分布式 vs 集中式</h2><p><strong>Distributed:</strong></p>
-<p><img "" class="lazyload placeholder" data-original="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/distributed.jpg" src="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/loading.gif"></p>
-<hr>
-<p><strong>Centralized:</strong></p>
-<p><img "" class="lazyload placeholder" data-original="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/centralized.jpg" src="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/loading.gif"></p>
-<h2 id="Source-Control-版本控制"><a href="#Source-Control-版本控制" class="headerlink" title="Source Control 版本控制"></a>Source Control 版本控制</h2><p>Source control is vital for managing software development projects. Being able to track changes to code allows developers to:</p>
+        <h1 id="1-Version-Control-VCS-amp-Git"><a href="#1-Version-Control-VCS-amp-Git" class="headerlink" title="1.Version_Control(VCS)&amp;Git"></a>1.Version_Control(VCS)&amp;Git</h1><p>Updated: 20/09/2021</p>
+<h2 id="Version-Source-Control-版本控制"><a href="#Version-Source-Control-版本控制" class="headerlink" title="Version/Source Control 版本控制"></a>Version/Source Control 版本控制</h2><p>Version Control is about the management of multiple versions of a project. To manage a version, each change (addition, edition, or removal) to the files in a project must be tracked. Version Control records each change made to a file (or a group of files) and offers a way to undo or roll back each change.</p>
+<p>Version control is vital for managing software development projects. Being able to track changes to code allows developers to:</p>
 <ul>
 <li>centralise all code changes and additions to one code repository</li>
 <li>allow for simple and effective collaboration within development teams</li>
@@ -628,40 +635,53 @@
 <li>track changes from the entire team over the full lifetime of the project</li>
 <li>revert code back to previous versions</li>
 </ul>
-<h2 id="Source-Control-Management-SCM-版本控制管理"><a href="#Source-Control-Management-SCM-版本控制管理" class="headerlink" title="Source Control Management (SCM) 版本控制管理"></a><u>Source Control Management (SCM)</u> 版本控制管理</h2><p>We use <strong><u>source control management (SCM) systems</u></strong> to implement source control practices. These provide the ability to:</p>
-<ul>
-<li>Store code in a central repository</li>
-<li>Track changes over time</li>
-<li>Create code branches so that additions are made in isolation from stable code</li>
-<li>Merge new code into a <strong>stable release branch</strong>, known as the <strong>main branch</strong></li>
-<li>Integrate with CI/CD automation tools (such as Jenkins and CircleCI) such that code will be built and tested as it is generated and pushed  to the repository</li>
-</ul>
+<h3 id="VCS"><a href="#VCS" class="headerlink" title="VCS"></a>VCS</h3><p><strong>VCS: Version Control System</strong> .  A VCS <strong>tracks each change</strong> you made to every file of your project and provides a simple way to <strong>compare and roll back those changes</strong>.</p>
+<p>Each version of the project is also accompanied by the description of the changes made along with a list of the new or edited files. When more people join the project, a VCS can show exactly who edited a particular file on a specific time. </p>
 <hr>
-<h3 id="Repositories-Short-for-Repo-仓库"><a href="#Repositories-Short-for-Repo-仓库" class="headerlink" title="Repositories (Short for Repo) 仓库"></a><strong>Repositories</strong> (Short for <strong><u>Repo</u></strong>) <strong>仓库</strong></h3><p>To keep code content in one place, SCM systems <strong>store code in a repository</strong>. This essentially functions as a big bucket for all your code to live in.</p>
+<h2 id="Distributed-vs-Centralized-分布式-vs-集中式"><a href="#Distributed-vs-Centralized-分布式-vs-集中式" class="headerlink" title="Distributed vs Centralized 分布式 vs 集中式"></a>Distributed vs Centralized 分布式 vs 集中式</h2><h3 id="Centralized"><a href="#Centralized" class="headerlink" title="Centralized:"></a><strong>Centralized:</strong></h3><p><img "" class="lazyload placeholder" data-original="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/centralized.jpg" src="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/loading.gif"></p>
+<p><img "" class="lazyload placeholder" data-original="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/howcenworks2.jpg" src="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/loading.gif"></p>
+<hr>
+<h3 id="Distributed"><a href="#Distributed" class="headerlink" title="Distributed:"></a><strong>Distributed:</strong></h3><p><img "" class="lazyload placeholder" data-original="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/distributed.jpg" src="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/loading.gif"></p>
+<p><img "" class="lazyload placeholder" data-original="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/howdisworks.jpg" src="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/loading.gif"></p>
+<p>A distributed Version Control System is generally faster than the other types of VCS because <strong>it doesn’t need a network access to a remote server</strong>. Nearly everything is done <strong>locally</strong>. There is also a slight difference with how it works: instead of tracking the changes between versions, it tracks all changes as “patches.” This means that those patches can be freely exchanged between repositories, so there is no “main” repository to keep up with.</p>
+<p>Distributed VCS works nearly the same as centralized VCS but with a big difference: there is no main server that holds all the history. <strong>Each client has a copy of the repository(along with the change history) instead of checking out a single server.</strong><br>This greatly lowers the chance of losing everything as each client has a clone of the project. With a distributed VCS, the concept of having a “main server” gets blurred because each client essentially has all the power within their own repository. This greatly encouraged the concept of “forking” within the Open Source community. <strong>Forking is the act of cloning a repository to make your own changes and have a different take on</strong> <strong>the project</strong>. The main benefit of forking is that you could also pull changes from other repositories if you see fit (and others can do the same with your changes).</p>
+<hr>
+<h2 id="So-What-is-Git"><a href="#So-What-is-Git" class="headerlink" title="So What is Git?"></a>So What is Git?</h2><blockquote>
+<p><strong>Git</strong> :</p>
+<p><strong><u>Distributed</u></strong> <u><strong>Version Control</strong></u> System (Distributed VCS)</p>
+<p><u><strong>分布式</strong> <strong>版本控制</strong></u> 系统</p>
+</blockquote>
+<p>I’m an egotistical bastard, and I name all my projects after myself. First Linux, now git. _Linus Torvalds</p>
+<p>So basically Linus was pissed with BitKeeper(previous Linux VCS) and he decided to write a new open-sourced VCS. Hence the Git. <del>Too much drama, even for IT.</del></p>
+<h3 id="Git-command-quick-review"><a href="#Git-command-quick-review" class="headerlink" title="Git command quick review"></a>Git command quick review</h3><pre class="line-numbers language-Git" data-language="Git"><code class="language-Git">$ git init # Initialize a new git database
+$ git clone # Copy an existing database
+$ git status # Check the status of the local project
+$ git diff # Review the changes done to the project
+$ git add # Tell Git to track a changed file
+$ git commit # Save the current state of the project to database
+$ git push # Copy the local database to a remote server
+$ git pull # Copy a remote database to a local machine
+$ git log # Check the history of the project
+$ git branch # List, create or delete branches
+$ git merge # Merge the history of two branches together
+$ git stash # Keep the current changes stashed away to be used later<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<hr>
+<h3 id="Repositories-Short-for-Repo-仓库"><a href="#Repositories-Short-for-Repo-仓库" class="headerlink" title="Repositories (Short for Repo) 仓库"></a><strong>Repositories</strong> (Short for <strong><u>Repo</u></strong>) <strong>仓库</strong></h3><p>To keep code content in one place, VCS <strong>store code in a repository</strong>. This essentially functions as a big bucket for all your code to live in.</p>
 <blockquote>
 <p>repository /rɪˈpɒzətri/ 仓库; 贮藏室</p>
 </blockquote>
-<h3 id="Branching"><a href="#Branching" class="headerlink" title="Branching"></a>Branching</h3><p><img "" class="lazyload placeholder" data-original="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/barnch,png.png" src="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/loading.gif"></p>
+<hr>
+<h3 id="Branch-Merge-Stash"><a href="#Branch-Merge-Stash" class="headerlink" title="Branch /Merge/ Stash"></a>Branch /Merge/ Stash</h3><p><img "" class="lazyload placeholder" data-original="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/barnch,png.png" src="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/loading.gif"></p>
 <p>Branching allows for each developer to work on new features in isolation by creating a version of the source code that only they are working on.</p>
 <p>This new version is called a feature branch, while the source code lives on the main branch.</p>
 <p>Once changes have been made and the feature implemented, the feature branch code is merged back into the source code on the main branch.</p>
-<p>The SCM system will automatically detect the differences between the feature and main branches and alert the developer if there are any conflicts. </p>
-<h3 id="Code-Tracking"><a href="#Code-Tracking" class="headerlink" title="Code Tracking"></a>Code Tracking</h3><p>Code tracking allows development teams to keep track of all changes made to a project over time. This allows for greater organisation as all additions to code are fully documented and attributed to the developer who made them.</p>
-<p>If a feature causes a bug in the software after it is merged to main, code tracking makes it easy to revert the main branch to a previous stable state until fixes can be made.</p>
+<p>The VCS will automatically detect the differences between the feature and main branches and alert the developer if there are any conflicts. </p>
+<p>There is also a simple concept that you might use a lot: Stashing. Stashing is the act of safely putting away your current edits so that you have clean environment to work on something completely different. You might want to use stashing when you are playing around or testing a feature but need to work on a new feature in priority. So, you stash your changes away and begin to write that feature. After you are done, you can get your changes back and apply them to your current working environment.</p>
 <hr>
-<h3 id="SCM-Tools"><a href="#SCM-Tools" class="headerlink" title="SCM Tools"></a>SCM Tools</h3><p>Some common SCM tools are:</p>
-<ul>
-<li><strong>Git</strong></li>
-<li>Mercurial</li>
-<li>Subversion (often abbreviated to SVN)</li>
-<li>CVS</li>
-<li>Perforce</li>
-</ul>
-<p>Git is by far the most common SCM system used in software development. Git is a free and open source version control system.</p>
-<p>Its ubiquity is largely due to how easy it is to learn and its tiny footprint, which is a result of being written in low-level C code.</p>
-<p>It is a decentralised SCM tool, meaning its operations are largely performed on your local computer and requires no communication with an external server, resulting in very fast performance.</p>
-<hr>
-<h3 id="Repository-Hosting-Services"><a href="#Repository-Hosting-Services" class="headerlink" title="Repository Hosting Services"></a><strong>Repository Hosting Services</strong></h3><p>There are several web-based version control <strong>repository hosting services</strong> out there:</p>
+<h2 id="Repository-Hosting-Services"><a href="#Repository-Hosting-Services" class="headerlink" title="Repository Hosting Services"></a><strong>Repository Hosting Services</strong></h2><p>There are several web-based version control <strong>repository hosting services</strong> out there:</p>
 <ul>
 <li><a target="_blank" rel="noopener" href="https://github.com/">GitHub</a></li>
 <li><a target="_blank" rel="noopener" href="https://about.gitlab.com/">GitLab</a></li>
@@ -705,7 +725,7 @@
     </li>
     <li class="post-copyright-link">
     <strong>Link:  </strong>
-    <a href="/posts/518e617c/" target="_blank" title="Git_Introduction_to_Source_Control">http://www.kaimourawang.com/posts/518e617c/</a>
+    <a href="/posts/518e617c/" target="_blank" title="Version_Control(VCS)&amp;Git">http://www.kaimourawang.com/posts/518e617c/</a>
     </li>
     <li class="post-copyright-license">
       <strong>Copyright:   </strong>
