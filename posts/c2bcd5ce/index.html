@@ -678,6 +678,12 @@
 <p>the <strong>OSI</strong> model, </p>
 <p>the <strong>TCP/IP</strong> model.</p>
 <h3 id="OSI"><a href="#OSI" class="headerlink" title="OSI"></a><strong>OSI</strong></h3><p>The <strong>Open System Interconnection</strong> (<strong>OSI</strong>) model is a 7 layer model, which is was developed by the <strong>International Organization for Standardization (ISO)</strong>.<br>It was designed to show how the software and hardware elements of a network work.</p>
+<p><strong>Transport Layer</strong></p>
+<p>The two most well-known protocols that are used on this layer are <strong>TCP</strong> and <strong>UDP</strong>.<br>Both are protocols used when sending an ordered stream of data packets.</p>
+<ul>
+<li><strong>T</strong>ransmission <strong>C</strong>ontrol <strong>P</strong>rotocol (TCP) - checks the data has been received by the destination device and has no errors.</li>
+<li><strong>U</strong>ser <strong>D</strong>atagram <strong>P</strong>rotocol (UDP) - does not do any checks, making the stream of data fast but not necessarily as accurate</li>
+</ul>
 <p>This diagram tells it all: </p>
 <p><img "" class="lazyload placeholder" data-original="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/osi.gif" src="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/loading.gif"></p>
 <blockquote>
@@ -703,7 +709,16 @@
 <p>&lt;7&gt;  物理层<br>        实际最终信号的传输是通过物理层实现的。通过物理介质传输比特流。规定了电平、速度和电缆针脚。常用设备有（各种物理设备）集线器、中继器、调制解调器、网线、双绞线、同轴电缆。这些都是物理层的传输介质。<br>         快递寄送过程中的交通工具，就相当于我们的物理层，例如汽车，火车，飞机，船。</p>
 </blockquote>
 <hr>
-<h3 id="TCP-IP"><a href="#TCP-IP" class="headerlink" title="TCP/IP"></a><strong>TCP/IP</strong></h3><p><img "" class="lazyload placeholder" data-original="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/osi_tcpip.png" src="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/loading.gif"></p>
+<h3 id="TCP-IP"><a href="#TCP-IP" class="headerlink" title="TCP/IP"></a><strong>TCP/IP</strong></h3><p>TCP/IP is a set of protocols used to communicate via networks, these protocols can be split into 4 layers.</p>
+<p>4 - <strong>Application Layer</strong></p>
+<p>The Application layer is equivalent to the Presentation and Application layers in the OSI model.<br>The higher level protocols are included on this layer, such as <strong>HTTP</strong>, <strong>Telnet</strong>, <strong>SSH</strong>, <strong>FTP</strong> and <strong>RDP</strong>.</p>
+<p>3 - <strong>Transport Layer</strong></p>
+<p>The Transport layer is equivalent to the Transport layer in the OSI model.<br>The main purpose of this layer is to allow devices to carry on a conversation.<br>Two of the main protocols that are used on this layer are <strong>TCP</strong> and <strong>UDP</strong>.</p>
+<p>2 - <strong>Internet Layer</strong></p>
+<p>The Internet Layer is equivalent to the Network layer in the OSI model.<br>This is where data is put into data packets, known as <strong>IP Datagrams</strong>, which contain the logical addresses of the source and destination devices.<br>This layer is also responsible for the routing of these datagrams.</p>
+<p>1 - <strong>Network Access Layer</strong></p>
+<p>The Network Access Layer is the lowest of all the TCP/IP layers and  is equivalent to the Physical and Data Link layers in the OSI model.<br>This layer is where details of how data is physically transmitted throughout a network are defined.</p>
+<h3 id="TCP-IP-and-OSI-Visual-Comparison"><a href="#TCP-IP-and-OSI-Visual-Comparison" class="headerlink" title="TCP/IP and OSI Visual Comparison"></a>TCP/IP and OSI Visual Comparison</h3><p><img "" class="lazyload placeholder" data-original="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/osi_tcpip.png" src="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/loading.gif"></p>
 
       </div>
       <div class="post-tags-categories">

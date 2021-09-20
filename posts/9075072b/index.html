@@ -11,7 +11,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-  <title>Kai Moura Wang</title>
+  <title>Security_Part2 | Kai Moura Wang</title>
 
   <link rel="icon" type="image/jpeg" href="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/20210828122447.jpg">
   <link rel="stylesheet" href="https://at.alicdn.com/t/font_1911880_c1nvbyezg17.css">
@@ -552,764 +552,434 @@
     <!-- 内容区域 -->
     <div id="safearea">
       <main class="main" id="pjax-container" style="margin-top: 0;">
-        <!-- 首页轮播 -->
-<link href="/js/swiper/swiper@5.4.1.min.css" rel="stylesheet">
-
-
-  <link href="/js/vue-typed-js/index.css" rel="stylesheet">
-
-
-
-
-
-
-<div class="swiper-length" style="display: none;">0</div>
-<div id="appSwiper"
-  class="swiper-no-swiping"
-  @mouseenter="stopAutoPlay()" 
-  @mouseleave="startAutoPlay()"
->
-  <swiper v-cloak ref="mySwiper" :options="swiperOptions" @slideChangeTransitionEnd="slideChangeTransitionEnd">
+        
+ <!-- prismjs 代码高亮 -->
+ 
     
-      <swiper-slide>
-        <div class="item swiper-lazy" data-background="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/4.gif" style="background-size: 300000px; 
-          background-position: left center;" style="position: relative;">
-          <div class="swiper-bgmask" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;"></div>
-            <div class="flag">
-              
-              <div class="img-mask swiper-lazy swiper-default-bgImg" data-background="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/4.gif" style="height: 100%; background-size: cover; 
-                background-position: center center;">
-                <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>   
-              </div>
-              <div class="flag-text">
-                <div class="flag-text-content">
-                  <div class="title ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">Learn Data Science From ZERO:</div>
-                  
-                    <div class="ani animated default-excerpt" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">
-                      <vue-typed-js :strings="defaultDesc" :loop="defaultDescTypedLoop" :type-speed="80" :back-speed="40">
-                        <h1 class="typing"></h1>
-                      </vue-typed-js>
-                    </div>
-                    
-                </div>
-                <div style="display: flex;" class="flag-text-btns">
-                  
-                    <div class="ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a target="_blank" rel="noopener" href="https://kaimourawang.com/about/" class="read-more swiper-btn-color" style="display: inline-block; z-index:1;">About Me</a></div>
-                  
-                  
-                    <div class="ani animated" style="margin-left: 10px;" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a target="_blank" rel="noopener" href="https://kaimourawang.com/archives/" class="read-more swiper-btn-color2" style="display: inline-block; z-index:1;border: 1px solid white;">Start Now</a></div>
-                  
-                </div>
-              </div>
-            </div>
-          </div>
-      </swiper-slide>
+    <link href="/js/prism/prism-line-numbers.css" rel="stylesheet">
     
-  </swiper>
+        <link href="/js/prism/prism-okaidia.min.css" rel="stylesheet">
+    
+
+    <style>
+        pre[class*="language-"] {
+            overflow-y: hidden;
+        }
+        .line-numbers .line-numbers-rows {
+            border: none;
+        }
+    </style>
   
-    <div id="scroll-down" @click="toPostContent()">
-      <a href="javascript:;">
-        <i class="fa fa-angle-down scroll-down-effects"></i>
-      </a>
+
+
+<div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -1;"></div>
+
+<!-- 文章详情页顶部图片和标题 -->
+
+
+
+
+<div class="post-detail-header lazyload" id="thumbnail_canvas" data-original="/medias/13.jpg" style="background-repeat: no-repeat; background-size: cover; 
+  background-position: center center;position: relative;">
+  <div class="post-detail-header-mask"></div>
+  <canvas id="header_canvas"style="position:absolute;bottom:0;pointer-events:none;"></canvas>
+  
+  <div class="post-detail-header_info-box">
+    <div class="title-box">
+      <span class="title">
+        Security_Part2
+      </span>
     </div>
+    
+    
+      
+        <span class="post-detail-header_date">
+          <i class="fa fa-calendar"></i> Published in：2021-09-20 |
+        </span>
+      
+
+      
+        <span class="post-detail-header_categories">
+          <i class="iconfont iconbookmark1"></i> category：
+          
+            <a href="/categories/Security/" class="post-detail-header_category">
+              Security
+            </a>
+          
+        </span>
+      
+
+      
+    
+  </div>
   
-  <canvas id="header_canvas"style="position:absolute;bottom:0;width:100%;pointer-events:none;"></canvas>
+  
+    <script src="/js/bubble/bubble.js"></script>
+  
 </div>
 
-<script type="text/javascript">
-  Vue.use(window.VueAwesomeSwiper)
-</script>
 
-<script>
-  var autoplay = JSON.parse('false');
-  var delay = '5000';
-  var loop = JSON.parse('true') ? false : JSON.parse('true');
-  var effect = 'slide';
-  var swiperLength = parseInt(document.querySelector(".swiper-length").innerText);
-  var defaultDesc = '🚀Progress with Kai Moura Wang💻';
-  defaultDesc = defaultDesc.split(',');
-  var defaultDescTypedLoop = JSON.parse('true');
-  var vm = new Vue({
-    el: '#appSwiper',
-    data: {
-      defaultDesc: defaultDesc,
-      defaultDescTypedLoop,
-      swiperOptions: {
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true // 允许点击小圆点跳转
-        },
-        loop: loop ? true : false,
-        effect, // fade
-        autoplay: (autoplay && swiperLength > 1) ? {
-  　　　　delay,
-  　　　　disableOnInteraction: false // 手动切换之后继续自动轮播
-    　　} : false,
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-        lazy: {
-          loadPrevNext: true,
-        },
-        on:{
-          init: function() {
-            swiperAnimateCache(this); //隐藏动画元素 
-            swiperAnimate(this); //初始化完成开始动画
-          }, 
-          slideChangeTransitionEnd: function(){ 
-            swiperAnimate(this); //每个slide切换结束时也运行当前slide动画
-          } 
-        }
-        // Some Swiper option/callback...
-      }
-    },
-    computed: {
-      swiper() {
-        return this.$refs.mySwiper.$swiper
-      }
-    },
-    mounted() {
-      // console.log('Current Swiper instance object', this.swiper)
-      // this.swiper.slideTo(0, 1000, false)
-    },
-    methods: {
-      stopAutoPlay() {
-        (autoplay && swiperLength > 1) && this.swiper.autoplay.stop();
-      },
-      startAutoPlay() {
-        (autoplay && swiperLength > 1) && this.swiper.autoplay.start();
-      },
-      slideChangeTransitionEnd() {
-        console.log('1');
-      },
-      toPostContent() {
-        const fullHeight = $(window).height() - 60;
-        $('html,body').animate({scrollTop: fullHeight},500);
-      }
-    },
-    created() {}
-  })
-</script>
 
-  <script src="/js/bubble/homeBubble.js"></script>
+<div class="row justify-position">
+  <div class="main-content">
+    <article class="post post-detail">
+      
+      <div class="post-content">
+        <h1 id="DevSecOps-Introduction"><a href="#DevSecOps-Introduction" class="headerlink" title="DevSecOps Introduction"></a>DevSecOps Introduction</h1><p>DevSecOps is a methodology which incorporates Information Security and DevOps, focusing on the security of an application throughout the development and deployment process.</p>
+<h2 id="Shift-Left-Testing-测试左移"><a href="#Shift-Left-Testing-测试左移" class="headerlink" title="Shift Left Testing 测试左移"></a>Shift Left Testing 测试左移</h2><p>Traditionally, security has been something which gets tested right at the end of the product creation, fitting well with a waterfall-like workflow.</p>
+<p>The reason for shift-left testing is <strong>the cost of bug fix</strong> in different phrases:</p>
+<p>1.</p>
+<p><img "" class="lazyload placeholder" data-original="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/shiftlefttest1.jpg" src="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/loading.gif"></p>
+<p>2.</p>
+<p><img "" class="lazyload placeholder" data-original="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/shiftlefttest2.jpg" src="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/loading.gif"></p>
+<p>3.</p>
+<p><img "" class="lazyload placeholder" data-original="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/shiftlefttest3.jpg" src="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/loading.gif"></p>
+<p>4.<img "" class="lazyload placeholder" data-original="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/shiftlefttest4.jpg" src="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/loading.gif"></p>
+<p>This implementation of security tests and practices earlier in the software development life cycle is beneficial.</p>
+<p><strong>DevSecOps is an example of shift left testing</strong>.</p>
+<h2 id="Principles"><a href="#Principles" class="headerlink" title="Principles"></a>Principles</h2><p><strong>Automated testing</strong></p>
+<p>Wherever possible, DevSecOps should make use of automated security testing.</p>
+<p><strong>Empower Teams</strong></p>
+<p>DevSecOps encourages all members of a team to have a good knowledge of basic security practices.</p>
+<p><strong>Be prepared for threats</strong></p>
+<p>DevSecOps encourages the whole team to think about potential security threats, and what would happen if the product was attacked.</p>
+<hr>
+<hr>
+<h1 id="Pen-Testing-DAST-SAST-amp-IAST"><a href="#Pen-Testing-DAST-SAST-amp-IAST" class="headerlink" title="Pen Testing, DAST, SAST &amp; IAST"></a>Pen Testing, DAST, SAST &amp; IAST</h1><h2 id="Penetration-Testing"><a href="#Penetration-Testing" class="headerlink" title="Penetration Testing"></a>Penetration Testing</h2><p>Penetration Testing, also known as Pen Testing.</p>
+<p>This can be <em>automated</em>, with software applications, or performed <em>manually</em>. </p>
+<p>The process involves:</p>
+<ul>
+<li><strong>gathering information</strong> about the target before the test</li>
+<li><strong>identifying</strong> possible entry points</li>
+<li>attempting to <strong>break in</strong> (either virtually or for real)</li>
+<li><strong>reporting</strong> back the findings.</li>
+</ul>
+<blockquote>
+<p>渗透测试 (penetration test)并没有一个标准的定义，国外一些安全组织达成共识的通用说法是：渗透测试是通过模拟恶意黑客的攻击方法，来评估计算机网络系统安全的一种评估方法。这个过程包括对系统的任何弱点、技术缺陷或漏洞的主动分析，这个分析是从一个攻击者可能存在的位置来进行的，并且从这个位置有条件主动利用安全漏洞。<br>换句话来说，渗透测试是指渗透人员在不同的位置（比如从内网、从外网等位置）利用各种手段对某个特定网络进行测试，以期发现和挖掘系统中存在的漏洞，然后输出渗透测试报告，并提交给网络所有者。网络所有者根据渗透人员提供的渗透测试报告，可以清晰知晓系统中存在的安全隐患和问题。</p>
+</blockquote>
+<p>方法分类<br>1、<strong>黑箱测试 Black-box testing</strong><br>黑箱测试又被称为所谓的“Zero-Knowledge Testing”，<strong>渗透者完全处于对系统一无所知的状态</strong>，通常这类型测试，最初的信息获取来自于DNS、Web、Email及各种公开对外的服务器。<br>2、<strong>白盒测试 White-box testing</strong><br>白盒测试与黑箱测试恰恰相反，<strong>测试者可以通过正常渠道向被测单位取得各种资料</strong>，包括网络拓扑、员工资料甚至网站或其它程序的代码片段，也能够与单位的其它员工（销售、程序员、管理者……）进行面对面的沟通。<strong>这类测试的目的是模拟企业内部雇员的越权操作。</strong><br>3、隐秘测试<br>隐秘测试是对被测单位而言的，通常情况下，接受渗透测试的单位网络管理部门会收到通知：在某些时段进行测试。因此能够监测网络中出现的变化。但隐秘测试则被测单位也仅有极少数人知晓测试的存在，因此能够有效地检验单位中的信息安全事件监控、响应、恢复做得是否到位。</p>
+<hr>
+<h2 id="DAST-SAST-amp-IAST"><a href="#DAST-SAST-amp-IAST" class="headerlink" title="DAST, SAST &amp; IAST"></a>DAST, SAST &amp; IAST</h2><blockquote>
+<p><strong>SAST: Static Application Security Testing  - 静态应用程序安全测试</strong></p>
+<p><strong>DAST: Dynamic Application Security Testing  - 动态应用程序安全测试</strong></p>
+<p><strong>IAST: Interactive Application Security Testing  - 交互式应用程序安全测试</strong></p>
+</blockquote>
+<hr>
+<h3 id="DAST-Dynamic-动态-黑盒"><a href="#DAST-Dynamic-动态-黑盒" class="headerlink" title="DAST / Dynamic 动态 - 黑盒"></a>DAST / Dynamic 动态 - 黑盒</h3><p><strong>D</strong>ynamic <strong>A</strong>pplication <strong>S</strong>ecurity <strong>T</strong>esting (DAST) is a <strong>black box</strong> testing method that <strong>examines an application as it’s running</strong> to find vulnerabilities that an attacker could exploit. </p>
+<p><strong>DAST是一种黑盒测试技术</strong>，是目前应用最广泛、使用最简单的一种Web应用安全测试方法，安全工程师常用的工具如AWVS、AppScan等就是基于DAST原理的产品。</p>
+<h4 id="Tools"><a href="#Tools" class="headerlink" title="Tools"></a>Tools</h4><p>Some of the more popular DAST tools are:</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.acunetix.com/vulnerability-scanner/">Acunetix Vulnerability Scanner</a></li>
+<li><a target="_blank" rel="noopener" href="https://about.gitlab.com/features/">GitLab</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.appknox.com/dynamic-application-security-testing">Appknox</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.netsparker.com/features/advanced/overview/">Netsparker</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.checkmarx.com/">CheckMarx</a></li>
+</ul>
+<hr>
+<h3 id="SAST-Static-静态-白盒"><a href="#SAST-Static-静态-白盒" class="headerlink" title="SAST - Static / 静态 - 白盒"></a>SAST - Static / 静态 - 白盒</h3><p><strong>S</strong>tatic <strong>A</strong>pplication <strong>S</strong>ecurity <strong>T</strong>esting (SAST) is a <strong>white box</strong> method of testing. It <strong>examines the code</strong> to find software flaws and weaknesses (such as SQL injection). </p>
+<h4 id="Tools-1"><a href="#Tools-1" class="headerlink" title="Tools"></a>Tools</h4><p>Some of the more popular SAST tools (not mentioned above) are:</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.synopsys.com/software-integrity/security-testing/static-analysis-sast.html">Coverity</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.hcltechsw.com/wps/portal/products/appscan/home">HCL AppScan</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.kiuwan.com/code-security-sast/">Kiuwan</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.attackflow.com/Enterprise">AttackFlow</a></li>
+<li><a target="_blank" rel="noopener" href="https://coreos.com/clair/docs/latest/">CoreOS Clair</a></li>
+</ul>
+<hr>
+<h3 id="IAST-Interactive-交互-结合"><a href="#IAST-Interactive-交互-结合" class="headerlink" title="IAST - Interactive / 交互 - 结合"></a>IAST - Interactive / 交互 - 结合</h3><p>IAST（Interactive Application Security Testing，交互式应用程序安全测试）结合了SAST和DAST的优点。IAST可以像SAST一样看到源代码，也可以像DAST一样看到应用程序运行时的执行流。</p>
+<hr>
+<h3 id="Compare-DAST-SAST-ISAT"><a href="#Compare-DAST-SAST-ISAT" class="headerlink" title="Compare DAST SAST ISAT"></a>Compare DAST SAST ISAT</h3><p><img "" class="lazyload placeholder" data-original="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/comparedsi.jpg" src="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/loading.gif"></p>
+<hr>
+<h1 id="OWASP"><a href="#OWASP" class="headerlink" title="OWASP"></a>OWASP</h1><p><strong>The Open Web Application Security Project (OWASP)</strong>, is a non-profit foundation that focuses on security in software and more specifically making software more secure.</p>
+<h2 id="OWASP-Top-Ten"><a href="#OWASP-Top-Ten" class="headerlink" title="OWASP Top Ten"></a>OWASP Top Ten</h2><p>You can find the current OWASP Top Ten <a target="_blank" rel="noopener" href="https://owasp.org/www-project-top-ten/">here</a></p>
+
+      </div>
+      <div class="post-tags-categories">
+        
+        <div class="tags">
+          
+            <a href="/tags/DevOps/" class="">
+              DevOps
+            </a>
+          
+            <a href="/tags/security/" class="">
+              security
+            </a>
+          
+            <a href="/tags/DevSecOps/" class="">
+              DevSecOps
+            </a>
+          
+            <a href="/tags/DAST/" class="">
+              DAST
+            </a>
+          
+            <a href="/tags/SAST/" class="">
+              SAST
+            </a>
+          
+            <a href="/tags/Pentesting/" class="">
+              Pentesting
+            </a>
+          
+            <a href="/tags/OWASP/" class="">
+              OWASP
+            </a>
+          
+        </div>
+        
+      </div>
+      
+        <div class="copyright">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+    <strong>Author:  </strong>Kai Moura Wang</a>
+    </li>
+    <li class="post-copyright-link">
+    <strong>Link:  </strong>
+    <a href="/posts/9075072b/" target="_blank" title="Security_Part2">http://www.kaimourawang.com/posts/9075072b/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>Copyright:   </strong>
+      You are WELCOME to SHARE this article via Link above or Social Badges👇 below. All articles on this website are under a <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)">CC BY-NC-SA 4.0</a>
+      license.
+    </li>
+  </ul>
+<div>
+      
+    </article>
+    <!-- 上一篇文章和下一篇文章 -->
+    
+      <!-- 文章详情页的上一页和下一页 -->
+<div class="post-nav">
+
+
+
+
+
+  
+  <div class="post-nav-next post-nav-item">
+    <div class="post-nav-img lazyload" data-original="/medias/1.jpg" style="background-size: cover; 
+      background-position: center center;">
+    </div>
+    <a href="/posts/cf0415bc/" class="post-nav-link">
+      <div class="title">
+        Next: <i class="fa fa-angle-right"></i>
+        <div class="title-text">How to enable Chrome parallel download</div>
+      </div>
+      <!-- <div class="content">
+        How to enable Chrome / Chromium-based Browsers Parallel Down
+      </div> -->
+    </a>
+  </div>
+
+</div>
+
+    
+    
+
+    <!-- 打赏 -->
+    
+
+    <!-- 分享 -->
+    
+      <!-- https://github.com/overtrue/share.js -->
+<!-- 文章详情页的分享 -->
+<div class="social-share" data-sites="twitter,facebook,google,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+
+<script src="/js/shareJs/social-share.min.js"></script>
+</script>
 
 <style>
-#appSwiper {
-  position: relative;
-  user-select: none;
-  overflow: hidden;
-}
-.default-excerpt {
-  font-size: 1.6rem;
-  margin-top: 1rem;
-  font-family: Titillium Web,'PingFang SC','Hiragino Sans GB','Microsoft JhengHei','Microsoft YaHei',sans-serif;
-}
-.bottom-one-btn {
-  margin-top: 15px;
-}
-.swiper-container {
-  overflow: hidden;
-  z-index: 0;
-}
-.swiper-slide {
-  height: 350px;
-  position: relative;
-}
-.swiper-button-prev,
-.swiper-button-next {
-  padding: 10px 10px;
-  transition: background 0.2s;
-}
-.swiper-button-prev:hover,
-.swiper-button-next:hover {
-  background: rgba(0, 0, 0, 0.2);
-}
-.swiper-slide .item {
-  width: 100%;
-  height: 100%;
-}
-.flag {
-  position: relative;
-  width: 60%;
-  margin: 0 auto;
-  color: #ffffff;
-  height: 100%;
-  background: #000;
-}
-.flag img {
-  min-height: 100%;
-}
-.flag-text {
-  position: absolute;
-  top: 50px;
-  left: 50px;
-  width: 80%;
-  height: 280px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  z-index: 9999;
-}
-.flag-text .title {
-  font-size: 1.8rem;
-  font-family: Long Cang,cursive;
-}
-.flag-text .title a {
-  color: #fff;
-  transition: color 0.3s;
-}
-.flag-text .title a:hover {
-  color: #8732a8;
-}
-.flag-text .excerpt {
-  color: #eee;
-  font-family: Ubuntu,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
-  width: 70%;
-  line-height: 30px;
-  height: 150px;
-  margin-top: 2%;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 5;
-  overflow: hidden;
-}
-.swiper-pagination-bullet-active {
-  opacity: 1;
-  background-color: #42b983;
-}
-.img-mask {
-  opacity:0.6; filter: alpha(opacity=60);
-}
-.flag-text .read-more {
-  margin-bottom: 30px;
-  padding: 5px 15px;
-  color: #ffffff;
-  border-radius: 20px;
-}
-#scroll-down {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 2.5rem;
-  color: #fff;
-  cursor: pointer;
-  z-index: 2;
-}
-#scroll-down a {
-  color: #fff;
-}
-@-webkit-keyframes rightan
-  {
-  
-  0%
-  {
-    transform: translateY(0);
-    opacity: 0.5;
+  .social-share {
+    margin: 20px 0;
   }
-  50% {
-    transform: translateY(-30px);
-    opacity: 1;
-  }
-  100%
-  {
-    transform: translateY(0);
-    opacity: 0.5;
-  }
-}
-.scroll-down-effects {
-  animation: rightan 1.5s infinite;
-}
-/* 当头部导航设置为背景透明的时候 */
-
-  .swiper-slide {
-    height: 400px;
-  }
-  .flag-text {
-    top: 80px;
-  }
-
-
-@media (min-width: 992px) {
-  .swiper-button-prev {
-    margin-left: 20%;
-    transform: translateX(-180%);
-  }
-  .swiper-button-next {
-    margin-right: 20%;
-    transform: translateX(180%);
-  }
-  .flag-text .title {
-    width: 80%;
-    line-height: 35px;
-    max-height: 70px;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    overflow: hidden;
-  }
-}
-@media (max-width: 992px) {
-  .flag {
-    width: 100%;
-  }
-  .flag-text .title {
-    font-size: 1.5rem;
-    margin-top: 50px;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    overflow: hidden;
-  }
-  .flag-text {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 80%;
-    height: 100%;
-    margin-left: 50%;
-    transform: translateX(-50%);
-  }
-  .flag-text .excerpt {
-    width: 100%;
-    line-height: 25px;
-    height: 125px;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 5;
-    overflow: hidden;
-  }
-  .flag-text .read-more {
-    margin-bottom: 80px;
-  }
-}
-@media (max-width: 992px) and (min-width: 551px) {
-  .flag-text .excerpt {
-    width: 70%;
-  }
-}
-@media (max-width: 551px) {
-  .swiper-slide {
-    height: 250px;
-  }
-  .flag-text .title {
-    line-height: 30px;
-    max-height: 60px;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    overflow: hidden;
-    margin-top: 20px;
-  }
-  .flag-text .excerpt {
-    font-size: 1rem;
-    line-height: 20px;
-    height: 80px;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 4;
-  }
-  .flag-text .excerpt { 
-    margin-top: 10px;
-  }
-  .flag-text .read-more {
-    margin-top: 10px;
-    margin-bottom: 50px;
-  }
-  .swiper-button-prev,
-  .swiper-button-next {
-    transform: scale(0.5);
-  }
-  .swiper-button-prev {
-    left: 0;
-  }
-  .swiper-button-next {
-    right: 0;
-  }
-}
-/* 当头部导航设置为背景透明的时候 */
-
-  @media (max-width: 992px) {
-    .flag-text {
-      top: 60px;
-      height: 80%;
-    }
-  }
-  @media (max-width: 551px) {
-    .swiper-slide {
-      height: 310px;
-    }
-  }
-
-
-/* 文字或者按钮居中显示 */
-
-  .flag-text {
-    left: 10%;
-  }
-  .flag-text .flag-text-content {
-    width: 100%;
-    text-align: center;
-  }
-  .flag-text .title {
-    width: 100%;
-    text-align: center;
-  }
-  .flag-text .excerpt { 
-    width: 100%;
-    text-align: center;
-  }
-  .bottom-one-btn {
-    display: flex;
-    justify-content: center;
-  }
-  .default-excerpt {
-    display: flex;
-    justify-content: center;
-    font-size: 1.6rem;
-    font-family: Titillium Web,'PingFang SC','Hiragino Sans GB','Microsoft JhengHei','Microsoft YaHei',sans-serif;
-  }
-  .flag-text-btns {
-    justify-content: center;
-  }
-  @media (min-width: 992px) {
-    .flag-text .excerpt {
-      line-height: 30px;
-      display: -webkit-box;
-      -webkit-box-orient: vertical;
-      -webkit-line-clamp: 5;
-      overflow: hidden;
-    }
-  }
-  @media (max-width: 992px) {
-    .flag-text {
-      margin-left: 0;
-      transform: translateX(0);
-    }
-  }
-
-
-
-
-/* 全屏显示 */
-
-  .flag {
-    width: 100%;
-  }
-  .swiper-slide {
-    height: calc(100vh - 60px);
-    
-      height: 100vh;
-    
-  }
-  .flag-text {
-    top: 50%;
-    left: 15%;
-    transform: translateY(-50%);
-    width: 70%;
-    height: auto;
-  }
-  .flag-text .title {
-    font-size: 2.8rem;
-    line-height: 1.5em;
-    max-height: none;
-    /* overflow: visible; */
-  }
-  .flag-text .excerpt {
-    font-size: 1.25rem;
-    height: 150px;
-  }
-  .flag-text .read-more {
-    margin-top: 10px;
-  }
-  .swiper-button-prev,
-  .swiper-button-next {
-    margin-top: -60px!important;
-  }
-  .swiper-btn-color,
-  .swiper-btn-color2 {
-    background-color: transparent;
-    border: 1px solid #fff;
-  }
-  .swiper-btn-color:hover,
-  .swiper-btn-color2:hover {
-    background-color: #8732a8;
-    border: 1px solid #8732a8!important;
-  }
-  .flag-text-btns {
-    justify-content: center;
-  }
-  .swiper-button-prev {
-    margin-left: 10px;
-    transform: translateX(0);
-    border-radius: 50%;
-    padding: 0;
-    width: 50px;
-    height: 50px;
-  }
-  .swiper-button-next {
-    margin-right: 10px;
-    transform: translateX(0);
-    border-radius: 50%;
-    padding: 0;
-    width: 50px;
-    height: 50px;
-  }
-  .swiper-button-next:after, .swiper-button-prev:after {
-    font-size: 1.2rem;
-  }
-  @media (min-width: 992px) {
-    .flag-text .excerpt {
-      line-height: 35px;
-      height: 175px;
-    }
-    .default-excerpt {
-      min-height: 150px;
-    }
-    .typed-element {
-      align-items: unset;
-    }
-  }
-  @media (max-width: 992px) {
-    .flag-text {
-      margin-left: 0;
-      height: 60%;
-      top: 55%;
-    }
-    .flag-text .title {
-      font-size: 2.4rem;
-      margin-top: 0;
-      display: -webkit-box;
-      -webkit-box-orient: vertical;
-      -webkit-line-clamp: 2;
-      overflow: hidden;
-    }
-    .flag-text .excerpt {
-      line-height: 35px;
-      height: 185px;
-    }
-    .flag-text .read-more {
-      margin-top: 20px;
-    }
-  }
-  @media (max-width: 551px) {
-    .flag-text {
-      height: 60%;
-    }
-    .flag-text .title {
-      font-size: 2.2rem;
-    }
-    .flag-text .excerpt {
-      line-height: 30px;
-    }
-    .flag-text .read-more {
-      margin-top: 50px;
-      padding: 10px 30px;
-    }
-    .swiper-button-prev {
-      margin-left: 0;
-    }
-    .swiper-button-next {
-      margin-right: 0;
-    }
-    .default-excerpt {
-      margin-top: 1rem;
-    }
-  }
-
-
-/* video */
-.swiper-video {
-  width: 100%;
-  height: 100%;
-}
-.swiper-video video {
-  pointer-events: none;
-}
-.swiper-video-maskBox{
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: #000;
-  opacity: 0.2;
-  z-index: 1;
-}
-@media (min-width: 992px) {
-  
-    .swiper-video {
-      display: none;
-    }
-    .swiper-default-bgImg {
-      display: block;  
-    }
-  
-}
-@media (max-width: 992px) {
-  .swiper-video {
-    display: none;
-  }
-  .swiper-default-bgImg {
-    display: block;  
-  }
-}
-/* video-end */
 </style>
-<!-- 首页座右铭 -->
-
-<!-- 首页公告 -->
-
-<!-- 首页文章置顶 -->
 
 
-
-
-<!-- hash算法 -->
-
-<div class="bg-floor" id="home-bg-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;"></div>
-<section class="posts">
-  
-    <article class="post reveal" style="flex-direction: row-reverse;   ">
-      <div class="post-main">
-        <div class="post-info">
-          <div class="post-time">
-            <i class="fa fa-clock-o" aria-hidden="true"></i>
-            <span class="post-time">2021-09-12</span>
-          </div>
-          <div class="post-title">
-            <a class="post-title-link" href="/posts/38dbfa3f/">What is &#39;Redundant&#39; Data?</a>
-          </div>
-          <div class="post-meta">
-            <div class="post-tags">
-              <!-- 文章详情页的标签 -->
-
-    <i class="iconfont icontag"></i>
-    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Data-Storage/" rel="tag">Data Storage</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Redundancy/" rel="tag">Redundancy</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Redundant/" rel="tag">Redundant</a></li></ul>
-
-            </div>
-            <div class="post-categories">
-              <!-- 文章详情页的分类 -->
-
-<div class="article-category">
-  <i class="iconfont iconbookmark1"></i>
-  <a class="article-category-link" href="/categories/Azure/">Azure</a> <a class="article-category-link" href="/categories/Data-Science/">Data Science</a>
-</div>
-
-
-            </div>
-          </div>
-          <div class="post-img-mobile">
-            
-              
-              <a href="/posts/38dbfa3f/" class="lazyload" data-original="/medias/7.jpg" style="background-size: cover; 
-                background-position: center center;">
-              </a>
-            
-          </div>
-          <div class="post-content">
-            What is ‘Redundant’ Data?Redundant DataWhen it comes to Data Storage, the word ‘redundant’ or ‘ redundancy’ keeps poppin
-          </div>
-        </div>
-        <div class="post-more">
-          <a href="/posts/38dbfa3f/">
-            <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
-          </a>
-        </div>
-      </div>
-      <div class="post-img">
-        
-          <a href="/posts/38dbfa3f/" class="lazyload" data-original="/medias/7.jpg" style="background-size: cover; 
-            background-position: center center;">
-          </a>
-        
-      </div>
-    </article>
-  
-    <article class="post reveal" style="   ">
-      <div class="post-main">
-        <div class="post-info">
-          <div class="post-time">
-            <i class="fa fa-clock-o" aria-hidden="true"></i>
-            <span class="post-time">2021-09-11</span>
-          </div>
-          <div class="post-title">
-            <a class="post-title-link" href="/posts/c9b9b3e2/">What is Container &amp; Docker?</a>
-          </div>
-          <div class="post-meta">
-            <div class="post-tags">
-              <!-- 文章详情页的标签 -->
-
-    <i class="iconfont icontag"></i>
-    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Azure/" rel="tag">Azure</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Container/" rel="tag">Container</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Docker/" rel="tag">Docker</a></li></ul>
-
-            </div>
-            <div class="post-categories">
-              <!-- 文章详情页的分类 -->
-
-<div class="article-category">
-  <i class="iconfont iconbookmark1"></i>
-  <a class="article-category-link" href="/categories/Azure/">Azure</a> <a class="article-category-link" href="/categories/Data-Science/">Data Science</a>
-</div>
-
-
-            </div>
-          </div>
-          <div class="post-img-mobile">
-            
-              
-              <a href="/posts/c9b9b3e2/" class="lazyload" data-original="/medias/4.jpg" style="background-size: cover; 
-                background-position: center center;">
-              </a>
-            
-          </div>
-          <div class="post-content">
-            What is Container &amp; Docker?ContainerWhat is Container?A container is a standard unit of software that packages up co
-          </div>
-        </div>
-        <div class="post-more">
-          <a href="/posts/c9b9b3e2/">
-            <i class="iconfont iconmore" pointer style="  " title="阅读更多"></i>
-          </a>
-        </div>
-      </div>
-      <div class="post-img">
-        
-          <a href="/posts/c9b9b3e2/" class="lazyload" data-original="/medias/4.jpg" style="background-size: cover; 
-            background-position: center center;">
-          </a>
-        
-      </div>
-    </article>
-  
-</section>
-<!-- 翻页 -->
-
-  <!-- <nav class="page-nav">
-    <a class="extend prev" rel="prev" href="/">Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-  </nav> -->
-  <div class="page-nav">
     
-      <a href="/"
-         class="page-nav-pre">
-         <i class="fa fa-angle-left"></i><span class="ml-5">Prev</span>
-      </a>
     
-    <div class="page-info">
-        <div class="page-info-text">2 / 2</div>
-    </div>
+    <!-- 评论 -->
+    <!-- 评论 -->
+
+  <div id="myComment">
     
   </div>
 
-
-<!-- 花瓣和雪花飘落 -->
-<!-- 雪花和花瓣特效 -->
+<!-- comment script in themes\hexo-theme-bamboo\layout\_partial\scripts\index.ejs -->
 
 
+  </div>
 
-<!-- 灯笼 -->
+  <!-- 目录 -->
+  <!-- 文章详情页右侧目录 -->
 
+  <div class="toc-aside">
+    <div class="toc-main">
+      <div class="toc-aside-title">
+        <i class="fa fa-list-ul" aria-hidden="true"></i><span>catalog</span>
+        
+          <div class="toc-open-close">catalog</div>
+        
+      </div>
+      <div class="toc-content">
+        <div class="toc"></div>
+      </div>
+    </div>
+  </div>
+  <!-- js在scripts目录下的的toc.ejs里面 -->
+  
+
+  <script>
+    function openBtnClickFn () {
+      let openOrCloseBtn = $('.toc-aside .toc-aside-title .toc-open-close');
+      let open = eval('' || 'true');
+      openOrCloseBtn.click(function() {
+        if (open === true) {
+          $(".toc-aside").css({'width': 0, 'padding': 0});
+          $(".toc-content").css({'width': 0});
+          $(".toc-aside-title span, .toc-aside-title i").css({'display': 'none'});
+          $(".main-content").css({'width': '75%', 'margin': '10px auto'});
+          open = false;
+        } else {
+          $(".toc-aside").css({'width': '300px', 'padding': '0 10px'});
+          $(".toc-content").css({'width': '300px'});
+          $(".toc-aside-title span, .toc-aside-title i").css({'display': 'inline-block'});
+          $(".main-content").css({'width': '65%', 'margin-right': '10px', 'margin-left': 'calc(35% - 350px)'});
+          open = true;
+        }
+      });
+    };
+    openBtnClickFn();
+    document.addEventListener('pjax:complete', function () {
+      openBtnClickFn();
+    })
+  </script>
+
+
+  
+
+  <!-- 图片放大 Wrap images with fancybox support -->
+  <script src="/js/wrapImage.js"></script>
+</div>
+
+<!-- 文章详情页背景图 -->
+<div id="appBgSwiper" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;" :style="{'background-color': bgColor ? bgColor : 'transparent'}">
+    <transition-group tag="ul" :name="names">
+        <li v-for='(image,index) in img' :key='index' v-show="index === mark" class="bg-swiper-box">
+            <img :src="image" class="bg-swiper-img">
+        </li>
+    </transition-group>
+</div>
+<script>
+    var vm = new Vue({
+        el: '#appBgSwiper',
+        data: {
+            names: '' || 'fade' || 'fade', // translate-fade fade
+            mark: 0,
+            img: [],
+            bgColor: '',
+            time: null
+        },
+        methods: {   //添加方法
+            change(i, m) {
+                if (i > m) {
+                    // this.names = 'fade';
+                } else if (i < m) {
+                    // this.names = 'fade';
+                } else {
+                    return;
+                }
+                this.mark = i;
+            },
+            prev() {
+                // this.names = 'fade';
+                this.mark--;
+                if (this.mark === -1) {
+                    this.mark = 3;
+                    return
+                }
+            },
+            next() {
+                // this.names = 'fade';
+                this.mark++;
+                if (this.mark === this.img.length) {
+                    this.mark = 0;
+                    return
+                }
+            },
+            autoPlay() {
+                // this.names = 'fade';
+                this.mark++;
+                if (this.mark === this.img.length) {
+                    this.mark = 0;
+                    return
+                }
+            },
+            play() {
+                let bgImgDelay = '' || '180000'
+                let delay = parseInt(bgImgDelay) || 180000;
+                this.time = setInterval(this.autoPlay, delay);
+            },
+            enter() {
+                clearInterval(this.time);
+            },
+            leave() {
+                this.play();
+            }
+        },
+        created() {
+            this.play()
+        },
+        beforeDestroy() {
+            clearInterval(this.time);
+        },
+        mounted() {
+            let prop = ''|| 'https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/reversed-waterfall@3000x2000px.png';
+            let isImg = prop.includes('.bmp') || prop.includes('.jpg') || prop.includes('.png') || prop.includes('.tif') || prop.includes('.gif') || prop.includes('.pcx') || prop.includes('.tga') || prop.includes('.exif') || prop.includes('.fpx') || prop.includes('.psd') || prop.includes('.cdr') || prop.includes('.pcd') || prop.includes('.dxf') || prop.includes('.ufo') || prop.includes('.eps') || prop.includes('.ai') || prop.includes('.raw') || prop.includes('.WMF') || prop.includes('.webp') || prop.includes('.jpeg') || prop.includes('http://') || prop.includes('https://') 
+            if (isImg) {
+                let img = prop.split(',');
+                let configRoot = '/'
+                let arrImg = [];
+                img.forEach(el => {
+                    var Expression=/http(s)?:\/\/([\w-]+\.)+[\w-]+(\/[\w- .\/?%&=]*)?/;
+			        var objExp = new RegExp(Expression);
+
+                    if(objExp.test(el)) {
+                        // http or https
+                        arrImg.push(el);
+                    } else {
+                        // 非http or https开头
+                        // 本地文件
+                        let firstStr = el.charAt(0);
+                        if (firstStr == '/') {
+                            el = el.substr(1); // 删除第一个字符 '/',因为 configRoot最后一个字符为 /
+                        }
+                        el = configRoot + el;
+                        arrImg.push(el);
+                    }
+                })
+                this.img = arrImg;
+            } else {
+                this.bgColor = prop;
+            }
+        }
+    })
+</script>
+
+<style>
+    .bg-swiper-box {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    .bg-swiper-img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+</style>
 
       </main>
     </div>
