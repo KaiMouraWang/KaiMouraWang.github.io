@@ -685,7 +685,7 @@ git commit -m  &quot;&lt;message&gt;&quot;<span aria-hidden="true" class="line-n
 
 <hr>
 <hr>
-<h2 id="Getting-Started"><a href="#Getting-Started" class="headerlink" title="Getting Started"></a>Getting Started</h2><h3 id="Repositories"><a href="#Repositories" class="headerlink" title="Repositories"></a>Repositories</h3><p>A repository is a storage where all your project and all the changes made to it are kept. You can think of it as a “change database.” But don’t worry; it is only a normal folder on your system, so it is very easy to manipulate.</p>
+<h2 id="Getting-Started"><a href="#Getting-Started" class="headerlink" title="Getting Started"></a>Getting Started</h2><h3 id="Repositories-版本库"><a href="#Repositories-版本库" class="headerlink" title="Repositories  版本库"></a>Repositories  版本库</h3><p>A repository is a storage where all your project and all the changes made to it are kept. You can think of it as a “change database.” But don’t worry; it is only a normal folder on your system, so it is very easy to manipulate.</p>
 <p>Open Git Bash:</p>
 <pre class="line-numbers language-none"><code class="language-none">$ mkdir mynewproject
 $ cd mynewproject&#x2F;
@@ -697,11 +697,11 @@ $ git init<span aria-hidden="true" class="line-numbers-rows"><span></span><span>
 </blockquote>
 <p><img "" class="lazyload placeholder" data-original="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/gitdirct.jpg" src="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/loading.gif"></p>
 <p>Instead of tracking changes between versions, Git <strong>takes snapshots</strong>. All those snapshots are stored in the “.git” directory. Each snapshot is called “commit”.<br><strong>The HEAD file in this “.git” directory points to the current “branch” or subversion of the project that you are working on.</strong> The default branch is called “<del>master</del> main,” but it is just like any other branch; the name is just an old convention.</p>
-<h3 id="Working-Directory"><a href="#Working-Directory" class="headerlink" title="Working Directory"></a>Working Directory</h3><p>What about <strong>the empty area outside the “.git” directory</strong>? <strong>It is called the Working Directory</strong>, and the files you will be working on will be stored there. Generally, your most recent version will be on the Working Directory.</p>
+<h3 id="Working-Directory-工作区"><a href="#Working-Directory-工作区" class="headerlink" title="Working Directory  工作区"></a>Working Directory  工作区</h3><p>What about <strong>the empty area outside the “.git” directory</strong>? <strong>It is called the Working Directory</strong>, and the files you will be working on will be stored there. Generally, your most recent version will be on the Working Directory.</p>
 <p>Each file you work on is on the Working Directory. There is nothing particular about this place except the fact that you will only manipulate the files here directly. <strong>Never modify the files inside the “.git” directory!</strong></p>
 <p><img "" class="lazyload placeholder" data-original="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/workingdirc.jpg" src="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/loading.gif"></p>
 <p><strong>Git will detect any new file you will place in the Working Directory.</strong> <strong>And you check the status of the directory by using the Git command “status.”</strong></p>
-<h3 id="Staging-Area"><a href="#Staging-Area" class="headerlink" title="Staging Area"></a>Staging Area</h3><p>The Staging Area is where your files go before the snapshots are taken.</p>
+<h3 id="Staging-Area-暂存区"><a href="#Staging-Area-暂存区" class="headerlink" title="Staging Area  暂存区"></a>Staging Area  暂存区</h3><p>The Staging Area is where your files go before the snapshots are taken.</p>
 <pre class="line-numbers language-none"><code class="language-none">$ git add &lt;name_of_the_file&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 
@@ -712,13 +712,13 @@ $ git init<span aria-hidden="true" class="line-numbers-rows"><span></span><span>
 <blockquote>
 <p>Don’t forget ‘<strong>–cached</strong>‘ behind rm, otherwise you’ll <strong>lose your file</strong> !!!</p>
 </blockquote>
-<h3 id="Commits"><a href="#Commits" class="headerlink" title="Commits"></a>Commits</h3><p>A commit is just a <strong>snapshot</strong> of the <strong>entire project</strong> at a certain time. <u>Git doesn’t record the individual changes done to the files</u> ; it takes <u>a picture of the <strong>entire</strong> project</u> .</p>
+<h3 id="Commits-提交"><a href="#Commits-提交" class="headerlink" title="Commits  提交"></a>Commits  提交</h3><p>A commit is just a <strong>snapshot</strong> of the <strong>entire project</strong> at a certain time. <u>Git doesn’t record the individual changes done to the files</u> ; it takes <u>a picture of the <strong>entire</strong> project</u> .</p>
 <p>The previous state of the project is another commit called “parent.” The very first commit is created by Git when the repository is created, and it’s the one commit that has no parents. If a commit has two parents, that means that it was created by merging two branches.</p>
 <p><strong>A reference to a specific commit is called “head,” and it also has a name. And the head you are currently working on is called “HEAD”.</strong></p>
 <pre class="line-numbers language-none"><code class="language-none">git commit<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-
-
+<p><img "" class="lazyload placeholder" data-original="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/git1324234.jpg" src="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/loading.gif"></p>
+<p><img "" class="lazyload placeholder" data-original="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/Git32423532.jpg" src="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/loading.gif"></p>
 <hr>
 <h2 id="Further-Reading"><a href="#Further-Reading" class="headerlink" title="Further Reading"></a>Further Reading</h2><h3 id="Get-help-git-help-everyday"><a href="#Get-help-git-help-everyday" class="headerlink" title="Get help ( git help everyday )"></a><strong>Get help ( <u>git help everyday</u> )</strong></h3><p>This open a html on your default browser and you can check the manual of git.</p>
 <h3 id="Username-and-Email-in-Git-Config-git-config"><a href="#Username-and-Email-in-Git-Config-git-config" class="headerlink" title="Username and Email in Git Config (git config)"></a>Username and Email in Git Config (git config)</h3><p>Setting Config Globally</p>
