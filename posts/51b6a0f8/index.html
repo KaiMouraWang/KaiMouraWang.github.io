@@ -625,17 +625,68 @@
     <article class="post post-detail">
       
       <div class="post-content">
-        <h1 id="Git-Basics"><a href="#Git-Basics" class="headerlink" title="Git_Basics"></a>Git_Basics</h1><blockquote>
-<p><em>I’m an egotistical bastard, and I name all my projects after myself. First Linux, now git.</em></p>
-<p><em>_Linus Torvalds</em></p>
-</blockquote>
+        <h1 id="2-Git-Basics"><a href="#2-Git-Basics" class="headerlink" title="2.Git_Basics"></a>2.Git_Basics</h1><p>updated: 20/09/2021</p>
 <h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><p>Git is used for tracking changes in source code during software development.<br><strong>It is designed for coordinating work amongst programmers, but <u>it can be used to track changes in any set of files</u>.</strong></p>
 <blockquote>
 <p>However, 所有的版本控制系统，其实只能跟踪文本文件的改动，比如TXT文件，网页，所有的程序代码等等，Git也不例外。版本控制系统可以告诉你每次的改动，比如在第5行加了一个单词“Linux”，在第8行删了一个单词“Windows”。而图片、视频这些二进制文件，虽然也能由版本控制系统管理，但没法跟踪文件的变化，只能把二进制文件每次改动串起来，也就是只知道图片从100KB改成了120KB，但到底改了啥，版本控制系统不知道，也没法知道。</p>
 </blockquote>
-<h2 id="Basic-Workflow"><a href="#Basic-Workflow" class="headerlink" title="Basic Workflow"></a>Basic Workflow</h2><p>The basic workflow for using Git includes <strong>staging, committing and pushing changes</strong>.<br>Before a change can be committed it must be staged and to apply your changes for everyone else on the team, the changes must be pushed to the remote repository.</p>
+<h2 id="Basic-Typical-Workflow"><a href="#Basic-Typical-Workflow" class="headerlink" title="Basic/Typical Workflow"></a>Basic/Typical Workflow</h2><p>The basic workflow for using Git:</p>
+<ol>
+<li><strong>Git clone</strong> - clone the source code you need to work on</li>
+</ol>
+<pre class="line-numbers language-none"><code class="language-none">git clone &lt;url&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ol start="2">
+<li><strong>Git log</strong> - check the recent changes made to the project</li>
+</ol>
+<pre class="line-numbers language-none"><code class="language-none">git log<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ol start="3">
+<li><strong>Git branch / checkout</strong> - create a new branch to work on so that you don’t mess up with the project</li>
+</ol>
+<pre class="line-numbers language-none"><code class="language-none">git branch &lt;your branch name&gt;
+#or create branch and move to this branch immediately:
+git checkout -b &lt;your branch name&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>You can use whatever editor you want; Git will track all the changes via checksums. Now that you made the necessary changes, it is time to put them on the <strong>staging area</strong>. As a reminder, the staging area is where you put modified codes that are ready to be <strong>snapshotted</strong>.</p>
+<ol start="4">
+<li><strong>Git add</strong> - Stage </li>
+</ol>
+<pre class="line-numbers language-none"><code class="language-none">git add &lt;filename&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><strong>You don’t have to add every file you modified to the staging area, only those which you want to be accounted in the snapshot</strong>. Now that the file is staged, it is time to “commit” it or putting its change in the database. We do this by using the command “commit” and <strong>attaching a little description</strong> with it.</p>
+<ol start="5">
+<li><strong>Git commit</strong> - commit the change to database, but only on your computer!</li>
+</ol>
+<pre class="line-numbers language-none"><code class="language-none">git commit
+#or
+git commit -m  &quot;&lt;message&gt;&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
 <hr>
-<h2 id="Common-Commands-and-Concepts"><a href="#Common-Commands-and-Concepts" class="headerlink" title="Common Commands and Concepts"></a><strong>Common Commands and Concepts</strong></h2><h3 id="Get-help-git-help-everyday"><a href="#Get-help-git-help-everyday" class="headerlink" title="Get help ( git help everyday )"></a><strong>Get help ( <u>git help everyday</u> )</strong></h3><p>This open a html on your default browser and you can check the manual of git.</p>
+<p>Show the code to the senior dev first before making a push. If they are okay with it, you can merge your branch with the main snapshot of the project (called the <del>master</del> main branch). So first you must navigate back to the main branch by using the “checkout” command.</p>
+<hr>
+<ol start="6">
+<li> Pull, Merge and Push: </li>
+</ol>
+<p>   <strong>6a)</strong>  <u>Switch to main branch</u></p>
+   <pre class="line-numbers language-none"><code class="language-none">git checkout master&#x2F;main<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>   You are now on the master branch, where all the team’s work is stored. <strong>But the time you worked on your fix, the project may have changed, meaning that a team member may have changed some files. You should retrieve those changes before committing your own changes to master.</strong> <strong>This will limit the risk of “conflicts” which can happen when two or more contributors change the same file.</strong> </p>
+<p>   <strong>6b)</strong>  To get the changes, you have to <u>pull the project</u> from the remote server (also called <u>origin</u> ).</p>
+   <pre class="line-numbers language-none"><code class="language-none">Git pull origin master&#x2F;main<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>   <strong>6c)</strong>  Merge</p>
+<p>   <strong>Conflicts only arise when the same line has been modified by multiple people. If you and your coworkers changed different parts of the file, everything is okay.</strong> Now that we kept up with the current state of the project, it’s time to commit our version to master. You can merge your branch with the “merge” command.</p>
+   <pre class="line-numbers language-none"><code class="language-none">git merge &lt;your branch name&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>   6d) <strong>Push</strong></p>
+<p>   Now that the commit has been merged back to master, it is time to push the changes to the main server. We do that by using to “push” command.</p>
+   <pre class="line-numbers language-none"><code class="language-none">git push<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<hr>
+<hr>
+<hr>
+<h2 id="Common-Commands-and-Concepts-Explained"><a href="#Common-Commands-and-Concepts-Explained" class="headerlink" title="Common Commands and Concepts Explained"></a><strong>Common Commands and Concepts</strong> Explained</h2><h3 id="Get-help-git-help-everyday"><a href="#Get-help-git-help-everyday" class="headerlink" title="Get help ( git help everyday )"></a><strong>Get help ( <u>git help everyday</u> )</strong></h3><p>This open a html on your default browser and you can check the manual of git.</p>
 <h3 id="Cloning-a-Repository-git-clone"><a href="#Cloning-a-Repository-git-clone" class="headerlink" title="Cloning a Repository (git clone)"></a><strong>Cloning a Repository (<em>git clone</em>)</strong></h3><p>To download a remote repository you can use the git clone command and provide the <strong>URL</strong> of the remote repository. Example:</p>
 <pre class="line-numbers language-GIT" data-language="GIT"><code class="language-GIT"># git clone [REPOSITORY_URL]
 git clone https:&#x2F;&#x2F;github.com&#x2F;bob-crutchley&#x2F;vim<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
