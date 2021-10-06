@@ -167,11 +167,11 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   }
 }
 ::-moz-selection {
-  background: rgba(66,185,131,0.8);
+  background: rgba(4,136,212,0.8);
   color: #fff;
 }
 ::selection {
-  background: rgba(66,185,131,0.8);
+  background: rgba(4,136,212,0.8);
   color: #fff;
 }
 .bg-floor {
@@ -830,14 +830,14 @@ pre:hover::-webkit-scrollbar-thumb:hover,
 }
 .post-detail :not(pre) > code[class*="language-"],
 .post-detail pre[class*="language-"] {
-  background-color: #f5821d;
+  background-color: #00387d;
 }
 .post-detail code:not([class *='language'] ) {
   padding: 1px 5px;
   top: 13px !important;
   font-family: Inconsolata, Monaco, Consolas, 'Courier New', Courier, monospace;
   font-size: 0.91rem;
-  color: #f5821d;
+  color: #f51d82;
   background-color: rgba(248,248,248,0.9);
   border-radius: 2px;
 }
@@ -900,7 +900,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   font-weight: bold;
   line-height: 1.4;
   cursor: url("https://cdn.jsdelivr.net/gh/inkss/common@master/cursor/text.png"), text;
-  color: #273849;
+  color: #7304b8;
 }
 .post-detail h1:focus,
 .post-detail h2:focus,
