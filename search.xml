@@ -40,11 +40,11 @@
       
       <categories>
           
-          <category> Data Science </category>
+          <category> Azure </category>
           
           <category> SQL </category>
           
-          <category> Azure </category>
+          <category> Data Science </category>
           
           <category> Database </category>
           
@@ -79,9 +79,9 @@
           
           <category> Software Development </category>
           
-          <category> SQL </category>
-          
           <category> Azure </category>
+          
+          <category> SQL </category>
           
           <category> Python </category>
           
@@ -114,9 +114,9 @@
       
       <categories>
           
-          <category> Data Science </category>
-          
           <category> Azure </category>
+          
+          <category> Data Science </category>
           
       </categories>
       
@@ -143,9 +143,9 @@
       
       <categories>
           
-          <category> Data Science </category>
-          
           <category> SQL </category>
+          
+          <category> Data Science </category>
           
           <category> Linux </category>
           
@@ -209,18 +209,18 @@
       
       <categories>
           
-          <category> Python </category>
-          
           <category> Codingame </category>
+          
+          <category> Python </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> Codingame </tag>
+            
+            <tag> Python </tag>
             
         </tags>
       
@@ -238,18 +238,18 @@
       
       <categories>
           
-          <category> Python </category>
-          
           <category> Codingame </category>
+          
+          <category> Python </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> Codingame </tag>
+            
+            <tag> Python </tag>
             
         </tags>
       
@@ -737,9 +737,9 @@
       
       <categories>
           
-          <category> Data Science </category>
-          
           <category> Azure </category>
+          
+          <category> Data Science </category>
           
       </categories>
       
@@ -768,9 +768,9 @@
       
       <categories>
           
-          <category> Data Science </category>
-          
           <category> Azure </category>
+          
+          <category> Data Science </category>
           
       </categories>
       
@@ -799,9 +799,9 @@
       
       <categories>
           
-          <category> Data Science </category>
-          
           <category> Azure </category>
+          
+          <category> Data Science </category>
           
       </categories>
       
