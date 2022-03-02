@@ -4,6 +4,202 @@
   
     
     <entry>
+      <title>Cardinality</title>
+      <link href="/posts/4c0210c1/"/>
+      <url>/posts/4c0210c1/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Cardinality"><a href="#Cardinality" class="headerlink" title="Cardinality"></a>Cardinality</h1><p>Within data modelling, the cardinality of a join between two tables is the numerical relationship between rows of one table and rows in the other. Common cardinalities include <strong>one-to-one, one-to-many, and many-to-many</strong>.</p><p>For example, consider a database of electronic health records. Such a database could contain tables like the following:</p><ul><li>A <code>doctor</code> table with information about physicians.</li><li>A <code>patient</code> table for medical subjects undergoing treatment.</li><li>An <code>encounter</code> table with an entry for each hospital visit.</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Power BI </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Cardinality </tag>
+            
+            <tag> Power BI </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Relational Data Structures</title>
+      <link href="/posts/d8f0bbf3/"/>
+      <url>/posts/d8f0bbf3/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Relational-Data-Structures"><a href="#Relational-Data-Structures" class="headerlink" title="Relational Data Structures"></a>Relational Data Structures</h1><p>A relational database comprises <code>a set of tables</code>. A table can have zero if the table is empty or more rows, each table has <code>a fixed set of columns</code>. You can define relationships between tables using <code>primary and foreign keys,</code> and you can access the data in tables using SQL. </p><p>Apart from tables, a typical relational database contains other structures that help to <code>optimize data organization</code> and <code>improve the speed of access</code>: <strong>indexes and views</strong>.</p><h2 id="Index"><a href="#Index" class="headerlink" title="Index"></a>Index</h2><p>An index helps you search for data in a table. Think of an index of a table like an index at the back of a book. </p><h3 id="Book-Index"><a href="#Book-Index" class="headerlink" title="Book Index"></a>Book Index</h3><blockquote><p><strong>Keyword - Page numbers</strong></p></blockquote><p>A book index contains assorted set of references with the <code>pages</code> on which each reference occurs. When you want to find a reference to an item in the book, you look at up through the index, you can use the <code>page numbers</code> in the index to <code>go directly</code> to the correct pages in the book. </p><p>Without an index, you might have to read through the entire book to find the references you’re looking for. </p><p>When you create an index in a database, you specify a column from the table and the index contains a copy of this data in assorted order with <code>pointers</code> to the corresponding rows in the table. When the user runs a query that specifies this column in the where clause, the database management system can use this index to fetch the data more quickly than if it had to scan through the entire table row by row. </p><p>You can create <code>many indexes</code> on a table. However, indexes aren’t free. They will inevitably come with some trade-off. </p><p>For example, <strong>an index might consume additional storage space, and each time you insert, update or delete data in a table,  the indexes for the table must be maintained</strong>. This additional work can <code>slow down</code> insert, update and delete operations, and incur additional processing charges. </p><p>Therefore, <strong>when deciding which indexes to create, you must strike a balance between having indexes that speed up your queries versus the cost of performing other operations</strong>. </p><p><strong>EXAMPLES:</strong></p><p>In a table that is <strong>read-only</strong> or that contains data that is <strong>modified infrequently</strong>, <strong>more indexes may improve query performance</strong>. </p><p><strong>If a table is subject to a large number of inserts, updates, and deletes, such as a table involved in OLTP, then creating too many indexes on that table can slow your system down.</strong> </p><blockquote><p><strong>OLTP : On-Line Transaction Processing</strong></p></blockquote><hr><h3 id="Clustered-Index"><a href="#Clustered-Index" class="headerlink" title="Clustered Index"></a>Clustered Index</h3><blockquote><p><strong>Keywords:  Physical Storage Order ; Unique</strong></p></blockquote><p>最通俗的解释是: </p><p><strong>Clustered Index</strong> 的顺序就是数据的 <strong><u>物理存储</u>顺序</strong> ；而 <strong>Non-Clustered Index</strong> 的索引顺序与数据物理排列顺序无关，只是一个 <strong>页码</strong> 。举例来说，你翻到新华字典的汉字“爬”那一页就是P开头的部分，这就是物理存储顺序（聚簇索引）；而不用你到目录，找到汉字“爬”所在的页码，然后根据页码找到这个字（非聚簇索引）。</p><p>A clustered index physically reorganizes a table by the index key.<br>This arrangement can improve the performance of queries still further because the relational database management system doesn’t have to follow references from the index to find the corresponding data in the underlying table. </p><p>A table can <strong>only</strong> have <strong>a single clustered index</strong>.</p><p><strong>聚簇索引的唯一性</strong><br>正式聚簇索引的顺序就是数据的物理存储顺序，所以一个表最多只能有一个聚簇索引，因为物理存储只能有一个顺序。正因为一个表最多只能有一个聚簇索引，所以它显得更为珍贵，一个表设置什么为聚簇索引对性能很关键。</p><p>初学者最大的误区：把主键自动设为聚簇索引<br>因为这是SQL Server的默认Primary Key行为，你设置了Primary Key，它就把Primary Key设为聚簇索引，而一个表最多只能有一个聚簇索引，所以很多人就把其他索引设置为非聚簇索引。这个是最大的误区。甚至有的Primary Key又是无意义的自动增量字段，那样的话Clustered Index对效率的帮助，完全被浪费了。</p><hr><h2 id="View"><a href="#View" class="headerlink" title="View"></a>View</h2><p>A <code>view</code> is a <code>virtual table</code> based on the results set of a query. </p><p><strong>You can query the view and filter the data in much the same way as a table.</strong> </p><p>A view can also display data from tables joined together.</p><p>You can think of a view as a storage query. The user does not need to know where the data is stored or the complexity of the query, they have immediate access to the relevant data. </p><p>数据库中的数据都是存储在 table 中的，而 View 只是一个或多个 table 依照某个条件组合而成的结果集。View 是抽象的，它在使用时，从 table 里提取出数据，形成虚(virtual)的表。</p><p>View 的作用</p><p>（1）当一个查询你需要频频的作为子查询使用时，<strong>view 可以简化代码，直接调用而不是每次都去重复写这个东西</strong>。</p><p>（2）其实视图还有很多其他的用处，比如说你是一个系统的数据库管理员，你需要给他人提供一张表的某两列数据，而不希望他可以看到其他任何数据，这样你就可以给他建一个只有这两列数据的视图，然后把视图公布给他。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Data Science </category>
+          
+          <category> SQL </category>
+          
+          <category> Azure </category>
+          
+          <category> Database </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Index </tag>
+            
+            <tag> Relational Data </tag>
+            
+            <tag> Clustered Index </tag>
+            
+            <tag> View </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>5_Naming_Conventions</title>
+      <link href="/posts/ab10aa1a/"/>
+      <url>/posts/ab10aa1a/</url>
+      
+        <content type="html"><![CDATA[<h1 id="5-Naming-Conventions"><a href="#5-Naming-Conventions" class="headerlink" title="5_Naming_Conventions"></a>5_Naming_Conventions</h1><p><a href="https://www.youtube.com/watch?v=MtQoWQForqE&amp;t=19s">https://www.youtube.com/watch?v=MtQoWQForqE&amp;t=19s</a></p><h2 id="CamelCase-vs-PascalCase-vs-WikiCase"><a href="#CamelCase-vs-PascalCase-vs-WikiCase" class="headerlink" title="CamelCase vs PascalCase vs WikiCase"></a>CamelCase vs PascalCase vs WikiCase</h2><blockquote><p>/‘pæskəl/</p></blockquote><p><strong>Pascal case</strong> requires that the <strong>first letter</strong> of a variable be in <strong>upper case</strong>. </p><p>In contrast, camel case – also known as <strong>CamelCase – allows the first letter to be either upper or lower case</strong>.</p><p>To clarify between the two options, the terms UpperCamelCase and lowerCamelCase are often used. </p><p><strong>Pascal case would be equivalent to UpperCamelCase</strong>.</p><p>The following are examples of terms written in Pascal case:</p><pre><code>ItemNumberTotalValueURLNameMasterCard</code></pre><p><strong>WikiCase</strong> is the restrictive version of PascalCase:  <strong>each capital letter must be followed by a lower case letter (hence one-letter words are not accommodated)</strong></p><p><strong>WikiCase is more restrictive than PascalCase: WikiCase does not allow 1-letter words, but PascalCase does. (“ReadARecord” is PascalCase but not WikiCase.)</strong> </p><h3 id="Compare"><a href="#Compare" class="headerlink" title="Compare:"></a>Compare:</h3><p><strong>CamelCase: allow first letter be lower letter</strong></p><p><strong>PascalCase: first letter must be Capital letter</strong></p><p><strong>WikiCase: Capital letter must be followed by a lower letter</strong></p><p><strong>这三个是<u>逐渐递进</u>的关系，一个比一个严格：</strong></p><p><strong>CamelCase: （最宽松）首字母可以是小写，其他单词的首字母必须大写；</strong></p><p><strong>PascalCase: 首字母必须是大写，其他和CamelCase一样；</strong></p><p><strong>WikiCase:（最严格）大写字母后面必须是小写字母，不允许两个大写字母在一起的情况，其他和PascalCase一样。</strong></p><h2 id="snake-case-vs-kebab-case"><a href="#snake-case-vs-kebab-case" class="headerlink" title="snake_case vs kebab-case"></a>snake_case vs kebab-case</h2><blockquote><p>kebab/kɪ’bæb/ n. (印度)烤腌羊肉串,肉串上的肉块</p><p>把 dash<code>- </code> 想象成羊肉串的木串，就很形象</p><p>而 underscore<code>_</code> 则像蛇一样</p></blockquote><p><strong>Snake case separates words with an underscore</strong> <code>_</code>, while <strong>kebab case uses a dash</strong> <code>-</code>.</p><p><strong>SCREAMING_SNAKE_CASE:</strong></p><p>SCREAMING_SNAKE_CASE_EXAMPLE</p><p><strong>SCERAMING-KABAB-CASE</strong>:</p><p>SCERAMING-KABAB-CASE</p><p><strong>NOT snake case:</strong></p><p><code>_computerMethod</code></p><p><code>_computerVariable_</code></p><p><strong>NOT kabab case:</strong></p><p><code>-computerMethod</code></p><p><code>computerVariable-</code></p><blockquote><p><strong>也就是说混用的就不是，必须要单一遵守这个case的准则</strong></p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> Software Development </category>
+          
+          <category> SQL </category>
+          
+          <category> Azure </category>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Naming Conventions </tag>
+            
+            <tag> SQL </tag>
+            
+            <tag> python </tag>
+            
+            <tag> Case </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Azure DP-900 Prep</title>
+      <link href="/posts/827be67b/"/>
+      <url>/posts/827be67b/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Azure-DP-900-Prep"><a href="#Azure-DP-900-Prep" class="headerlink" title="Azure DP-900 Prep"></a>Azure DP-900 Prep</h1><h2 id="Roadmap"><a href="#Roadmap" class="headerlink" title="Roadmap"></a>Roadmap</h2><p><img "" class="lazyload placeholder" data-original="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/Azure_RoadMap.jpg" src="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/loading.gif"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Data Science </category>
+          
+          <category> Azure </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Azure </tag>
+            
+            <tag> DP-900 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Bit &amp; Byte</title>
+      <link href="/posts/62200d81/"/>
+      <url>/posts/62200d81/</url>
+      
+        <content type="html"><![CDATA[<p>Data is measured by the number of <strong>bits</strong> it takes to represent it. All information in a computer can be represented as a binary number consisting solely of 0’s and 1’s. Each 0 or 1 in a number is a bit. A bit is the smallest unit of storage in computers. Since computers work in binary (Base 2), this means that all the important numbers that differentiate between different data sizes will be powers of 2. </p><p>Sometime around 1948, the American mathematician John Wilder Tukey (born 1915) realized that the words <strong>binary digit</strong> were likely to assume a much greater importance in the years ahead as computers became more prevalent. He decided to coin a new, shorter word to replace the unwieldy five syllables of binary digit. He considered bigit and binit but settled instead on the short, simple, elegant, and perfectly lovely word <strong>bit</strong>.</p><blockquote><p><strong>bit == binary digit == 0 or 1</strong></p><p><strong>1 byte = 8 bits</strong></p></blockquote><p><u>A <strong>byte</strong> is a collection of <strong>8 bits</strong></u> . Take a moment to examine the table below to get a feel for the difference between data measurements and their relative sizes to one another. </p><table><thead><tr><th>Unit</th><th>Equivalent to</th><th>Abbreviation</th><th>Real-World Example</th></tr></thead><tbody><tr><td>Byte</td><td>8 bits</td><td>B</td><td>1 character in a string</td></tr><tr><td><strong>Kilo</strong>byte</td><td>1024 bytes</td><td>KB</td><td>A page of text (~4 kilobytes)</td></tr><tr><td><strong>Mega</strong>byte</td><td>1024 Kilobytes</td><td>MB</td><td>1 song in MP3 format (~2-3 megabytes)</td></tr><tr><td><strong>Giga</strong>byte</td><td>1024 Megabytes</td><td>GB</td><td>~300 songs in MP3 format</td></tr><tr><td><strong>Tera</strong>byte</td><td>1024 Gigabytes</td><td>TB</td><td>~500 hours of HD video</td></tr><tr><td><strong>Peta</strong>byte</td><td>1024 Terabytes</td><td>PB</td><td>10 billion Facebook photos</td></tr><tr><td><strong>Exa</strong>byte</td><td>1024 Petabytes</td><td>EB</td><td>~500 million hours of HD video</td></tr><tr><td><strong>Zetta</strong>byte</td><td>1024 Exabytes</td><td>ZB</td><td>All the data on the internet in 2019 (~4.5 ZB)</td></tr></tbody></table><p>The amount of data in the world is exploding and growing at an incredible pace every year. This growth is largely the result of the over 4.6 billion people around the world connected to the Internet. Now that smartphones and other Internet-connected devices have become common, they generate a staggering amount of new data. Many experts believe that the size of all the data on the Internet will swell to 175 ZB by the end of 2025!</p><p>The size of the dataset you’re working with usually determines which tool, spreadsheets or SQL, is best suited for the task. Spreadsheets often start to have performance issues as dataset sizes increase beyond a few megabytes. SQL databases are much better at working with larger datasets that have billions of rows with sizes measured in gigabytes. The dataset’s size still matters here–larger datasets will take longer for queries to complete, depending on the query’s content and the number of rows SQL has to process to complete the query. </p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Data Science </category>
+          
+          <category> SQL </category>
+          
+          <category> Linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> SQL </tag>
+            
+            <tag> Data Science </tag>
+            
+            <tag> Linux </tag>
+            
+            <tag> Data Measurement </tag>
+            
+            <tag> Bit </tag>
+            
+            <tag> Byte </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Excel_Notes (Updating)</title>
+      <link href="/posts/63d530b5/"/>
+      <url>/posts/63d530b5/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Excel-Notes-Updating"><a href="#Excel-Notes-Updating" class="headerlink" title="Excel Notes (Updating)"></a>Excel Notes (Updating)</h1><h2 id="COUNTIF-amp-COUNTIFS"><a href="#COUNTIF-amp-COUNTIFS" class="headerlink" title="COUNTIF &amp; COUNTIFS"></a>COUNTIF &amp; COUNTIFS</h2><p><a href="https://support.microsoft.com/zh-cn/office/countif-%e5%87%bd%e6%95%b0-e0de10c6-f885-4e71-abb4-1f464816df34?ui=zh-cn&rs=zh-cn&ad=cn">COUNTIF Microsoft Support(Mandarin)</a></p><p><a href="https://support.microsoft.com/zh-cn/office/countifs-%E5%87%BD%E6%95%B0-dda3dc6e-f74e-4aee-88bc-aa8c2a866842">COUNTIFS Microsoft Support(Mandarin)</a></p><p>COUNTIF Syntax:<br><strong>COUNTIF(range, criteria)</strong></p><p>In the <code>criteria</code> area, even if it is not a string, such as number, you <strong>still need to use “ “</strong>, example:</p><p><strong>“&gt;32”</strong></p><p>COUNTIFS Syntax:</p><p><strong>COUNTIFS(criteria_range1, criteria1, [criteria_range2, criteria2],…)</strong></p><hr><h2 id="VLOOKUP"><a href="#VLOOKUP" class="headerlink" title="VLOOKUP"></a>VLOOKUP</h2><p><a href="https://support.microsoft.com/zh-cn/office/vlookup-942f678a-1bfc-4ccf-8dfa-f5057ded5c65">VLOOKUP Microsoft Support(Mandarin)</a></p><p><strong>Syntax</strong>           </p><p><strong>VLOOKUP (lookup_value, table_array, col_index_num, [range_lookup])</strong>          </p><ol><li>选择单元格。</li><li>键入 =VLOOKUP (，然后选择<strong>要查找的值</strong>。</li><li>键入逗号 (,) 并选择<strong>要在其中查找值的区域或表</strong>。</li><li>键入逗号 (,) 及<strong>要查找的值所在行的行号</strong>。</li><li>键入 ,<strong>FALSE) 查找精确匹配项</strong>。</li><li>按 Enter。</li></ol><blockquote><p><strong>VLOOKUP：在表格中按行查找内容</strong></p><p>它是一个“查找和引用”函数，也就是说，它会在指定的范围里查找有没有与条件相匹配的数据，然后返回一个被引用的数据。简单地说，就好比是按照“门牌号”找到房屋的“主人”。</p><p><strong>COUNTIF：统计满足某条件单元格数量</strong></p><p>当我们需要持续了解某种条件的值或者得分的数量情况时，用COUNTIF/COUNTIFS</p></blockquote><hr>]]></content>
+      
+      
+      <categories>
+          
+          <category> Excel </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Excel </tag>
+            
+            <tag> Excel2019 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Power of Thor - Episode 1</title>
       <link href="/posts/51550831/"/>
       <url>/posts/51550831/</url>
@@ -13,18 +209,18 @@
       
       <categories>
           
-          <category> Codingame </category>
-          
           <category> Python </category>
+          
+          <category> Codingame </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> Codingame </tag>
-            
             <tag> Python </tag>
+            
+            <tag> Codingame </tag>
             
         </tags>
       
@@ -42,18 +238,18 @@
       
       <categories>
           
-          <category> Codingame </category>
-          
           <category> Python </category>
+          
+          <category> Codingame </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> Codingame </tag>
-            
             <tag> Python </tag>
+            
+            <tag> Codingame </tag>
             
         </tags>
       
@@ -467,9 +663,9 @@
       
       <categories>
           
-          <category> Agile </category>
-          
           <category> Software Development </category>
+          
+          <category> Agile </category>
           
       </categories>
       
@@ -508,9 +704,9 @@
       
       <categories>
           
-          <category> Agile </category>
-          
           <category> Software Development </category>
+          
+          <category> Agile </category>
           
       </categories>
       
@@ -541,9 +737,9 @@
       
       <categories>
           
-          <category> Azure </category>
-          
           <category> Data Science </category>
+          
+          <category> Azure </category>
           
       </categories>
       
@@ -572,9 +768,9 @@
       
       <categories>
           
-          <category> Azure </category>
-          
           <category> Data Science </category>
+          
+          <category> Azure </category>
           
       </categories>
       
@@ -603,20 +799,20 @@
       
       <categories>
           
-          <category> Azure </category>
-          
           <category> Data Science </category>
+          
+          <category> Azure </category>
           
       </categories>
       
       
         <tags>
             
+            <tag> Azure </tag>
+            
             <tag> Container </tag>
             
             <tag> Docker </tag>
-            
-            <tag> Azure </tag>
             
         </tags>
       
