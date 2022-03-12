@@ -8,7 +8,7 @@
       <link href="/posts/ecf97eb0/"/>
       <url>/posts/ecf97eb0/</url>
       
-        <content type="html"><![CDATA[<h1 id="Common-File-Extension-Tableau"><a href="#Common-File-Extension-Tableau" class="headerlink" title="Common File Extension - Tableau"></a>Common File Extension - Tableau</h1><h2 id="hyper"><a href="#hyper" class="headerlink" title=".hyper"></a>.hyper</h2><p><a href="https://help.tableau.com/current/api/hyper_api/en-us/docs/hyper_api_publish.html">Tableau Doc</a></p><p><strong>Extract</strong> data from <strong>Connection</strong></p><h2 id="twb-amp-twbx"><a href="#twb-amp-twbx" class="headerlink" title=".twb &amp; .twbx"></a>.twb &amp; .twbx</h2><p>t<strong>wb</strong> - stand for <strong>t</strong>ableau <u><strong>w</strong>ork<strong>b</strong>ook</u></p><p>(.twb)<strong>x</strong> - packaged - means contains original source data</p><h2 id="tds-amp-tdsx"><a href="#tds-amp-tdsx" class="headerlink" title=".tds &amp; .tdsx"></a>.tds &amp; .tdsx</h2><p>t<strong>ds</strong> - stand for tableau <u><strong>data source</strong></u> - <strong>meta data</strong>(the information you need to connect to the data, such as data type, sql server address&amp;port)</p><p>(.tds)<strong>x</strong> - packaged - means contains original source data</p>]]></content>
+        <content type="html"><![CDATA[<h1 id="Common-File-Extension-Tableau"><a href="#Common-File-Extension-Tableau" class="headerlink" title="Common File Extension - Tableau"></a>Common File Extension - Tableau</h1><h2 id="hyper"><a href="#hyper" class="headerlink" title=".hyper"></a>.hyper</h2><p><a href="https://help.tableau.com/current/api/hyper_api/en-us/docs/hyper_api_publish.html">Tableau Doc</a></p><p><strong>Extract</strong> data from <strong>Connection</strong></p><h2 id="twb-amp-twbx"><a href="#twb-amp-twbx" class="headerlink" title=".twb &amp; .twbx"></a>.twb &amp; .twbx</h2><p>t<strong>wb</strong> - stand for <strong>t</strong>ableau <u><strong>w</strong>ork<strong>b</strong>ook</u></p><p>(.twb)<strong>x</strong> - packaged - means contains original source data</p><h2 id="tds-amp-tdsx"><a href="#tds-amp-tdsx" class="headerlink" title=".tds &amp; .tdsx"></a>.tds &amp; .tdsx</h2><p>t<strong>ds</strong> - stand for tableau <u><strong>data source</strong></u> - <code>1.</code> <strong>meta data</strong>(the information you need to connect to the data, such as data type, sql server address&amp;port)  <strong>as well as <code>2.</code> any modifications you’ve made on top of the actual data</strong> such as changing default properties, creating calculated fields, adding groups, and so on - <strong>Important</strong>: <code>Do NOT contain the actual data</code></p><p>(.tds)<strong>x</strong> - packaged - means contains original source data</p>]]></content>
       
       
       <categories>
@@ -69,9 +69,9 @@
           
           <category> Azure </category>
           
-          <category> SQL </category>
-          
           <category> Data Science </category>
+          
+          <category> SQL </category>
           
           <category> Database </category>
           
@@ -170,9 +170,9 @@
       
       <categories>
           
-          <category> SQL </category>
-          
           <category> Data Science </category>
+          
+          <category> SQL </category>
           
           <category> Linux </category>
           
@@ -236,18 +236,18 @@
       
       <categories>
           
-          <category> Python </category>
-          
           <category> Codingame </category>
+          
+          <category> Python </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> Codingame </tag>
+            
+            <tag> Python </tag>
             
         </tags>
       
@@ -265,18 +265,18 @@
       
       <categories>
           
-          <category> Python </category>
-          
           <category> Codingame </category>
+          
+          <category> Python </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> Codingame </tag>
+            
+            <tag> Python </tag>
             
         </tags>
       
