@@ -8,7 +8,7 @@
       <link href="/posts/91f177af/"/>
       <url>/posts/91f177af/</url>
       
-        <content type="html"><![CDATA[<p><a href="https://help.tableau.com/current/pro/desktop/en-us/multiple_connections.htm">MethodsOfCombiningData-Tableau</a></p><p>There are several ways to combine data, each with their own strengths and weaknesses.</p><p><strong>Relationships</strong> are the default method and can be used in most instances, including across tables with different levels of detail. Relationships are flexible and are adaptable to the structure of the analysis on a sheet by sheet basis. However, <strong>you <u>can’t</u> create relationships between tables from <u>published data sources</u></strong> .</p><p><strong>Joins</strong> combine tables by adding more columns of data across similar row structures. <strong>This <u>can cause data loss or duplication</u></strong> if tables are at different levels of detail, and joined data sources must be fixed before analysis can begin.</p><p><strong>Blends</strong>, unlike relationships or joins, never truly combine the data. Instead, blends query each data source independently, <strong><u>the results are aggregated to the appropriate level, then the results are presented visually together in the view</u></strong>. Because of this, blends can handle different levels of detail and working with published data sources. Blends are also established individually on every sheet and can never be published, because there is no true “blended data source”, simply blended results from multiple data sources in a visualization.</p><p>Data blending is particularly useful when the blend relationship—linking fields—need to vary on a <strong><u>sheet-by-sheet</u></strong> basis, or when combining published data sources.</p><p><strong>Important</strong>: Prior to version 2020.2, data blending was often the best way to handle data sources at different levels of detail. These can now be combined with relationships. Relationships have fewer technical limitations than data blending and are the recommended way of combining data when possible. Blending is only encouraged when it is the best method for your data or relationships are not available.</p>]]></content>
+        <content type="html"><![CDATA[<p><a href="https://help.tableau.com/current/pro/desktop/en-us/multiple_connections.htm">MethodsOfCombiningData-Tableau</a></p><p>There are several ways to combine data, each with their own strengths and weaknesses.</p><p><strong>Relationships</strong> are the default method and can be used in most instances, including across tables with different levels of detail. Relationships are flexible and are adaptable to the structure of the analysis on a sheet by sheet basis. However, <strong>you <u>can’t</u> create relationships between tables from <u>published data sources</u></strong> .</p><p><strong>Joins</strong> combine tables by adding more columns of data across similar row structures. <strong>This <u>can cause data loss or duplication</u></strong> if tables are at different levels of detail, and joined data sources must be fixed before analysis can begin.</p><p><strong>Blends</strong>, unlike relationships or joins, never truly combine the data. Instead, blends query each data source independently, <strong><u>the results are aggregated to the appropriate level, then the results are presented visually together in the view</u></strong>. Because of this, blends can handle different levels of detail and working with published data sources. Blends are also established individually on every sheet and can never be published, because there is no true “blended data source”, simply blended results from multiple data sources in a visualization.</p><p>Data blending is particularly useful when the blend relationship—linking fields—need to vary on a <strong><u>sheet-by-sheet</u></strong> basis, or when combining published data sources.</p><p><img "" class="lazyload placeholder" data-original="https://miro.medium.com/max/1400/1*VJ_M5T4r7j6ojErChi3Ipg.png" src="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/loading.gif"></p><p><strong>Important</strong>: Prior to version 2020.2, data blending was often the best way to handle data sources at different levels of detail. These can now be combined with relationships. Relationships have fewer technical limitations than data blending and are the recommended way of combining data when possible. Blending is only encouraged when it is the best method for your data or relationships are not available.</p>]]></content>
       
       
       <categories>
@@ -92,11 +92,11 @@
       
       <categories>
           
+          <category> SQL </category>
+          
           <category> Azure </category>
           
           <category> Data Science </category>
-          
-          <category> SQL </category>
           
           <category> Database </category>
           
@@ -131,9 +131,9 @@
           
           <category> Software Development </category>
           
-          <category> Azure </category>
-          
           <category> SQL </category>
+          
+          <category> Azure </category>
           
           <category> Python </category>
           
@@ -195,9 +195,9 @@
       
       <categories>
           
-          <category> Data Science </category>
-          
           <category> SQL </category>
+          
+          <category> Data Science </category>
           
           <category> Linux </category>
           
@@ -860,11 +860,11 @@
       
         <tags>
             
+            <tag> Azure </tag>
+            
             <tag> Container </tag>
             
             <tag> Docker </tag>
-            
-            <tag> Azure </tag>
             
         </tags>
       
