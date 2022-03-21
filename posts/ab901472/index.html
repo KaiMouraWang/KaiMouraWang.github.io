@@ -11,7 +11,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-  <title>Methods Of Combining Data-Tableau | Kai Wang&#39;s Blog</title>
+  <title>average_mean_median_mode | Kai Wang&#39;s Blog</title>
 
   <link rel="icon" type="image/jpeg" href="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/20210828122447.jpg">
   <link rel="stylesheet" href="https://at.alicdn.com/t/font_1911880_c1nvbyezg17.css">
@@ -579,7 +579,7 @@
 
 
 
-<div class="post-detail-header lazyload" id="thumbnail_canvas" data-original="/medias/12.jpg" style="background-repeat: no-repeat; background-size: cover; 
+<div class="post-detail-header lazyload" id="thumbnail_canvas" data-original="/medias/14.jpg" style="background-repeat: no-repeat; background-size: cover; 
   background-position: center center;position: relative;">
   <div class="post-detail-header-mask"></div>
   <canvas id="header_canvas"style="position:absolute;bottom:0;pointer-events:none;"></canvas>
@@ -587,26 +587,17 @@
   <div class="post-detail-header_info-box">
     <div class="title-box">
       <span class="title">
-        Methods Of Combining Data-Tableau
+        average_mean_median_mode
       </span>
     </div>
     
     
       
         <span class="post-detail-header_date">
-          <i class="fa fa-calendar"></i> Published in：2022-03-13 |
+          <i class="fa fa-calendar"></i> Published in：2022-03-21 |
         </span>
       
 
-      
-        <span class="post-detail-header_categories">
-          <i class="iconfont iconbookmark1"></i> category：
-          
-            <a href="/categories/Tableau/" class="post-detail-header_category">
-              Tableau
-            </a>
-          
-        </span>
       
 
       
@@ -625,22 +616,34 @@
     <article class="post post-detail">
       
       <div class="post-content">
-        <p><a target="_blank" rel="noopener" href="https://help.tableau.com/current/pro/desktop/en-us/multiple_connections.htm">MethodsOfCombiningData-Tableau</a></p>
-<p>There are several ways to combine data, each with their own strengths and weaknesses.</p>
-<p><strong>Relationships</strong> are the default method and can be used in most instances, including across tables with different levels of detail. Relationships are flexible and are adaptable to the structure of the analysis on a sheet by sheet basis. However, <strong>you <u>can’t</u> create relationships between tables from <u>published data sources</u></strong> .</p>
-<p><strong>Joins</strong> combine tables by adding more columns of data across similar row structures. <strong>This <u>can cause data loss or duplication</u></strong> if tables are at different levels of detail, and joined data sources must be fixed before analysis can begin.</p>
-<p><strong>Blends</strong>, unlike relationships or joins, never truly combine the data. Instead, blends query each data source independently, <strong><u>the results are aggregated to the appropriate level, then the results are presented visually together in the view</u></strong>. Because of this, blends can handle different levels of detail and working with published data sources. Blends are also established individually on every sheet and can never be published, because there is no true “blended data source”, simply blended results from multiple data sources in a visualization.</p>
-<p>Data blending is particularly useful when the blend relationship—linking fields—need to vary on a <strong><u>sheet-by-sheet</u></strong> basis, or when combining published data sources.</p>
-<p><img "" class="lazyload placeholder" data-original="https://miro.medium.com/max/1400/1*VJ_M5T4r7j6ojErChi3Ipg.png" src="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/loading.gif"></p>
-<p><strong>Important</strong>: Prior to version 2020.2, data blending was often the best way to handle data sources at different levels of detail. These can now be combined with relationships. Relationships have fewer technical limitations than data blending and are the recommended way of combining data when possible. Blending is only encouraged when it is the best method for your data or relationships are not available.</p>
+        <p><em>转载自：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/Neo007/p/7503503.html">https://www.cnblogs.com/Neo007/p/7503503.html</a></em></p>
+<p>通过专门检索和其他课本的比较，得到了如下结论。统计学在分析数据时，需要对数据进行最基础的描述性分析。在众多描述分析的指标中，平均数指标能够反映分布数列集中趋势。但是平均数指标包括两类：一类是数值平均数。另一类是位置平均数。</p>
+<p>在平常用的时候“average”跟“mean”基本上是一个意思。但是在统计学的范畴内，“average”这个概念可以用三种方法来代表。就是“mean”，“mode”和“median”。其中，“mean”是“arithmetical  mean”(数学平均数)，亦即我们日常非学术用时一般人理解的“平均数”。而其他两个“mode”和“mean”，都是可以用来“大概”指示出“大概平均数”的方法，是位置平均数。所以，在统计学的范畴内，“mean”仅指算术平均数，而“average”还包括中位数(Median)和众数(Mode)</p>
+<blockquote>
+<p><strong>注：一般来说，不严格的情况下，average=mean，两者是一个意思，平均数</strong></p>
+<p><strong>只要别把mean平均数和median中位数搞混就行了！！！</strong></p>
+</blockquote>
+<p><img "" class="lazyload placeholder" data-original="https://images2017.cnblogs.com/blog/1143923/201709/1143923-20170911095042828-1297655953.jpg" src="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/loading.gif"></p>
 
       </div>
       <div class="post-tags-categories">
         
         <div class="tags">
           
-            <a href="/tags/Tableau/" class="">
-              Tableau
+            <a href="/tags/average/" class="">
+              average
+            </a>
+          
+            <a href="/tags/mean/" class="">
+              mean
+            </a>
+          
+            <a href="/tags/median/" class="">
+              median
+            </a>
+          
+            <a href="/tags/mode/" class="">
+              mode
             </a>
           
         </div>
@@ -654,7 +657,7 @@
     </li>
     <li class="post-copyright-link">
     <strong>Link:  </strong>
-    <a href="/posts/91f177af/" target="_blank" title="Methods Of Combining Data-Tableau">http://www.rainbowhero.com/posts/91f177af/</a>
+    <a href="/posts/ab901472/" target="_blank" title="average_mean_median_mode">http://www.rainbowhero.com/posts/ab901472/</a>
     </li>
     <li class="post-copyright-license">
       <strong>Copyright:   </strong>
@@ -672,38 +675,21 @@
 
 
 
-  
-  <div class="post-nav-prev post-nav-item">
-    <div class="post-nav-img lazyload" data-original="/medias/14.jpg" style="background-size: cover; 
-      background-position: center center;">
-    </div>
-    <a href="/posts/ab901472/" class="post-nav-link">
-      <div class="title">
-        <i class="fa fa-angle-left"></i> Prev:
-        <div class="title-text">average_mean_median_mode</div>
-      </div>
-      
-      <!-- <div class="content">
-        转载自：https://www.cnblogs.com/Neo007/p/7503503.html
-通过专门检索和其他课
-      </div> -->
-    </a>
-  </div>
-
 
 
   
   <div class="post-nav-next post-nav-item">
-    <div class="post-nav-img lazyload" data-original="/medias/8.jpg" style="background-size: cover; 
+    <div class="post-nav-img lazyload" data-original="/medias/12.jpg" style="background-size: cover; 
       background-position: center center;">
     </div>
-    <a href="/posts/ecf97eb0/" class="post-nav-link">
+    <a href="/posts/91f177af/" class="post-nav-link">
       <div class="title">
         Next: <i class="fa fa-angle-right"></i>
-        <div class="title-text">Common File Extension - Tableau</div>
+        <div class="title-text">Methods Of Combining Data-Tableau</div>
       </div>
       <!-- <div class="content">
-        Common File Extension/Type - Tableau.hyper &amp; .tde[Tablea
+        MethodsOfCombiningData-Tableau
+There are several ways to com
       </div> -->
     </a>
   </div>
