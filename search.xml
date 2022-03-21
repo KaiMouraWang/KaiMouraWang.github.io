@@ -8,7 +8,7 @@
       <link href="/posts/ab901472/"/>
       <url>/posts/ab901472/</url>
       
-        <content type="html"><![CDATA[<p><em>转载自：<a href="https://www.cnblogs.com/Neo007/p/7503503.html">https://www.cnblogs.com/Neo007/p/7503503.html</a></em></p><p>通过专门检索和其他课本的比较，得到了如下结论。统计学在分析数据时，需要对数据进行最基础的描述性分析。在众多描述分析的指标中，平均数指标能够反映分布数列集中趋势。但是平均数指标包括两类：一类是数值平均数。另一类是位置平均数。</p><p>在平常用的时候“average”跟“mean”基本上是一个意思。但是在统计学的范畴内，“average”这个概念可以用三种方法来代表。就是“mean”，“mode”和“median”。其中，“mean”是“arithmetical  mean”(数学平均数)，亦即我们日常非学术用时一般人理解的“平均数”。而其他两个“mode”和“mean”，都是可以用来“大概”指示出“大概平均数”的方法，是位置平均数。所以，在统计学的范畴内，“mean”仅指算术平均数，而“average”还包括中位数(Median)和众数(Mode)</p><blockquote><p><strong>注：一般来说，不严格的情况下，average=mean，两者是一个意思，平均数</strong></p><p><strong>只要别把mean平均数和median中位数搞混就行了！！！</strong></p></blockquote><p><img "" class="lazyload placeholder" data-original="https://images2017.cnblogs.com/blog/1143923/201709/1143923-20170911095042828-1297655953.jpg" src="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/loading.gif"></p>]]></content>
+        <content type="html"><![CDATA[<p><em>转载自：<a href="https://www.cnblogs.com/Neo007/p/7503503.html">https://www.cnblogs.com/Neo007/p/7503503.html</a></em></p><p>通过专门检索和其他课本的比较，得到了如下结论。统计学在分析数据时，需要对数据进行最基础的描述性分析。在众多描述分析的指标中，平均数指标能够反映分布数列集中趋势。但是平均数指标包括两类：一类是数值平均数。另一类是位置平均数。</p><p>在平常用的时候“average”跟“mean”基本上是一个意思。但是在统计学的范畴内，“average”这个概念可以用三种方法来代表。就是“mean”，“mode”和“median”。其中，“mean”是“arithmetical  mean”(数学平均数)，亦即我们日常非学术用时一般人理解的“平均数”。而其他两个“mode”和“mean”，都是可以用来“大概”指示出“大概平均数”的方法，是位置平均数。所以，在统计学的范畴内，“mean”仅指算术平均数，而“average”还包括中位数(Median)和众数(Mode)</p><blockquote><p><strong>注：一般来说，不严格的情况下，average=mean，两者是一个意思，平均数</strong></p><p><strong>只要别把mean平均数和median中位数搞混就行了！！！</strong></p></blockquote><p><img "" class="lazyload placeholder" data-original="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/1143923-20170911095042828-1297655953.jpg" src="https://cdn.jsdelivr.net/gh/KaiMouraWang/Pics/loading.gif"></p>]]></content>
       
       
       
@@ -119,9 +119,9 @@
           
           <category> SQL </category>
           
-          <category> Azure </category>
-          
           <category> Data Science </category>
+          
+          <category> Azure </category>
           
           <category> Database </category>
           
@@ -191,9 +191,9 @@
       
       <categories>
           
-          <category> Azure </category>
-          
           <category> Data Science </category>
+          
+          <category> Azure </category>
           
       </categories>
       
@@ -286,9 +286,9 @@
       
       <categories>
           
-          <category> Python </category>
-          
           <category> Codingame </category>
+          
+          <category> Python </category>
           
       </categories>
       
@@ -315,9 +315,9 @@
       
       <categories>
           
-          <category> Python </category>
-          
           <category> Codingame </category>
+          
+          <category> Python </category>
           
       </categories>
       
@@ -814,9 +814,9 @@
       
       <categories>
           
-          <category> Azure </category>
-          
           <category> Data Science </category>
+          
+          <category> Azure </category>
           
       </categories>
       
@@ -845,9 +845,9 @@
       
       <categories>
           
-          <category> Azure </category>
-          
           <category> Data Science </category>
+          
+          <category> Azure </category>
           
       </categories>
       
@@ -876,9 +876,9 @@
       
       <categories>
           
-          <category> Azure </category>
-          
           <category> Data Science </category>
+          
+          <category> Azure </category>
           
       </categories>
       
